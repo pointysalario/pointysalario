@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://popochiu/Characters/Criptoevangelista/CharacterCriptoevangelistaState.gd" type="Script" id=1]
+
+[resource]
+resource_name = "Criptoevangelista"
+script = ExtResource( 1 )
+script_name = "Criptoevangelista"
+scene = "res://popochiu/Characters/Criptoevangelista/CharacterCriptoevangelista.tscn"

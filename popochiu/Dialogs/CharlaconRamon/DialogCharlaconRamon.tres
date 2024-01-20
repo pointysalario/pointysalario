@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://popochiu/Dialogs/CharlaconRamon/DialogCharlaconRamon.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+resource_name = "Muerto"
+script = ExtResource( 2 )
+id = "Muerto"
+text = "Usted se parece mucho a Ramón Ayala, pero él murió hace unos meses."
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=2]
+resource_name = "ComoLlegar"
+script = ExtResource( 2 )
+id = "ComoLlegar"
+text = "¿Sabe cómo puedo llegar a la Plaza 9 de Julio?"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=3]
+resource_name = "onirica"
+script = ExtResource( 2 )
+id = "onirica"
+text = "¿Cómo que onirica?¿Qué quiere decir?"
+visible = false
+disabled = false
+always_on = false
+
+[resource]
+resource_name = "CharlaconRamon"
+script = ExtResource( 1 )
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+script_name = "CharlaconRamon"

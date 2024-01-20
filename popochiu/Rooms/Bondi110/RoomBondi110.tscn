@@ -1,0 +1,110 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Bondi110/RoomBondi110.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.gd" type="Script" id=2]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://popochiu/Rooms/Bondi110/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=4]
+[ext_resource path="res://assets/fondos/Bondi110.png" type="Texture" id=5]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.gd" type="Script" id=7]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://popochiu/Characters/RamonAyala/CharacterRamonAyala.gd" type="Script" id=9]
+[ext_resource path="res://popochiu/Characters/RamonAyala/CharacterRamonAyala.tscn" type="PackedScene" id=10]
+[ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Templobudista/HotspotTemplobudista.gd" type="Script" id=11]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=12]
+[ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Cartel/HotspotCartel.gd" type="Script" id=13]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 138, 58, 217, 65, 202, 177, 112, 169, 391, 189, 394, 294, -393, 296, -42, 177, -390, 166 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 2 ), PoolIntArray( 3, 2, 6, 7 ), PoolIntArray( 8, 7, 6 ) ]
+outlines = [ PoolVector2Array( -42, 177, 112, 169, 138, 58, 217, 65, 202, 177, 391, 189, 394, 294, -393, 296, -390, 166 ) ]
+
+[node name="RoomBondi110" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Bondi110"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Piso" type="Node2D" parent="WalkableAreas" instance=ExtResource( 6 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 4 )
+script_name = "Piso"
+description = "Piso"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
+modulate = Color( 0, 1, 0, 1 )
+navpoly = SubResource( 1 )
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Fondo" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+script_name = "Fondo"
+description = "Fondo"
+clickable = false
+cursor = 1
+texture = ExtResource( 5 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Templobudista" type="Area2D" parent="Hotspots" instance=ExtResource( 12 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 11 )
+script_name = "Templobudista"
+description = "Templo budista"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Templobudista"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 163, -38 )
+polygon = PoolVector2Array( 29, -22, -6, -4, -13, 41, 125, 49, 126, 34 )
+
+[node name="Cartel" type="Area2D" parent="Hotspots" instance=ExtResource( 12 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 13 )
+script_name = "Cartel"
+description = "Cartel"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Cartel"]
+modulate = Color( 0, 0, 1, 1 )
+polygon = PoolVector2Array( -366, -99, -31, -103, -31, -41, -368, -39 )
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="CharacterPlayer *" type="Area2D" parent="Characters" instance=ExtResource( 8 )]
+position = Vector2( 643, 477 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+script_name = "Player"
+description = "Player"
+baseline = 82
+walk_to_point = Vector2( 0, 81 )
+cursor = 8
+popochiu_placeholder = null
+
+[node name="CharacterRamonAyala *" type="Area2D" parent="Characters" instance=ExtResource( 10 )]
+position = Vector2( 169, 389 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+script_name = "RamonAyala"
+description = "Ramon Ayala"
+baseline = 113
+walk_to_point = Vector2( 50, 112 )
+cursor = 8
+popochiu_placeholder = null

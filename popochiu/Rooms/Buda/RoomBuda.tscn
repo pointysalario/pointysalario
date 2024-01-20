@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Buda/RoomBuda.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://popochiu/Rooms/Buda/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=5]
+[ext_resource path="res://assets/fondos/Buda.png" type="Texture" id=6]
+[ext_resource path="res://popochiu/Characters/Criptoevangelista/CharacterCriptoevangelista.tscn" type="PackedScene" id=7]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 146, 225, 401, 193, 397, 295, -395, 301, -57, 215, -274, 196, -392, 157, -333, 152 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3 ), PoolIntArray( 5, 4, 3 ), PoolIntArray( 5, 3, 6, 7 ) ]
+outlines = [ PoolVector2Array( -57, 215, 146, 225, 401, 193, 397, 295, -395, 301, -392, 157, -333, 152, -274, 196 ) ]
+
+[node name="RoomBuda" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Buda"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 4 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 5 )
+script_name = "Piso"
+description = "Piso"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
+modulate = Color( 0, 1, 0, 1 )
+navpoly = SubResource( 1 )
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Fondo" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+script_name = "Fondo"
+description = "Fondo"
+clickable = false
+cursor = 1
+texture = ExtResource( 6 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="CharacterCriptoevangelista *" parent="Characters" instance=ExtResource( 7 )]
+position = Vector2( 747, 416 )
