@@ -9,7 +9,7 @@ __meta__ = {
 "_edit_group_": true
 }
 script_name = "Criptoevangelista"
-description = "Criptoevangelista"
+description = "Cripto evangelista"
 baseline = 154
 walk_to_point = Vector2( 64, 140 )
 cursor = 8
@@ -21,7 +21,7 @@ polygon = PoolVector2Array( -66, -74, -34, -146, -16, -148, -5, -97, 20, -76, 25
 
 [node name="BaselineHelper" type="Line2D" parent="."]
 visible = false
-position = Vector2( -140, 154 )
+position = Vector2( 0, 154 )
 points = PoolVector2Array( -10000, 0, 139.946, 0, 10000, 0 )
 width = 1.0
 
