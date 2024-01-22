@@ -8,20 +8,26 @@ extends PopochiuHotspot
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
 func on_interact() -> void:
-	 E.run([
+	yield(E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: Sí, odio a las inmobiliarias como cualquier argentino de a pie pero llevarme un cartel así no tiene sentido"
-	])
-#	.on_interact()
+#		"Player: Can't open it"
+	]), 'completed')
+	E.goto_room('Entrada')
+
 
 
 # When the node is right clicked
 func on_look() -> void:
-	E.run([
-		C.face_clicked(),
-		'Player: Parece ser que las fuerzas del cielo ya invadieron la provincia.'
-	])
+	# Replace the call to .on_look() to implement your code. This only makes
+	# the default behavior to happen.
+	# For example you can make the character walk to the Hotspot and then say
+	# something:
+#	E.run([
+#		C.face_clicked(),
+#		'Player: A closed door'
+#	])
+	.on_look()
 
 
 # When the node is clicked and there is an inventory item selected

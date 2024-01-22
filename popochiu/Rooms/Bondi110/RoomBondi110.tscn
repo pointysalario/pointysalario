@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Bondi110/RoomBondi110.gd" type="Script" id=1]
+[ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Hacialaentrada/HotspotHacialaentrada.gd" type="Script" id=2]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://popochiu/Rooms/Bondi110/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=4]
 [ext_resource path="res://assets/fondos/Bondi110.png" type="Texture" id=5]
@@ -109,6 +110,19 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Paradadecolectivo"]
 modulate = Color( 0, 0, 1, 1 )
 polygon = PoolVector2Array( -20, 181, -17, -33, -344, -37, -318, 179, -265, 191, -308, 76, -279, -24, -210, -21, -153, 26, -182, 184 )
+
+[node name="Hacialaentrada" parent="Hotspots" instance=ExtResource( 12 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 2 )
+script_name = "Hacialaentrada"
+description = "Hacia la entrada"
+walk_to_point = Vector2( -338, 210 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacialaentrada"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -372, 253 )
+polygon = PoolVector2Array( -26, 44, 27, 44, 13, -82, -25, -81 )
 
 [node name="Regions" type="Node2D" parent="."]
 

@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Entrada/RoomEntrada.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://popochiu/Rooms/Entrada/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=5]
+[ext_resource path="res://assets/fondos/entradadelbarrio.jpeg" type="Texture" id=6]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://popochiu/Rooms/Entrada/Hotspots/Hacia la colectora/HotspotHacia la colectora.gd" type="Script" id=8]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=9]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( -367, 152, -368, -12, -10, -10, 416, 149, 10, -10, 54, -2, 418, 72 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5, 6 ) ]
+outlines = [ PoolVector2Array( -10, -10, 10, -10, 54, -2, 418, 72, 416, 149, -367, 152, -368, -12 ) ]
+
+[node name="RoomEntrada" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Entrada"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 4 )]
+position = Vector2( 400, 300 )
+z_index = 1
+script = ExtResource( 5 )
+script_name = "Piso"
+description = "Piso"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( -29, 147 )
+navpoly = SubResource( 1 )
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Fondo" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+script_name = "Fondo"
+description = "Fondo"
+clickable = false
+baseline = -267
+cursor = 1
+texture = ExtResource( 6 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Hacia la colectora" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 8 )
+script_name = "Hacia la colectora"
+description = "Hacia la colectora"
+walk_to_point = Vector2( -284, 143 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacia la colectora"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -347, 127 )
+polygon = PoolVector2Array( 28, 10, -19, 14, -20, -14, 26, -19 )
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 7 )]
+position = Vector2( 98, 502 )

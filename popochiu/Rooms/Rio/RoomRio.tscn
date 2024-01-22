@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Rio/RoomRio.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://popochiu/Rooms/Rio/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=4]
+[ext_resource path="res://popochiu/Rooms/Rio/WalkableAreas/Piso-pasando-rio/WalkableAreaPiso-pasando-rio.gd" type="Script" id=5]
+[ext_resource path="res://assets/fondos/rio.jpg" type="Texture" id=6]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=8]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 224, 150, 302, 272, -342, 32, -215, -32, 32, -47, 319, -8, 381, 44 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 0, 4, 5, 6 ) ]
+outlines = [ PoolVector2Array( -215, -32, 32, -47, 319, -8, 381, 44, 224, 150, 302, 272, -342, 32 ) ]
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 10, -10, 182, 67, -53, 62, -55, -61 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 2, 3, 0 ) ]
+outlines = [ PoolVector2Array( -55, -61, 10, -10, 182, 67, -53, 62 ) ]
+
+[node name="RoomRio" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Rio"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Piso" type="Node2D" parent="WalkableAreas" instance=ExtResource( 2 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 4 )
+script_name = "Piso"
+description = "Piso"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
+modulate = Color( 0, 1, 0, 1 )
+z_index = 1
+navpoly = SubResource( 1 )
+
+[node name="Piso-pasando-rio" type="Node2D" parent="WalkableAreas" instance=ExtResource( 2 )]
+position = Vector2( 59, 533 )
+script = ExtResource( 5 )
+script_name = "Piso-pasando-rio"
+description = "Piso-pasando-rio"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso-pasando-rio"]
+modulate = Color( 0, 1, 0, 1 )
+z_index = 1
+navpoly = SubResource( 2 )
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Fondo" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+script_name = "Fondo"
+description = "Fondo"
+clickable = false
+baseline = -278
+cursor = 1
+texture = ExtResource( 6 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 8 )]
+position = Vector2( 494, 330 )
