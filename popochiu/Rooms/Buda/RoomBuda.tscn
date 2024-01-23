@@ -88,7 +88,7 @@ polygon = PoolVector2Array( -13, -27, 18, -27, 24, 22, -18, 23 )
 sort_enabled = false
 
 [node name="CharacterCriptoevangelista *" parent="Characters" instance=ExtResource( 7 )]
-position = Vector2( 747, 416 )
+position = Vector2( 737, 424 )
 
 [node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 10 )]
 position = Vector2( 369, 500 )

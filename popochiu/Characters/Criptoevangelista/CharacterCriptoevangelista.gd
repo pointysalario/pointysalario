@@ -16,7 +16,7 @@ func on_room_set() -> void:
 func on_interact() -> void:
 	# Replace the call to .on_interact() to implement your code. This only makes
 	# the default behavior to happen.
-	.on_interact()
+	D.show_dialog('Charlaconcriptoevangelista')
 
 
 # When the node is right clicked

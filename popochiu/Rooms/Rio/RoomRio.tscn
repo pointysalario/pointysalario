@@ -25,7 +25,7 @@ script_name = "Rio"
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
-[node name="Piso" type="Node2D" parent="WalkableAreas" instance=ExtResource( 2 )]
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 2 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 4 )
 script_name = "Piso"
@@ -36,7 +36,7 @@ modulate = Color( 0, 1, 0, 1 )
 z_index = 1
 navpoly = SubResource( 1 )
 
-[node name="Piso-pasando-rio" type="Node2D" parent="WalkableAreas" instance=ExtResource( 2 )]
+[node name="Piso-pasando-rio" parent="WalkableAreas" instance=ExtResource( 2 )]
 position = Vector2( 59, 533 )
 script = ExtResource( 5 )
 script_name = "Piso-pasando-rio"

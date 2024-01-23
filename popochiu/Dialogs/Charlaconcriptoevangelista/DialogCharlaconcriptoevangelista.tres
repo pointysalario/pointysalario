@@ -1,0 +1,46 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://popochiu/Dialogs/Charlaconcriptoevangelista/DialogCharlaconcriptoevangelista.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+resource_name = "Templo"
+script = ExtResource( 2 )
+id = "Templo"
+text = "¿Qué es esto?¿Qué sucedió con el templo de los laosianos?"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=2]
+resource_name = "Necesito-dinero"
+script = ExtResource( 2 )
+id = "Necesito-dinero"
+text = "Necesito dinero para poder tomarme el colectivo e ir hacia el centro, ¿podría prestarme algo?"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=3]
+resource_name = "bajoconsumo"
+script = ExtResource( 2 )
+id = "bajoconsumo"
+text = "¿Qué problema tenés con el bajo consumo eléctrico?"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=4]
+resource_name = "vidaaustera"
+script = ExtResource( 2 )
+id = "vidaaustera"
+text = "Creo que estás equivocado. El Señor ha pregonado siempre una vida austera y libre de la tiranía del dinero."
+visible = false
+disabled = false
+always_on = false
+
+[resource]
+resource_name = "Charlaconcriptoevangelista"
+script = ExtResource( 1 )
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+script_name = "Charlaconcriptoevangelista"
