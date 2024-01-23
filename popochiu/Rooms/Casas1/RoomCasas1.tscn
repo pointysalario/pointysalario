@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Casas1/RoomCasas1.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Casetadegas3/HotspotCasetadegas3.gd" type="Script" id=13]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Plantera/HotspotPlantera.gd" type="Script" id=14]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Plantera2/HotspotPlantera2.gd" type="Script" id=15]
+[ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Hacialacolectora/HotspotHacialacolectora.gd" type="Script" id=16]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 1209, 49, -31, 57, -32, -172, 135, -153, 739, -54, 1207, -88, 670, -85 )
@@ -151,6 +152,17 @@ cursor = 1
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -367, 53 )
 polygon = PoolVector2Array( 23, 8, 19, -4, -6, -3, -10, 8 )
+
+[node name="Hacialacolectora" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 16 )
+script_name = "Hacialacolectora"
+description = "Hacialacolectora"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacialacolectora"]
+modulate = Color( 0, 0, 1, 1 )
+polygon = PoolVector2Array( -636, 103, -636, 269, -590, 271, -596, 74, -636, 64 )
 
 [node name="Regions" type="Node2D" parent="."]
 

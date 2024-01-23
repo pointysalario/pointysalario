@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://popochiu/Dialogs/Charlaconcriptoevangelista/DialogCharlaconcriptoevangelista.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
@@ -39,8 +39,26 @@ visible = false
 disabled = false
 always_on = false
 
+[sub_resource type="Resource" id=5]
+resource_name = "MamonMusk"
+script = ExtResource( 2 )
+id = "MamonMusk"
+text = "Hablando de Mamon Musk, tengo este anuncio, ¿no querés invertir conmigo? Soy un anunciante oficial."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=6]
+resource_name = "SubeMamonMusk"
+script = ExtResource( 2 )
+id = "SubeMamonMusk"
+text = "Bueno, te quería ofrecer una membresía de inversión en MamonMusk, soy un agente oficial, ¿puede darme dinero?"
+visible = false
+disabled = false
+always_on = false
+
 [resource]
 resource_name = "Charlaconcriptoevangelista"
 script = ExtResource( 1 )
-options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
 script_name = "Charlaconcriptoevangelista"

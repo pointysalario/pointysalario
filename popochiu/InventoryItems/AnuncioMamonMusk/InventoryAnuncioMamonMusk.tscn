@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://popochiu/InventoryItems/AnuncioMamonMusk/InventoryAnuncioMamonMusk.gd" type="Script" id=1]
+[ext_resource path="res://assets/bebidas/tetra-tinto-01-abierto.png" type="Texture" id=2]
+
+[node name="InventoryAnuncioMamonMusk" type="TextureRect"]
+mouse_filter = 0
+size_flags_vertical = 4
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+description = "Anuncio Mamon Musk"
+script_name = "AnuncioMamonMusk"
+cursor = 10
