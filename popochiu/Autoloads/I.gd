@@ -13,6 +13,14 @@ const PII350pesos := preload('res://popochiu/InventoryItems/350pesos/Inventory35
 const PIICelular := preload('res://popochiu/InventoryItems/Celular/InventoryCelular.gd')
 const PIIBaldecondetergente := preload('res://popochiu/InventoryItems/Baldecondetergente/InventoryBaldecondetergente.gd')
 const PIIBaldeconespuma := preload('res://popochiu/InventoryItems/Baldeconespuma/InventoryBaldeconespuma.gd')
+const PIIMandioca := preload('res://popochiu/InventoryItems/Mandioca/InventoryMandioca.gd')
+const PIIAluminio := preload('res://popochiu/InventoryItems/Aluminio/InventoryAluminio.gd')
+const PIICablecoaxial := preload('res://popochiu/InventoryItems/Cablecoaxial/InventoryCablecoaxial.gd')
+const PIICableusb := preload('res://popochiu/InventoryItems/Cableusb/InventoryCableusb.gd')
+const PIIMandiocaaluminada := preload('res://popochiu/InventoryItems/Mandiocaaluminada/InventoryMandiocaaluminada.gd')
+const PIIGeneradororganico := preload('res://popochiu/InventoryItems/Generadororganico/InventoryGeneradororganico.gd')
+const PIIMandiocausb := preload('res://popochiu/InventoryItems/Mandiocausb/InventoryMandiocausb.gd')
+const PIIMandiocacoaxial := preload('res://popochiu/InventoryItems/Mandiocacoaxial/InventoryMandiocacoaxial.gd')
 # ---- classes
 
 # nodes ----
@@ -27,6 +35,14 @@ var R350pesos: PII350pesos setget , get_350pesos
 var Celular: PIICelular setget , get_Celular
 var Baldecondetergente: PIIBaldecondetergente setget , get_Baldecondetergente
 var Baldeconespuma: PIIBaldeconespuma setget , get_Baldeconespuma
+var Mandioca: PIIMandioca setget , get_Mandioca
+var Aluminio: PIIAluminio setget , get_Aluminio
+var Cablecoaxial: PIICablecoaxial setget , get_Cablecoaxial
+var Cableusb: PIICableusb setget , get_Cableusb
+var Mandiocaaluminada: PIIMandiocaaluminada setget , get_Mandiocaaluminada
+var Generadororganico: PIIGeneradororganico setget , get_Generadororganico
+var Mandiocausb: PIIMandiocausb setget , get_Mandiocausb
+var Mandiocacoaxial: PIIMandiocacoaxial setget , get_Mandiocacoaxial
 # ---- nodes
 
 # functions ----
@@ -41,5 +57,13 @@ func get_350pesos(): return ._get_item_instance('350pesos')
 func get_Celular(): return ._get_item_instance('Celular')
 func get_Baldecondetergente(): return ._get_item_instance('Baldecondetergente')
 func get_Baldeconespuma(): return ._get_item_instance('Baldeconespuma')
+func get_Mandioca(): return ._get_item_instance('Mandioca')
+func get_Aluminio(): return ._get_item_instance('Aluminio')
+func get_Cablecoaxial(): return ._get_item_instance('Cablecoaxial')
+func get_Cableusb(): return ._get_item_instance('Cableusb')
+func get_Mandiocaaluminada(): return ._get_item_instance('Mandiocaaluminada')
+func get_Generadororganico(): return ._get_item_instance('Generadororganico')
+func get_Mandiocausb(): return ._get_item_instance('Mandiocausb')
+func get_Mandiocacoaxial(): return ._get_item_instance('Mandiocacoaxial')
 # ---- functions
 

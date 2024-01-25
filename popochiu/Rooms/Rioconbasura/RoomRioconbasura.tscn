@@ -42,6 +42,7 @@ sort_enabled = false
 
 [node name="Fondo" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 400, 300 )
+scale = Vector2( 1, 1 )
 script_name = "Fondo"
 description = "Fondo"
 clickable = false
@@ -89,7 +90,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 168, -60 )
 polygon = PoolVector2Array( -13, 17, 47, 18, 45, -5, -10, -10 )
 
-[node name="Agua" type="Area2D" parent="Hotspots" instance=ExtResource( 8 )]
+[node name="Agua" parent="Hotspots" instance=ExtResource( 8 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 11 )
 script_name = "Agua"

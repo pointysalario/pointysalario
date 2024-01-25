@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Casas1/RoomCasas1.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Alpuente/HotspotAlpuente.gd" type="Script" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Hacialacolectora/HotspotHacialacolectora.gd" type="Script" id=16]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Alaentrada/HotspotAlaentrada.gd" type="Script" id=17]
 [ext_resource path="res://popochiu/Rooms/Casas1/Props/Lavame/PropLavame.gd" type="Script" id=18]
+[ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Puertaprimo/HotspotPuertaprimo.gd" type="Script" id=19]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 1209, 49, -31, 57, -32, -172, 135, -153, 739, -54, 1207, -88, 670, -85 )
@@ -58,19 +59,17 @@ baseline = -137
 cursor = 1
 texture = ExtResource( 6 )
 
-[node name="Lavame" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+[node name="Lavame" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 508, 319 )
 script = ExtResource( 18 )
-__meta__ = {
-"_editor_description_": ""
-}
 script_name = "Lavame"
 description = "Lavame"
-walk_to_point = Vector2( 431, 123 )
+walk_to_point = Vector2( 4250, 1200 )
 cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Lavame"]
-position = Vector2( 406, 83 )
+position = Vector2( 4090, 790 )
+scale = Vector2( 6.6875, 5.8726 )
 polygon = PoolVector2Array( 62, 7, -13, 19, -30, -15, 70, -33 )
 
 [node name="Hotspots" type="Node2D" parent="."]
@@ -203,6 +202,19 @@ cursor = 1
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -65, 283 )
 polygon = PoolVector2Array( -160, -6, 295, -8, 295, 18, -159, 17 )
+
+[node name="Puertaprimo" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 19 )
+script_name = "Puertaprimo"
+description = "Puertaprimo"
+walk_to_point = Vector2( 384, 150 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Puertaprimo"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 375, 1 )
+polygon = PoolVector2Array( -7, 71, 24, 72, 23, -28, -12, -27 )
 
 [node name="Regions" type="Node2D" parent="."]
 

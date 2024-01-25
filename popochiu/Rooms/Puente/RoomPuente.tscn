@@ -43,6 +43,7 @@ sort_enabled = false
 
 [node name="Puente" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 400, 300 )
+scale = Vector2( 1, 1 )
 script_name = "Puente"
 description = "Puente"
 clickable = false

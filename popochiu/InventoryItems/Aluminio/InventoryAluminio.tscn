@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://popochiu/InventoryItems/Aluminio/InventoryAluminio.gd" type="Script" id=1]
+[ext_resource path="res://assets/objetos/papelaluminio.png" type="Texture" id=2]
+
+[node name="InventoryAluminio" type="TextureRect"]
+mouse_filter = 0
+size_flags_vertical = 4
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+description = "Aluminio"
+script_name = "Aluminio"
+cursor = 10

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Rio/RoomRio.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=9]
 [ext_resource path="res://popochiu/Rooms/Rio/Hotspots/Rio/HotspotRio.gd" type="Script" id=10]
 [ext_resource path="res://popochiu/Characters/MonstruoRodridodeFilippi/CharacterMonstruoRodridodeFilippi.tscn" type="PackedScene" id=11]
+[ext_resource path="res://popochiu/Rooms/Rio/Props/Tacuru/PropTacuru.gd" type="Script" id=12]
+[ext_resource path="res://assets/objetos/tacuru.jpg" type="Texture" id=13]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 224, 150, 302, 272, -342, 32, -215, -32, 32, -47, 319, -8, 381, 44 )
@@ -30,6 +32,7 @@ script_name = "Rio"
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Piso" parent="WalkableAreas" instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 400, 300 )
 script = ExtResource( 4 )
 script_name = "Piso"
@@ -56,12 +59,29 @@ sort_enabled = false
 
 [node name="Fondo" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 400, 300 )
+scale = Vector2( 1, 1 )
 script_name = "Fondo"
 description = "Fondo"
 clickable = false
 baseline = -278
 cursor = 1
 texture = ExtResource( 6 )
+
+[node name="Tacuru" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 285, 279 )
+scale = Vector2( 0.2, 0.2 )
+script = ExtResource( 12 )
+script_name = "Tacuru"
+description = "Tacuru"
+baseline = -240
+walk_to_point = Vector2( 29.9999, 295 )
+cursor = 1
+texture = ExtResource( 13 )
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Tacuru"]
+visible = false
+position = Vector2( -0.00012207, 19.9999 )
+polygon = PoolVector2Array( -230, 50, -75, 180, 110, 165, 225, 35, 165, -210, 30, -270, -100, -230 )
 
 [node name="Hotspots" type="Node2D" parent="."]
 
@@ -77,7 +97,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -269, 20 )
 polygon = PoolVector2Array( -82, 6, 18, 52, 31, -36 )
 
-[node name="Rio" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Rio" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 10 )
 script_name = "Rio"

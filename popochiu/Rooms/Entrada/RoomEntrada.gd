@@ -14,6 +14,9 @@ var state: Data = preload('RoomEntrada.tres')
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func on_room_entered() -> void:
+#	yield(E.run([
+#		C.Player.say("Tengo que ir primero a lo de mi primo")
+#		]), 'completed')
 	pass
 
 

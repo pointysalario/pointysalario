@@ -40,7 +40,7 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				'Player: ¿Será que Perón tiene razón y el mejor ritual para llamar a la lluvia es lavar el auto?',
 				'Player: Nunca especificó si tiene que ser TU auto o cualquier auto. Probemos...',
 				I.remove_item('Baldeconespuma'),
-				queue_free()
+				disable()
 				])
 
 # When an inventory item linked to this Prop (link_to_item) is removed from

@@ -32,6 +32,7 @@ description = "Piso"
 
 [node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
 modulate = Color( 0, 1, 0, 1 )
+z_index = 1
 navpoly = SubResource( 1 )
 
 [node name="Props" type="YSort" parent="."]
@@ -39,6 +40,7 @@ sort_enabled = false
 
 [node name="Fondo" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 400, 300 )
+scale = Vector2( 1, 1 )
 script_name = "Fondo"
 description = "Fondo"
 clickable = false

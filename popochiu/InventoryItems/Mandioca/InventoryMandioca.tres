@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://popochiu/InventoryItems/Mandioca/InventoryMandiocaState.gd" type="Script" id=1]
+
+[resource]
+resource_name = "Mandioca"
+script = ExtResource( 1 )
+script_name = "Mandioca"
+scene = "res://popochiu/InventoryItems/Mandioca/InventoryMandioca.tscn"
