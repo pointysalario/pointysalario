@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Rio/RoomRio.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=2]
@@ -6,7 +6,11 @@
 [ext_resource path="res://popochiu/Rooms/Rio/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=4]
 [ext_resource path="res://popochiu/Rooms/Rio/WalkableAreas/Piso-pasando-rio/WalkableAreaPiso-pasando-rio.gd" type="Script" id=5]
 [ext_resource path="res://assets/fondos/rio.jpg" type="Texture" id=6]
+[ext_resource path="res://popochiu/Rooms/Rio/Hotspots/Haciaelcanal/HotspotHaciaelcanal.gd" type="Script" id=7]
 [ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=9]
+[ext_resource path="res://popochiu/Rooms/Rio/Hotspots/Rio/HotspotRio.gd" type="Script" id=10]
+[ext_resource path="res://popochiu/Characters/MonstruoRodridodeFilippi/CharacterMonstruoRodridodeFilippi.tscn" type="PackedScene" id=11]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 224, 150, 302, 272, -342, 32, -215, -32, 32, -47, 319, -8, 381, 44 )
@@ -61,6 +65,31 @@ texture = ExtResource( 6 )
 
 [node name="Hotspots" type="Node2D" parent="."]
 
+[node name="Haciaelcanal" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 7 )
+script_name = "Haciaelcanal"
+description = "Hacia el canal"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Haciaelcanal"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -269, 20 )
+polygon = PoolVector2Array( -82, 6, 18, 52, 31, -36 )
+
+[node name="Rio" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 10 )
+script_name = "Rio"
+description = "Rio"
+walk_to_point = Vector2( -86, 121 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Rio"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -180, 200 )
+polygon = PoolVector2Array( -181, -113, -214, -58, 77, 100, 299, 95 )
+
 [node name="Regions" type="Node2D" parent="."]
 
 [node name="Points" type="Node2D" parent="."]
@@ -70,3 +99,7 @@ sort_enabled = false
 
 [node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 8 )]
 position = Vector2( 494, 330 )
+
+[node name="CharacterMonstruoRodridodeFilippi *" parent="Characters" instance=ExtResource( 11 )]
+position = Vector2( 680, 231 )
+scale = Vector2( 0.4, 0.4 )

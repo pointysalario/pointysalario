@@ -10,7 +10,7 @@ __meta__ = {
 }
 script_name = "Player"
 description = "Player"
-baseline = 82
+baseline = 73
 walk_to_point = Vector2( 0, 81 )
 cursor = 8
 walk_speed = 250.0
@@ -21,7 +21,7 @@ polygon = PoolVector2Array( 0, -57, 29, -33, 58, -23, 61, 23, 32, 42, 33, 65, -1
 
 [node name="BaselineHelper" type="Line2D" parent="."]
 visible = false
-position = Vector2( -100, 82 )
+position = Vector2( -96, 73 )
 points = PoolVector2Array( -10000, 0, 100.684, 0, 10000, 0 )
 width = 1.0
 

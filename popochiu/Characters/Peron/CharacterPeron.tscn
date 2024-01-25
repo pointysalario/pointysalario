@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://popochiu/Characters/Peron/CharacterPeron.gd" type="Script" id=1]
+[ext_resource path="res://assets/personajes/peron.png" type="Texture" id=2]
+
+[node name="CharacterPeron" type="Area2D"]
+scale = Vector2( 0.6, 0.6 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+script_name = "Peron"
+description = "Peron"
+baseline = 232
+walk_to_point = Vector2( -210, 236.667 )
+cursor = 8
+popochiu_placeholder = null
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -30, -215, 13, -221, 26, -150, 65, -126, 82, -19, 53, 26, 70, 230, 10, 69, -16, 203, -64, 225, -34, 6, -81, -43, -73, -113, -34, -146 )
+
+[node name="BaselineHelper" type="Line2D" parent="."]
+visible = false
+position = Vector2( 0, 232 )
+points = PoolVector2Array( -10000, 0, 10000, 0 )
+width = 1.0
+
+[node name="WalkToHelper" type="Position2D" parent="."]
+visible = false
+position = Vector2( -210, 236.667 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="WalkToHelper"]
+margin_left = -2.5
+margin_top = -2.5
+margin_right = 2.5
+margin_bottom = 2.5
+color = Color( 0, 1, 1, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="DialogPos" type="Position2D" parent="."]
+position = Vector2( -135, -226.667 )
+z_index = 1

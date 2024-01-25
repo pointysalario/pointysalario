@@ -12,7 +12,9 @@ var state: Data = preload('InventoryTarjetaSUBE.tres')
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the item is clicked in the inventory
 func on_interact() -> void:
-		.on_interact()
+	# Replace the call to .on_interact() to implement your code. This only makes
+	# the default behavior to happen.
+	.on_interact()
 
 
 # When the item is right clicked in the inventory
@@ -23,7 +25,6 @@ func on_look() -> void:
 		"Player: Esta muy pegajosa, como si alguien le hubiera puesto pegamento para pegarle algo.",
 		
 	])
-
 
 
 # When the item is clicked and there is another inventory item selected
@@ -50,3 +51,8 @@ func on_discard() -> void:
 	# Replace the call to .on_discard() to implement your code. This only
 	# makes the default behavior to happen.
 	.on_discard()
+
+
+
+
+# When the item is clicked and there is another inventory item selected

@@ -17,7 +17,7 @@ func on_interact() -> void:
 		C.face_clicked(),
 		"Player: Un primo mio me dijo que frotar un Buda trae buena suerte.",
 		"Player: Pero ese primo estaba todo el día frotando el Buda y le terminó agarrando unas cagaderas tremendas.",
-		"Player: Se hacía baños de asiento y de a doscientos y no paraba de cagarse. Así que no, mejor no lo toco."
+		"Player: Se hacía baños de asiento y de a doscientos y no paraba de cagarse. Así que no, mejor no quiero tocar al Buda con mis manos."
 	])
 
 
@@ -35,9 +35,11 @@ func on_look() -> void:
 
 # When the node is clicked and there is an inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
-	# Replace the call to .on_item_used(item) to implement your code. This only
-	# makes the default behavior to happen.
-	# For example you can make the PC react on using some items in this Hotspot
-#	if item.script_name == 'Key':
-#		E.run(['Player: No can do'])
-	.on_item_used(item)
+		if item.script_name == 'Guantes':
+			E.run([
+				'Player: Bueno, una cosa es tocarlo con las manos y otra frotarlo con guantes...',
+				'Player: Veamos que pasa...',
+				I.add_item('100pesos'),
+				'Player: Eh, ahora si me trajo suerte, ¡me dio plata!',
+				'Player: Ya saben, si van a frotar un Buda y no quieren terminar cagandose encima, usen guantes.'
+				])

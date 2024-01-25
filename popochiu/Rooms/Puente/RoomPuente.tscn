@@ -1,0 +1,117 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Puente/RoomPuente.gd" type="Script" id=1]
+[ext_resource path="res://popochiu/Characters/Peron/CharacterPeron.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/fondos/Puente.jpg" type="Texture" id=4]
+[ext_resource path="res://popochiu/Rooms/Puente/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=5]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=8]
+[ext_resource path="res://popochiu/Rooms/Puente/Hotspots/Alascasas/HotspotAlascasas.gd" type="Script" id=9]
+[ext_resource path="res://popochiu/Rooms/Puente/Hotspots/Bajaralcanal/HotspotBajaralcanal.gd" type="Script" id=10]
+[ext_resource path="res://popochiu/Rooms/Puente/Hotspots/Canal/HotspotCanal.gd" type="Script" id=11]
+[ext_resource path="res://popochiu/Rooms/Puente/Hotspots/Cielo/HotspotCielo.gd" type="Script" id=12]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( -357, -21, 422, -22, 430, 110, -357, 106 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -357, -21, 422, -22, 430, 110, -357, 106 ) ]
+
+[node name="RoomPuente" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Puente"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 6 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 5 )
+script_name = "Piso"
+description = "Piso"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
+visible = false
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( -40, 103 )
+z_index = 1
+navpoly = SubResource( 1 )
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Puente" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+script_name = "Puente"
+description = "Puente"
+clickable = false
+baseline = -195
+walk_to_point = Vector2( 294, 213 )
+cursor = 1
+texture = ExtResource( 4 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Alascasas" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 397, 303 )
+script = ExtResource( 9 )
+script_name = "Alascasas"
+description = "Hacia el barrio"
+walk_to_point = Vector2( -319, 223 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Alascasas"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -371, 153 )
+polygon = PoolVector2Array( -23, 139, 23, 141, 28, -68, -24, -68 )
+
+[node name="Bajaralcanal" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 10 )
+script_name = "Bajaralcanal"
+description = "Bajar al canal"
+walk_to_point = Vector2( -51, 144 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Bajaralcanal"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 371, 185 )
+polygon = PoolVector2Array( -40, 106, 18, 106, 26, -87, -41, -83 )
+
+[node name="Canal" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 11 )
+script_name = "Canal"
+description = "Canal"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Canal"]
+modulate = Color( 0, 0, 1, 1 )
+polygon = PoolVector2Array( -141, 50, 121, 47, 155, 16, -339, 24, -318, 53 )
+
+[node name="Cielo" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 12 )
+script_name = "Cielo"
+description = "Cielo"
+walk_to_point = Vector2( -37, 231 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Cielo"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -177, -81 )
+polygon = PoolVector2Array( 331, 4, 4, 6, -154, -75, 447, -73 )
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 7 )]
+position = Vector2( 68, 435 )
+
+[node name="CharacterPeron *" parent="Characters" instance=ExtResource( 2 )]
+position = Vector2( 670, 319 )

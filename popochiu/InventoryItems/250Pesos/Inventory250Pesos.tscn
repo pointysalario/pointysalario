@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://popochiu/InventoryItems/250Pesos/Inventory250Pesos.gd" type="Script" id=1]
-[ext_resource path="res://assets/otros/unpeso-static.png" type="Texture" id=2]
+[ext_resource path="res://assets/objetos/250pesos.png" type="Texture" id=2]
 
 [node name="Inventory250Pesos" type="TextureRect"]
 mouse_filter = 0

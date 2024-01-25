@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://popochiu/Characters/MonstruoRodridodeFilippi/CharacterMonstruoRodridodeFilippi.gd" type="Script" id=1]
+[ext_resource path="res://assets/personajes/Rodrigo.png" type="Texture" id=2]
+
+[node name="CharacterMonstruoRodridodeFilippi" type="Area2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+script_name = "MonstruoRodridodeFilippi"
+description = "Monstruo Rodrigo de Filippi"
+baseline = 642
+walk_to_point = Vector2( 357.5, 577.5 )
+cursor = 8
+popochiu_placeholder = null
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+position = Vector2( -92, 120.75 )
+scale = Vector2( 6.75, 8.54687 )
+polygon = PoolVector2Array( 3.11111, -18.34, 6.96296, -31.6783, 13.1852, -35.6563, 24.4444, -22.5521, 19.4074, -9.4479, 17.9259, -4.06582, 23.5556, 8.57039, 15.5556, 7.86838, 15.2593, -4.76783, 11.4074, -3.1298, 8.14815, 8.10238, 1.48148, 7.86838, 6.66667, -3.94881 )
+
+[node name="BaselineHelper" type="Line2D" parent="."]
+visible = false
+position = Vector2( 0, 642 )
+points = PoolVector2Array( -10000, 0, 10000, 0 )
+width = 1.0
+
+[node name="WalkToHelper" type="Position2D" parent="."]
+visible = false
+position = Vector2( 357.5, 577.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="WalkToHelper"]
+margin_left = -2.5
+margin_top = -2.5
+margin_right = 2.5
+margin_bottom = 2.5
+color = Color( 0, 1, 1, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="DialogPos" type="Position2D" parent="."]
+visible = false
+position = Vector2( -2.5, -695 )

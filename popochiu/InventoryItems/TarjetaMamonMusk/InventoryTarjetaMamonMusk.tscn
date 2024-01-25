@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://popochiu/InventoryItems/TarjetaMamonMusk/InventoryTarjetaMamonMusk.gd" type="Script" id=1]
-[ext_resource path="res://assets/otros/unpeso-static.png" type="Texture" id=2]
+[ext_resource path="res://assets/objetos/subemamonmusk.png" type="Texture" id=2]
 
 [node name="InventoryTarjetaMamonMusk" type="TextureRect"]
 mouse_filter = 0

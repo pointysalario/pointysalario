@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Casas1/RoomCasas1.gd" type="Script" id=1]
-[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.gd" type="Script" id=2]
+[ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Alpuente/HotspotAlpuente.gd" type="Script" id=2]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://popochiu/Rooms/Casas1/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=5]
@@ -16,6 +16,8 @@
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Plantera/HotspotPlantera.gd" type="Script" id=14]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Plantera2/HotspotPlantera2.gd" type="Script" id=15]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Hacialacolectora/HotspotHacialacolectora.gd" type="Script" id=16]
+[ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Alaentrada/HotspotAlaentrada.gd" type="Script" id=17]
+[ext_resource path="res://popochiu/Rooms/Casas1/Props/Lavame/PropLavame.gd" type="Script" id=18]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 1209, 49, -31, 57, -32, -172, 135, -153, 739, -54, 1207, -88, 670, -85 )
@@ -31,7 +33,7 @@ limit_right = 1040.0
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
-[node name="Piso" type="Node2D" parent="WalkableAreas" instance=ExtResource( 4 )]
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 4 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 5 )
 script_name = "Piso"
@@ -46,13 +48,9 @@ navpoly = SubResource( 1 )
 [node name="Props" type="YSort" parent="."]
 sort_enabled = false
 
-[node name="Fondo" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+[node name="Fondo" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 401, 301 )
 scale = Vector2( 1, 1.15 )
-script = ExtResource( 2 )
-__meta__ = {
-"_editor_description_": ""
-}
 script_name = "Fondo"
 description = "Fondo"
 clickable = false
@@ -60,9 +58,24 @@ baseline = -137
 cursor = 1
 texture = ExtResource( 6 )
 
+[node name="Lavame" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 508, 319 )
+script = ExtResource( 18 )
+__meta__ = {
+"_editor_description_": ""
+}
+script_name = "Lavame"
+description = "Lavame"
+walk_to_point = Vector2( 431, 123 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Lavame"]
+position = Vector2( 406, 83 )
+polygon = PoolVector2Array( 62, 7, -13, 19, -30, -15, 70, -33 )
+
 [node name="Hotspots" type="Node2D" parent="."]
 
-[node name="Rotiseria" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Rotiseria" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 8 )
 script_name = "Rotiseria"
@@ -75,7 +88,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 455, -9 )
 polygon = PoolVector2Array( 31, -8, 31, -8, -12, -9, -12, 56, 20, 47, 34, 15 )
 
-[node name="Puerta" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Puerta" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 10 )
 script_name = "Puerta"
@@ -88,7 +101,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -296, -33 )
 polygon = PoolVector2Array( 106, -19, -22, -13, -25, 91, 102, 97 )
 
-[node name="Casetadegas" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Casetadegas" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 397, 302 )
 script = ExtResource( 11 )
 script_name = "Casetadegas"
@@ -101,7 +114,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 0, 54 )
 polygon = PoolVector2Array( -11, 30, 6, 30, 9, -6, -12, -8 )
 
-[node name="Casetadegas2" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Casetadegas2" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 254, 291 )
 script = ExtResource( 12 )
 script_name = "Casetadegas2"
@@ -114,7 +127,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -25, 43 )
 polygon = PoolVector2Array( 11, 22, -13, 22, -13, -14, 11, -14 )
 
-[node name="Casetadegas3" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Casetadegas3" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 736, 307 )
 script = ExtResource( 13 )
 script_name = "Casetadegas3"
@@ -127,7 +140,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 11, 35 )
 polygon = PoolVector2Array( -10, 20, 9, 21, 7, -12, -13, -11 )
 
-[node name="Plantera" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Plantera" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( -79, 297 )
 script = ExtResource( 14 )
 script_name = "Plantera"
@@ -140,7 +153,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -5, 49 )
 polygon = PoolVector2Array( 23, 10, 20, -10, -12, -11, -19, 10 )
 
-[node name="Plantera2" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Plantera2" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 15 )
 script_name = "Plantera2"
@@ -153,16 +166,43 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -367, 53 )
 polygon = PoolVector2Array( 23, 8, 19, -4, -6, -3, -10, 8 )
 
-[node name="Hacialacolectora" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Hacialacolectora" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 16 )
 script_name = "Hacialacolectora"
-description = "Hacialacolectora"
+description = "Hacia la colectora"
+walk_to_point = Vector2( -528, 208 )
 cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacialacolectora"]
 modulate = Color( 0, 0, 1, 1 )
 polygon = PoolVector2Array( -636, 103, -636, 269, -590, 271, -596, 74, -636, 64 )
+
+[node name="Alpuente" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 2 )
+script_name = "Alpuente"
+description = "Hacia el puente"
+walk_to_point = Vector2( 568, 215 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Alpuente"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 622, 164 )
+polygon = PoolVector2Array( 13, 132, -30, 130, -19, -29, 13, -42 )
+
+[node name="Alaentrada" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 17 )
+script_name = "Alaentrada"
+description = "Hacia la entrada"
+walk_to_point = Vector2( -16, 262 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Alaentrada"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -65, 283 )
+polygon = PoolVector2Array( -160, -6, 295, -8, 295, 18, -159, 17 )
 
 [node name="Regions" type="Node2D" parent="."]
 

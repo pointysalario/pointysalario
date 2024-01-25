@@ -1,0 +1,112 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Rioconbasura/RoomRioconbasura.gd" type="Script" id=1]
+[ext_resource path="res://popochiu/Rooms/Rioconbasura/Hotspots/Alcanal/HotspotAlcanal.gd" type="Script" id=2]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/fondos/rio-con-basura.jpg" type="Texture" id=4]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=5]
+[ext_resource path="res://popochiu/Rooms/Rioconbasura/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=6]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=8]
+[ext_resource path="res://popochiu/Rooms/Rioconbasura/Hotspots/Almonte/HotspotAlmonte.gd" type="Script" id=9]
+[ext_resource path="res://popochiu/Rooms/Rioconbasura/Hotspots/Basura/HotspotBasura.gd" type="Script" id=10]
+[ext_resource path="res://popochiu/Rooms/Rioconbasura/Hotspots/Agua/HotspotAgua.gd" type="Script" id=11]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( -392, -50, -19, -66, 333, -52, 353, -1, -388, 40 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ) ]
+outlines = [ PoolVector2Array( -392, -50, -19, -66, 333, -52, 353, -1, -388, 40 ) ]
+
+[node name="RoomRioconbasura" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Rioconbasura"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 5 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 6 )
+script_name = "Piso"
+description = "Piso"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
+visible = false
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( -3, -61 )
+z_index = 1
+navpoly = SubResource( 1 )
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Fondo" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+script_name = "Fondo"
+description = "Fondo"
+clickable = false
+baseline = -231
+cursor = 1
+texture = ExtResource( 4 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Alpuente" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 2 )
+script_name = "Alcanal"
+description = "Hacia el puente"
+walk_to_point = Vector2( -309, -20 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Alpuente"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -378, -31 )
+polygon = PoolVector2Array( -12, 52, 22, 54, 19, -95, -17, -98 )
+
+[node name="Almonte" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 9 )
+script_name = "Almonte"
+description = "Hacia el monte"
+walk_to_point = Vector2( 200, -46 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Almonte"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 318, -28 )
+polygon = PoolVector2Array( -104, -43, -3, 20, 39, 0, -91, -91, -131, -56 )
+
+[node name="Basura" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 10 )
+script_name = "Basura"
+description = "Basura"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Basura"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 168, -60 )
+polygon = PoolVector2Array( -13, 17, 47, 18, 45, -5, -10, -10 )
+
+[node name="Agua" type="Area2D" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 11 )
+script_name = "Agua"
+description = "Agua"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Agua"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -85, 31 )
+polygon = PoolVector2Array( -285, 21, 384, -8, 394, 50, -295, 53 )
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 7 )]
+position = Vector2( 62, 179 )

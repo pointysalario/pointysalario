@@ -125,11 +125,12 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -372, 253 )
 polygon = PoolVector2Array( -26, 44, 27, 44, 13, -82, -25, -81 )
 
-[node name="Hacialascasas" type="Area2D" parent="Hotspots" instance=ExtResource( 12 )]
+[node name="Hacialascasas" parent="Hotspots" instance=ExtResource( 12 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 7 )
 script_name = "Hacialascasas"
 description = "Hacialascasas"
+walk_to_point = Vector2( 324, 246 )
 cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacialascasas"]

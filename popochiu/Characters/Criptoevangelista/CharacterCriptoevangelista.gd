@@ -29,10 +29,28 @@ func on_look() -> void:
 
 # When the node is clicked and there is an inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
-	# Replace the call to .on_item_used(item) to implement your code. This only
-	# makes the default behavior to happen.
-	.on_item_used(item)
-
+	if item.script_name == 'AnuncioMamonMusk':
+		E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+				'Criptoevangelista: Bah, ese anuncio es truchisimo, no me vas a hacer caer en esa truchada.',
+				'Criptoevangelista: Los verdaderos traders de MamṕṕónMusk tienen tarjetas oficiales de inversión',
+			])
+	elif item.script_name == 'TarjetaMamonMusk':
+		E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			E.camera_shake_no_block(1,2),
+				'Criptoevangelista: ¡UNA TARJETA OFICIAL DE INVERSIONISTA DE MAMÓNMUSK',
+				'Criptoevangelista: No es que tenga mucho metálico ahora, el enlace del cripto diezmo todavía está en viaje.',
+				'Criptoevangelista: Pero tome, hermano, todo sea por ser parte de las fuerzas del CriptoMamṕṕón.',
+				I.remove_item('TarjetaMamonMusk'),
+				I.add_item('250Pesos'),
+				'Player: Jeje que manera de cazar giles.',
+				'Criptoevangelista: ¿Qué dijiste hermano?',
+				'Player: Que ya llegó mi primo de San Andres de Giles.',
+			
+			])
 
 # Use it to play the idle animation for the character
 func play_idle() -> void:

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://popochiu/Dialogs/Charlaconperon/DialogCharlaconperon.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+resource_name = "quehaceaqui"
+script = ExtResource( 2 )
+id = "quehaceaqui"
+text = "Mi general, ¿qué hace usted por aquí?"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=2]
+resource_name = "consulta"
+script = ExtResource( 2 )
+id = "consulta"
+text = "Mi general, el gobierno provincial nos ha recortado el salario. ¿Qué deberíamos hacer?"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=3]
+resource_name = "sinorganizacion"
+script = ExtResource( 2 )
+id = "sinorganizacion"
+text = "Pero general, muchos docentes reniegan de ser trabajadores y de todo tipo de organizacion."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=4]
+resource_name = "adios"
+script = ExtResource( 2 )
+id = "adios"
+text = "Es un placer verlo, general, pero debo seguir camino."
+visible = true
+disabled = false
+always_on = false
+
+[resource]
+resource_name = "Charlaconperon"
+script = ExtResource( 1 )
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+script_name = "Charlaconperon"
