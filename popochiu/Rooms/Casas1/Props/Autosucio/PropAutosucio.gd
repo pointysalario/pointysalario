@@ -4,7 +4,7 @@ extends PopochiuProp
 # Use yield(E.run([]), 'completed') if you want to pause the excecution of
 # the function until the sequence of events finishes.
 
-
+var mouse_enabled = true
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
 func on_interact() -> void:
@@ -35,13 +35,23 @@ func on_look() -> void:
 
 func on_item_used(item: PopochiuInventoryItem) -> void:
 		if item.script_name == 'Baldeconespuma':
-			E.run([
+			yield(E.run([
 				'Player: ¿Será que mi misión en este mundo es lavar autos ajenos?',
 				'Player: ¿Será que Perón tiene razón y el mejor ritual para llamar a la lluvia es lavar el auto?',
 				'Player: Nunca especificó si tiene que ser TU auto o cualquier auto. Probemos...',
-				I.remove_item('Baldeconespuma'),
-				disable()
-				])
+				I.remove_item('Baldeconespuma')
+				]),'completed')
+			$"../../AnimationPlayer".play("Tiempo espera")
+func transicion():
+	E.run([
+		disable(),
+		'Player: 400 milimetros de lluvia luego...'
+		])
+
+func mouse_interactions(valor):
+	 get_tree().get_root().set_disable_input(valor)
+func _on_Timer_timeout():
+	mouse_enabled = true
 
 # When an inventory item linked to this Prop (link_to_item) is removed from
 # the inventory (i.e. when it is used in something that makes use of the object).
