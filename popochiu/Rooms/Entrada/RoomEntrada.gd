@@ -24,8 +24,11 @@ func on_room_entered() -> void:
 # is visible.
 func on_room_transition_finished() -> void:
 	# You can use yield(E.run([]), 'completed') to excecute a queue of instructions
+	if state.visited_first_time:
+		yield(E.run([
+		C.Player.say("Voy a decir esto 1 vez sola, y nunca más, porque es la primera vez que paso por acá")
+		]), 'completed')
 	pass
-
 
 # What happens before Popochiu unloads the room.
 # At this point, the screen is black, processing is disabled and all characters
