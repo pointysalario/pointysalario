@@ -30,8 +30,13 @@ func on_look() -> void:
 func on_item_used(item: PopochiuInventoryItem) -> void:
 	# Replace the call to .on_item_used(item) to implement your code. This only
 	# makes the default behavior to happen.
-	.on_item_used(item)
-
+	if item.script_name == "Mandiocaaluminada":
+		E.run([
+			C.face_clicked(),
+			'Player: Me voy a flashearla fiero',
+			E.goto_room('Onirico')
+		])
+	pass
 
 # Use it to play the idle animation for the character
 func play_idle() -> void:
