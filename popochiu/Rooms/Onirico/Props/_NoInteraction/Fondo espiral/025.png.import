@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Peron.png-901410837fda443cf272179e405e5b9b.stex"
+path="res://.import/025.png-012f1dcca01e4c75920d41acb4a9bc2b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personajes/Peron.png"
-dest_files=[ "res://.import/Peron.png-901410837fda443cf272179e405e5b9b.stex" ]
+source_file="res://popochiu/Rooms/Onirico/Props/_NoInteraction/Fondo espiral/025.png"
+dest_files=[ "res://.import/025.png-012f1dcca01e4c75920d41acb4a9bc2b.stex" ]
 
 [params]
 

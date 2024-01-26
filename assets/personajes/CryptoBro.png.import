@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Peron.png-901410837fda443cf272179e405e5b9b.stex"
+path="res://.import/CryptoBro.png-40888806be870f527244d5132df04c65.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personajes/Peron.png"
-dest_files=[ "res://.import/Peron.png-901410837fda443cf272179e405e5b9b.stex" ]
+source_file="res://assets/personajes/CryptoBro.png"
+dest_files=[ "res://.import/CryptoBro.png-40888806be870f527244d5132df04c65.stex" ]
 
 [params]
 

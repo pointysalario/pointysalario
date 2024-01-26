@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Peron.png-901410837fda443cf272179e405e5b9b.stex"
+path="res://.import/auto_lavamesucio.png-6ea8ca51e2f8e23e9b5559bc5fb0b289.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personajes/Peron.png"
-dest_files=[ "res://.import/Peron.png-901410837fda443cf272179e405e5b9b.stex" ]
+source_file="res://assets/personajes/auto_lavamesucio.png"
+dest_files=[ "res://.import/auto_lavamesucio.png-6ea8ca51e2f8e23e9b5559bc5fb0b289.stex" ]
 
 [params]
 

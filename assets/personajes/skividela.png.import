@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Peron.png-901410837fda443cf272179e405e5b9b.stex"
+path="res://.import/skividela.png-de4f5ef7e9019c2d9e91d444d8de5800.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/personajes/Peron.png"
-dest_files=[ "res://.import/Peron.png-901410837fda443cf272179e405e5b9b.stex" ]
+source_file="res://assets/personajes/skividela.png"
+dest_files=[ "res://.import/skividela.png-de4f5ef7e9019c2d9e91d444d8de5800.stex" ]
 
 [params]
 
