@@ -9,12 +9,12 @@ __meta__ = {
 "_edit_group_": true
 }
 script_name = "RamonPuerta"
-description = "RamonPuerta"
+description = "Ramon Puerta"
 cursor = 8
 popochiu_placeholder = null
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10 )
+polygon = PoolVector2Array( 25, -229, 29, -159, 98, -52, 47, -14, 48, 138, -102, 158, -19, -229 )
 
 [node name="BaselineHelper" type="Line2D" parent="."]
 visible = false
@@ -42,3 +42,4 @@ texture = ExtResource( 2 )
 
 [node name="DialogPos" type="Position2D" parent="."]
 visible = false
+position = Vector2( -271, -131 )

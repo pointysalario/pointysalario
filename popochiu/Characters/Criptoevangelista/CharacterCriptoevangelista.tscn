@@ -20,11 +20,13 @@ position = Vector2( 28, 1 )
 polygon = PoolVector2Array( -66, -74, -34, -146, -16, -148, -5, -97, 20, -76, 25, -41, 17, -1, 18, 128, 8, 142, -16, 151, -62, 140 )
 
 [node name="BaselineHelper" type="Line2D" parent="."]
+visible = false
 position = Vector2( 0, 154 )
 points = PoolVector2Array( -10000, 0, 139.946, 0, 10000, 0 )
 width = 1.0
 
 [node name="WalkToHelper" type="Position2D" parent="."]
+visible = false
 position = Vector2( -97, 153 )
 __meta__ = {
 "_edit_group_": true
@@ -44,4 +46,5 @@ texture = ExtResource( 2 )
 flip_h = true
 
 [node name="DialogPos" type="Position2D" parent="."]
+visible = false
 position = Vector2( 0, -157 )

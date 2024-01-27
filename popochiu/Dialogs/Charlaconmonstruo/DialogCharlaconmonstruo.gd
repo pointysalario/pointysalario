@@ -8,6 +8,8 @@ func on_start() -> void:
 		'Player: Emm...',
 		'MonstruoRodridodeFilippi: ¡Fue lo mejor de... los métodos piqueteros!',
 	]), 'completed')
+	if Globals.lluvia == true:
+		turn_on_options(['lluvia'])
 	
 func option_selected(opt: PopochiuDialogOption) -> void:
 	yield(D.say_selected(), 'completed')
@@ -34,6 +36,15 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'MonstruoRodridodeFilippi: ¡Ojalá que llueva!',
 			]), 'completed')
 			Globals.dialog_cucumelo_lluvia_done = true
+#			if Globals.lluvia == true:
+#				turn_on_options(['lluvia'])
+		'lluvia':
+			yield(E.run([
+				'MonstruoRodridodeFilippi: ¡Si! Que llueva, que llueva, que crezca el cucumelo',
+				'MonstruoRodridodeFilippi: ¡Y creció!',
+				'MonstruoRodridodeFilippi: Tomá, ya que hiciste llover, esto es para vos, que cucu que cucu que cucumelo!',
+				I.add_item('Cucumelo'),
+				]), 'completed')
 		'adios':
 			yield(E.run([
 				'MonstruoRodridodeFilippi: ¡QUE CUCU, QUE CUCU, QUE CUCUMELO!'

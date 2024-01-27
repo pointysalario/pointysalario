@@ -26,9 +26,15 @@ func on_look() -> void:
 
 # When the item is clicked and there is another inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
-	# Replace the call to .on_item_used(item) to implement your code. This only
-	# makes the default behavior to happen.
-	.on_item_used(item)
+		if item.script_name == 'Celular':
+			E.run([
+				I.remove_item(item.script_name),
+				I.remove_item(script_name),
+#				I.remove_item('Generadororganico'),
+				I.remove_item('Celular'),
+				I.add_item('Generadororganicoenchufado'),
+				'Player: Bueno, ahora si, el generador definitivo. Necesito enchufarlo a una fuente orgánica de vida.'
+				])
 
 
 # Actions to excecute after the item is added to the Inventory

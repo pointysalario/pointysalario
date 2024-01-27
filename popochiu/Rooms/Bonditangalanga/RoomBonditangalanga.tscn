@@ -1,0 +1,102 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Bonditangalanga/RoomBonditangalanga.gd" type="Script" id=1]
+[ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Cartel/HotspotCartel.gd" type="Script" id=2]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/fondos/Bondi110.png" type="Texture" id=4]
+[ext_resource path="res://popochiu/Rooms/Bonditangalanga/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=5]
+[ext_resource path="res://popochiu/Characters/Tangalanga/CharacterTangalanga.tscn" type="PackedScene" id=6]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=8]
+[ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Tacho/HotspotTacho.gd" type="Script" id=9]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=10]
+[ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Parada/HotspotParada.gd" type="Script" id=11]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 233, -146, 270, -145, 246, -32, 180, -37, -10, 10, -314, 18, -311, -57, 15, -29, 466, 50, 471, -31 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 4, 7, 3, 2 ), PoolIntArray( 8, 2, 9 ) ]
+outlines = [ PoolVector2Array( -311, -57, 15, -29, 180, -37, 233, -146, 270, -145, 246, -32, 471, -31, 466, 50, -10, 10, -314, 18 ) ]
+
+[node name="RoomBonditangalanga" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Bonditangalanga"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 10 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 5 )
+script_name = "Piso"
+description = "Piso"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( -74, 215 )
+navpoly = SubResource( 1 )
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Fondo" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+scale = Vector2( 1, 1 )
+script_name = "Fondo"
+description = "Fondo"
+clickable = false
+cursor = 1
+texture = ExtResource( 4 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Cartel" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 2 )
+script_name = "Cartel"
+description = "Cartel"
+walk_to_point = Vector2( -2, 257 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Cartel"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -330, -74 )
+polygon = PoolVector2Array( 296, -27, -29, -24, -34, 20, 294, 22 )
+
+[node name="Parada" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 11 )
+script_name = "Parada"
+description = "Parada"
+walk_to_point = Vector2( -100, 236 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Parada"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -160, 116 )
+polygon = PoolVector2Array( 143, 27, -70, 15, -111, -102, -151, -107, -205, -160, 127, -158, 128, -213, 157, -162 )
+
+[node name="Tacho" type="Area2D" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 9 )
+script_name = "Tacho"
+description = "Tacho"
+walk_to_point = Vector2( 3, 201 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Tacho"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 10, 120 )
+polygon = PoolVector2Array( 27, 41, -11, 43, -12, -22, 23, -21 )
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="CharacterTangalanga *" parent="Characters" instance=ExtResource( 6 )]
+position = Vector2( 120, 456 )
+
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 7 )]
+position = Vector2( 550, 485 )

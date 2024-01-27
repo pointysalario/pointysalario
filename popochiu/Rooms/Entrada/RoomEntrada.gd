@@ -23,7 +23,10 @@ func on_room_transition_finished() -> void:
 	# You can use yield(E.run([]), 'completed') to excecute a queue of instructions
 	if state.visited_first_time:
 		yield(E.run([
-		C.Player.say("Voy a decir esto 1 vez sola, y nunca más, porque es la primera vez que paso por acá")
+			'Player: Bien, fue un viaje largo, pero llegué a Itaembé Guazú, el barrio de mi prima.',
+			'Player: Recuerdo vagamente donde vivía, solo se que es siguiendo la avenida principal, sé llegar de memoria.',
+			'Player: Así que, antes que nada, vamos a buscarla.',
+#		C.Player.say("Voy a decir esto 1 vez sola, y nunca más, porque es la primera vez que paso por acá")
 		]), 'completed')
 	pass
 

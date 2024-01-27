@@ -1,9 +1,64 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://popochiu/Dialogs/PresentacionRamonPuerta/DialogPresentacionRamonPuerta.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+resource_name = "muerto"
+script = ExtResource( 2 )
+id = "muerto"
+text = "¿Pero...usted no estaba muerto?"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=2]
+resource_name = "donde"
+script = ExtResource( 2 )
+id = "donde"
+text = "¿Me puede decir donde estamos? ¡Yo necesito ir al centro!"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=3]
+resource_name = "triciclo"
+script = ExtResource( 2 )
+id = "triciclo"
+text = "¿Qué le pasó a su rostro?¿Por qué el triciclo?"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=4]
+resource_name = "buscaste"
+script = ExtResource( 2 )
+id = "buscaste"
+text = "Pero esto parece una joda, ¿hay que comerse un hongo y hablar con Ramon Puerta para llegar al centro?"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=5]
+resource_name = "carpadocente"
+script = ExtResource( 2 )
+id = "carpadocente"
+text = "¿La carpa docente?"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=6]
+resource_name = "adios"
+script = ExtResource( 2 )
+id = "adios"
+text = "Esto es demasiado extraño, necesito pensar a solas"
+visible = true
+disabled = false
+always_on = false
 
 [resource]
 resource_name = "PresentacionRamonPuerta"
 script = ExtResource( 1 )
-options = [  ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
 script_name = "PresentacionRamonPuerta"

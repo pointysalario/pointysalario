@@ -10,6 +10,7 @@ const PRCasas1 := preload('res://popochiu/Rooms/Casas1/RoomCasas1.gd')
 const PRRioconbasura := preload('res://popochiu/Rooms/Rioconbasura/RoomRioconbasura.gd')
 const PRPuente := preload('res://popochiu/Rooms/Puente/RoomPuente.gd')
 const PROnirico := preload('res://popochiu/Rooms/Onirico/RoomOnirico.gd')
+const PRBonditangalanga := preload('res://popochiu/Rooms/Bonditangalanga/RoomBonditangalanga.gd')
 # ---- classes
 
 # nodes ----
@@ -21,6 +22,7 @@ var Casas1: PRCasas1 setget , get_Casas1
 var Rioconbasura: PRRioconbasura setget , get_Rioconbasura
 var Puente: PRPuente setget , get_Puente
 var Onirico: PROnirico setget , get_Onirico
+var Bonditangalanga: PRBonditangalanga setget , get_Bonditangalanga
 # ---- nodes
 
 # functions ----
@@ -32,5 +34,6 @@ func get_Casas1(): return .get_runtime_room('Casas1')
 func get_Rioconbasura(): return .get_runtime_room('Rioconbasura')
 func get_Puente(): return .get_runtime_room('Puente')
 func get_Onirico(): return .get_runtime_room('Onirico')
+func get_Bonditangalanga(): return .get_runtime_room('Bonditangalanga')
 # ---- functions
 

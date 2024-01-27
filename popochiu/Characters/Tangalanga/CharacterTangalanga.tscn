@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://popochiu/Characters/Tangalanga/CharacterTangalanga.gd" type="Script" id=1]
+[ext_resource path="res://assets/personajes/tangalanga.png" type="Texture" id=2]
+
+[node name="CharacterTangalanga" type="Area2D"]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+script_name = "Tangalanga"
+description = "Tangalanga"
+cursor = 8
+popochiu_placeholder = null
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -103.333, -393.333, -6.66667, -410, 0, -233.333, 83.3333, -140, 73.3333, -60, 60, -3.33333, 180, 430, -196.667, 420, -146.667, -56.6667, -183.333, -246.667, -113.333, -273.333 )
+
+[node name="BaselineHelper" type="Line2D" parent="."]
+visible = false
+points = PoolVector2Array( -10000, 0, 10000, 0 )
+width = 1.0
+
+[node name="WalkToHelper" type="Position2D" parent="."]
+visible = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="WalkToHelper"]
+margin_left = -2.5
+margin_top = -2.5
+margin_right = 2.5
+margin_bottom = 2.5
+color = Color( 0, 1, 1, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="DialogPos" type="Position2D" parent="."]
+visible = false

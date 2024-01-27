@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Onirico/RoomOnirico.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Onirico/Props/_NoInteraction/Fondo espiral/002.png" type="Texture" id=2]
@@ -26,10 +26,15 @@
 [ext_resource path="res://popochiu/Rooms/Onirico/Props/_NoInteraction/Fondo espiral/024.png" type="Texture" id=24]
 [ext_resource path="res://popochiu/Rooms/Onirico/Props/_NoInteraction/Fondo espiral/007.png" type="Texture" id=25]
 [ext_resource path="res://popochiu/Rooms/Onirico/Props/_NoInteraction/Fondo espiral/006.png" type="Texture" id=26]
-[ext_resource path="res://popochiu/Characters/RamonPuerta/CharacterRamonPuerta.gd" type="Script" id=27]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=27]
 [ext_resource path="res://popochiu/Characters/RamonPuerta/CharacterRamonPuerta.tscn" type="PackedScene" id=28]
-[ext_resource path="res://addons/Popochiu/Engine/Objects/Region/PopochiuRegion.tscn" type="PackedScene" id=29]
-[ext_resource path="res://popochiu/Rooms/Onirico/Regions/Walkeable/RegionWalkeable.gd" type="Script" id=30]
+[ext_resource path="res://popochiu/Rooms/Onirico/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=29]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=30]
+
+[sub_resource type="NavigationPolygon" id=3]
+vertices = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -392, 268, -394, 77, -356, 86, -65, 249, 394, 294, 387, 211 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 4, 7 ), PoolIntArray( 8, 7, 9 ) ]
+outlines = [ PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10 ), PoolVector2Array( -356, 86, -65, 249, 387, 211, 394, 294, -392, 268, -394, 77 ) ]
 
 [sub_resource type="AnimatedTexture" id=2]
 frames = 24
@@ -89,6 +94,18 @@ script_name = "Onirico"
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 27 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 29 )
+script_name = "Piso"
+description = "Piso"
+
+[node name="Perimeter" type="NavigationPolygonInstance" parent="WalkableAreas/Piso"]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( 8, -55 )
+z_index = 1
+navpoly = SubResource( 3 )
+
 [node name="Props" type="YSort" parent="."]
 sort_enabled = false
 
@@ -105,29 +122,13 @@ texture = SubResource( 2 )
 
 [node name="Regions" type="Node2D" parent="."]
 
-[node name="Walkeable" type="Area2D" parent="Regions" instance=ExtResource( 29 )]
-position = Vector2( 400, 300 )
-monitorable = false
-script = ExtResource( 30 )
-script_name = "Walkeable"
-description = "Walkeable"
-
-[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Regions/Walkeable"]
-modulate = Color( 0, 1, 1, 1 )
-polygon = PoolVector2Array( -400, -300, -400, 300, 400, 308, 400, -300 )
-
 [node name="Points" type="Node2D" parent="."]
 
 [node name="Characters" type="YSort" parent="."]
 sort_enabled = false
 
-[node name="CharacterRamonPuerta *" type="Area2D" parent="Characters" instance=ExtResource( 28 )]
-position = Vector2( 400, 300 )
-script = ExtResource( 27 )
-__meta__ = {
-"_edit_group_": true
-}
-script_name = "RamonPuerta"
-description = "RamonPuerta"
-cursor = 8
-popochiu_placeholder = null
+[node name="CharacterRamonPuerta *" parent="Characters" instance=ExtResource( 28 )]
+position = Vector2( 599, 325 )
+
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 30 )]
+position = Vector2( 69, 453 )

@@ -42,11 +42,13 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				I.remove_item('Baldeconespuma')
 				]),'completed')
 			$"../../AnimationPlayer".play("Tiempo espera")
+		Globals.lluvia = true
 func transicion():
 	E.run([
 		disable(),
 		'Player: 400 milimetros de lluvia luego...'
 		])
+	
 
 func mouse_interactions(valor):
 	 get_tree().get_root().set_disable_input(valor)

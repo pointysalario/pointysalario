@@ -8,22 +8,14 @@ extends PopochiuHotspot
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
 func on_interact() -> void:
-	if times_clicked >= 1:
+	
 		E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: Solo quedan porquerías y basura para nada interesante"
+		"Player: Ugghh, esto está lleno de basura pudriéndose al sol"
 		])
 #		"Player: ¿Un espejaime? ¡Nunca había visto uno! Me lo llevo.",
-	else:
-		E.run([
-		C.walk_to_clicked(),
-		C.face_clicked(),
-		"Player: Ugghh, esto está lleno de basura pudriéndose al sol...pero..¿qué es eso?",
-		"Player: ¿Un espejaime?¿Aquí, ahora, y en este barrio? ¡Me lo llevo!",
-		I.add_item('Espejaime')
-		])
-	
+
 
 
 # When the node is right clicked

@@ -4,6 +4,7 @@
 [ext_resource path="res://assets/personajes/RamonAyala_001.png" type="Texture" id=2]
 
 [node name="CharacterRamonAyala" type="Area2D"]
+scale = Vector2( 0.4, 0.4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -16,7 +17,7 @@ cursor = 8
 popochiu_placeholder = null
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -52, -59, -22, -103, 3, -100, 9, -35, 64, -59, 73, -52, 45, -32, 56, -11, 38, 1, 36, 110, 11, 110, -3, 110, -6, 108, -17, 109, -58, 14 )
+polygon = PoolVector2Array( -132.5, -127.5, -87.5, -165, -55, -245, 17.5, -240, 3, -100, 9, -35, 155, -142.5, 187.5, -117.5, 140, -77.5, 135, -32.5, 137.5, -15, 115, -5, 87.5, 12.5, 38, 1, 102.5, 55, 100, 285, 30, 277.5, 42.5, 105, -12.5, 80, -32.5, 112.5, -27.5, 170, -15, 262.5, -45, 275, -137.5, 32.5 )
 
 [node name="BaselineHelper" type="Line2D" parent="."]
 visible = false

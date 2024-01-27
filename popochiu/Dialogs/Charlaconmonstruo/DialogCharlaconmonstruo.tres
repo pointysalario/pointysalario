@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=7 format=2]
 
 [ext_resource path="res://popochiu/Dialogs/Charlaconmonstruo/DialogCharlaconmonstruo.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
@@ -30,8 +30,17 @@ visible = true
 disabled = false
 always_on = false
 
+[sub_resource type="Resource" id=4]
+resource_name = "lluvia"
+script = ExtResource( 2 )
+id = "lluvia"
+text = "Bueno, finalmente llovió"
+visible = false
+disabled = false
+always_on = false
+
 [resource]
 resource_name = "Charlaconmonstruo"
 script = ExtResource( 1 )
-options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
 script_name = "Charlaconmonstruo"

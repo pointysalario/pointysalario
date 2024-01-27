@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=13 format=2]
 
 [ext_resource path="res://popochiu/Dialogs/Charlaconperon/DialogCharlaconperon.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
@@ -34,13 +34,67 @@ always_on = false
 resource_name = "adios"
 script = ExtResource( 2 )
 id = "adios"
-text = "Es un placer verlo, general, pero debo seguir camino."
+text = "Es un placer hablar con usted, mi General, pero debo seguir camino"
 visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=5]
+resource_name = "perdido"
+script = ExtResource( 2 )
+id = "perdido"
+text = "Mi general, estoy bastante perdido, tengo que llegar al centro y no sé cómo."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=6]
+resource_name = "doctrina1"
+script = ExtResource( 2 )
+id = "doctrina1"
+text = "¿No me podría dar algun consejo, una guía, pista o algo para llegar al centro?"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=7]
+resource_name = "doctrina2"
+script = ExtResource( 2 )
+id = "doctrina2"
+text = "Si, mi general, perdone, pero es que esto solo me confunde más. Yo solo quiero llegar al centro."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=9]
+resource_name = "doctrina3"
+script = ExtResource( 2 )
+id = "doctrina3"
+text = "Mi general, solo me queda confiar en usted, así que proceda."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=10]
+resource_name = "ultimaverdad"
+script = ExtResource( 2 )
+id = "ultimaverdad"
+text = "¡Si, por favor, mi general, es lo que estoy esperando!"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=11]
+resource_name = "ayuda"
+script = ExtResource( 2 )
+id = "ayuda"
+text = "¿No tendría dinero, una tarjeta SUBE misionera o donde cargar el celular, así puedo viajar?"
+visible = false
 disabled = false
 always_on = false
 
 [resource]
 resource_name = "Charlaconperon"
 script = ExtResource( 1 )
-options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ]
 script_name = "Charlaconperon"

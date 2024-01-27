@@ -23,6 +23,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Player: Mejor cambiemos de tema',
 			opt.turn_off()
 			]), 'completed')
+			turn_on_options(['perdido'])
 #			stop()
 		'consulta':
 			yield(E.run([
@@ -44,7 +45,89 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Peron: ¡No me bajes los brazos, muchacho!',
 			opt.turn_off()
 			]), 'completed')
+			
+		'perdido':
+			yield(E.run([
+				'Peron: ¿Perdido, compañero? ¡Solamente aquel que no se organiza se halla perdido!',
+				'Peron: Cuando nuestra querida Eva, porque nunca fue mia sino del Pueblo argentino, pasó a la inmortalidad... cuando las masas la lloraron por tanto tiempo. ¡Eso era estar perdido! ¿De qué me habla, muchacho?',
+				'Player: Lo comprendo, mi general, pero voy a algo más concreto. ¡Tengo que llegar al centro y no sé cómo!',
+				opt.turn_off()
+			]), 'completed')
+			turn_on_options(['doctrina1','ayuda'])
+		'doctrina1':
+			yield(E.run([
+				'Peron: ¡Compañero! En tiempos donde uno se haya perdido y precisa un norte orientador, debe ir siempre hacia las bases, que en este caso son...',
+				'Peron: ¡Las 20 verdades peronistas!',
+				'Player: ¡Pero general, ya las conozco!',
+				'Peron: La verdadera democracia es aquella donde el gobierno hace lo que el pueblo quiere y defiende un solo interés: el del pueblo.',
+				'Player: Si, ¿pero qué tiene que ver eso con mi pregunta?',
+				'Peron: El peronismo es esencialmente anticlonados. Todo circulo politico clonador es antipopular, anti humano y por lo tanto, antiperonista',
+				'Player: Esa me parece que es nueva.',
+				'Peron: ¡Silencio!. Lxs peronistas trabajan para el movimiento. El que, en su nombre, sirva a un "clonado", no es peronista ni patriota',
+				'Player: Esto se pone interesante.',
+				'Peron: Compañero, ¿va a seguir interrumpiendo? ¿No quería consejos para guiarse en este peculiar situación en la que se halla?',
+			opt.turn_off()
+			]), 'completed')
+			turn_on_options(['doctrina2'])
+		'ayuda':
+			yield(E.run([
+				'Peron: No se lo que es un celular, ni tampoco una SUBE. Dinero no manejo. En realidad, desde que no tengo manos, pocas cosas guardo.',
+				'Peron: Ah...de hecho, justamente, hablando de cosas inservibles desde que me he quedado doblemente manco, tengo estos guantes, espero sepa darle un buen uso, compañero',
+				'Player: Estem...no es lo que esperaba, pero todo sirve.',
+				I.add_item('Guantes'),
+				opt.turn_off()
+			]), 'completed')
+		'doctrina2':
+			yield(E.run([
+				'Peron: No existe para el peronismo más que una clase de personas: las que trabajan por la grandeza de la patria y la caída de los falsos "conductores" y clonadores seriales.',
+				'Player: Ok, creo que se a quién se refiere con lo de "conductor"',
+				'Peron: En la nueva Argentina de Perón, el trabajo es un derecho que crea la dignidad del hombre, no del clonado. Los clonados y clonadores no tienen lugar en nuestro suelo.',
+				'Player: Bien, me gusta hacia donde va esto.',
+				'Peron: Para un argentino no hay nada mejor que otro argentino. Todo aquel que se enbandere en falsos provincialismos que niegan a la nación, que nos engloba y une, no pueden ser considerados argentinos.',
+				'Player: ¡Ese palo no fue para mi rancho!',
+				'Peron: Ningún peronista debe sentirse más de lo que es ni menos de lo que debe ser, a menos que enfrente tenga a un clonado, que por definición, no es nada y no vale un pingo.',
+				'Player: jejeje',
+				'Peron: La escala de valores peronista es la siguiente: primero la patria, después el movimiento, luego los hombre y finalmente, a las fuerzas del cielo las bajaremos a los tiros',
+				'Player: Me gusta cómo se va poniendo esto.',
+				'Peron: ¡Sea paciente compañero, la única verdad es la realidad! Usted pidió consejo, entonces, ¿quiere que continue?',
+			opt.turn_off()
+			]), 'completed')
+			turn_on_options(['doctrina3'])
+#		'canse':
+#			yield(E.run([
+#				'Peron: Una pena, estaré aquí para seguir aconsejandolo, compañero.',
+#			opt.turn_off()
+#			]), 'completed')
+		'doctrina3':
+			yield(E.run([
+				'Peron: Ya llegaremos a la gran verdad, espere, ¿o acaso nunca jugo una aventura gráfica?',
+				'Player: Si, tiener razón mi general',
+				'Peron: El peronismo anhela la UNIDAD NACIONAL y no los PROVINCIALISMOS BERRETAS. Ni cordobesistas ni misioneristas, ARGENTINOS de buena ley.',
+				'Player: Je, ¿a quién le hablará el general, no?',
+				'Peron: El justicialismo es una filosofía de vida, simple, popular, práctica, humanista y profundamente anti oscuranista y mesianica.',
+				'Peron: En esta tierra, lo mejor que tenemos, es el pueblo.',
+				'Peron: Del cielo solo cae la lluvia que riega nuestros campos y da vida a nuestra tierra. La única fuerza del cielo que existe son las fuerzas elementales de la naturaleza. Al resto, las rechazamos, como sea.',
+				'Peron: Estas son las 20 verdades peronistas, he dicho.',
+				'Player: (Mmmm, a mi me parece que dijo menos. Ups, ¿esto lo dije o lo pensé?)',
+				'Peron: Lo pensaste. Pero no te preocupes. Tengo la última verdad, la que te ayudará en este travesía, ¿estás dispuesto a oirla, compañero?',
+			opt.turn_off()
+			]), 'completed')
+			turn_on_options(['ultimaverdad'])
+#		'mecanse':
+#			yield(E.run([
+#				'Peron: Una pena, compañero. Estaré aquí si me necesita.',
+#			opt.turn_off()
+#			]), 'completed')
+		'ultimaverdad':
+			yield(E.run([
+				'Peron: ¡Compañero! La útlima Gran Verdad, la que te ayudará en este camino, en esta indómita travesía de reclamos contra el ajustador serial en el que se transformó el gobierno provincial de Misiones es...',
+				'Peron: Si alguna vez de llover tu quiere hacer, a rabdomantes y bailarines no debes creer...',
+				'Peron: Lavando un auto un dia soleado alcanza para a la lluvia atraer.',
+				'Player: Ok...estoy más confundido que antes pero me guardo este consejo.',
+			opt.turn_off()
+			]), 'completed')
 			Globals.dialog_verdad_peronista_done = true
+				
 		'adios':
 			yield(E.run([
 				'Peron: Siga, compañero, ¡y no se rinda!'
