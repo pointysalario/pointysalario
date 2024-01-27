@@ -15,7 +15,7 @@ func on_interact() -> void:
 	 E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: Estas casetas son de las que no se abren."
+		"Player: No hay forma de llegar, el camino está bloqueado."
 	])
 
 
@@ -24,7 +24,7 @@ func on_look() -> void:
  E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: Es el único lugar de la provincia que recibe gas por red.",
+		"Player: El templo se ve muy...extraño.",
 	])
 
 

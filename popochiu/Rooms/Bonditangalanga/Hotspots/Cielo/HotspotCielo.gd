@@ -15,7 +15,7 @@ func on_interact() -> void:
 	 E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: Estas casetas son de las que no se abren."
+		"Player: Por más drogado que esté, no puedo tocar el cielo."
 	])
 
 
@@ -24,8 +24,9 @@ func on_look() -> void:
  E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: Es el único lugar de la provincia que recibe gas por red.",
+		"Player: Estoy realmente drogado.",
 	])
+
 
 
 # When the node is clicked and there is an inventory item selected

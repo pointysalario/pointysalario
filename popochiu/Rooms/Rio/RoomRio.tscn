@@ -123,3 +123,12 @@ position = Vector2( 494, 330 )
 [node name="CharacterMonstruoRodridodeFilippi *" parent="Characters" instance=ExtResource( 11 )]
 position = Vector2( 680, 231 )
 scale = Vector2( 0.4, 0.4 )
+clickable = true
+always_on_top = false
+text_color = Color( 1, 1, 1, 1 )
+flips_when = 0
+voices = [  ]
+follow_player = false
+walk_speed = 200.0
+can_move = true
+ignore_walkable_areas = false

@@ -15,6 +15,7 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
+		'Player: ¡Esta si es la casa de mi prima!',
 		"Player: A ver, golpeemos.",
 		"Player: Qué extraño, dijo que me iba a estar esperando.",
 		"Player: ¡Y encima no tengo batería en el télefono!",

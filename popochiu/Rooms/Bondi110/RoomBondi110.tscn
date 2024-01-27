@@ -151,3 +151,12 @@ position = Vector2( 643, 477 )
 
 [node name="CharacterRamonAyala *" parent="Characters" instance=ExtResource( 10 )]
 position = Vector2( 169, 389 )
+clickable = true
+always_on_top = false
+text_color = Color( 1, 1, 1, 1 )
+flips_when = 0
+voices = [  ]
+follow_player = false
+walk_speed = 200.0
+can_move = true
+ignore_walkable_areas = false

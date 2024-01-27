@@ -30,11 +30,11 @@ func on_look() -> void:
 func on_item_used(item: PopochiuInventoryItem) -> void:
 	# Replace the call to .on_item_used(item) to implement your code. This only
 	# makes the default behavior to happen.
-	if item.script_name == "Mandiocaaluminada":
+	if item.script_name == "Cucumelo":
 		E.run([
 			C.face_clicked(),
 			'Player: Me voy a flashearla fiero',
-			E.goto_room('Onirico')
+			E.goto_room('Bonditangalanga')
 		])
 	pass
 

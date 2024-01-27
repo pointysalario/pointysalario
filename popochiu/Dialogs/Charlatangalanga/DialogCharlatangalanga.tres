@@ -1,46 +1,100 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=13 format=2]
 
 [ext_resource path="res://popochiu/Dialogs/Charlatangalanga/DialogCharlatangalanga.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
 
 [sub_resource type="Resource" id=1]
-resource_name = "Opt1"
+resource_name = "estanmuertos"
 script = ExtResource( 2 )
-id = "Opt1"
-text = "Option 1"
+id = "estanmuertos"
+text = "¿El cucumelo me mató?"
 visible = true
 disabled = false
 always_on = false
 
 [sub_resource type="Resource" id=2]
-resource_name = "Opt2"
+resource_name = "docentes"
 script = ExtResource( 2 )
-id = "Opt2"
-text = "Option 2"
+id = "docentes"
+text = "Dr, está usted al tanto del reclamo salarial docente?"
 visible = true
 disabled = false
 always_on = false
 
 [sub_resource type="Resource" id=3]
-resource_name = "Opt3"
+resource_name = "delcielo"
 script = ExtResource( 2 )
-id = "Opt3"
-text = "Option 3"
+id = "delcielo"
+text = "Dr., qué opina de las fuerzas del cielo"
 visible = true
 disabled = false
 always_on = false
 
 [sub_resource type="Resource" id=4]
-resource_name = "Opt4"
+resource_name = "adios"
 script = ExtResource( 2 )
-id = "Opt4"
-text = "Option 4"
+id = "adios"
+text = "Este...quiero ver un poco qué tal todo."
 visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=5]
+resource_name = "espejaime"
+script = ExtResource( 2 )
+id = "espejaime"
+text = "Dr., encontré un espejaime, ¿le sirve a usted?"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=6]
+resource_name = "malabia"
+script = ExtResource( 2 )
+id = "malabia"
+text = "Malabia 1614 segundo patio del lado de la sombra."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=7]
+resource_name = "ecuador"
+script = ExtResource( 2 )
+id = "ecuador"
+text = "Ecuador 747."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=8]
+resource_name = "junin"
+script = ExtResource( 2 )
+id = "junin"
+text = "Junin y Santa Fe."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=9]
+resource_name = "cochabamba"
+script = ExtResource( 2 )
+id = "cochabamba"
+text = "Cochabamba al tresmil setecientos y monedas."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=10]
+resource_name = "venezuela"
+script = ExtResource( 2 )
+id = "venezuela"
+text = "Venuezuela y Chile."
+visible = false
 disabled = false
 always_on = false
 
 [resource]
 resource_name = "Charlatangalanga"
 script = ExtResource( 1 )
-options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ]
 script_name = "Charlatangalanga"

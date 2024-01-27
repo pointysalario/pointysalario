@@ -50,13 +50,10 @@ baseline = -267
 cursor = 1
 texture = ExtResource( 6 )
 
-[node name="Contenedor" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+[node name="Contenedor" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 446, 412 )
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 11 )
-__meta__ = {
-"_editor_description_": ""
-}
 script_name = "Contenedor"
 description = "Contenedor"
 baseline = -18

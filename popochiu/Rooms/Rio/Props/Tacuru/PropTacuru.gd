@@ -35,12 +35,17 @@ func on_look() -> void:
 
 # When the node is clicked and there is an inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
-	# Replace the call to .on_item_used(item) to implement your code. This only
-	# makes the default behavior to happen.
-	# For example you can make the PC react on using some items in this Prop
-#	if item.script_name == 'Key':
-#		E.run(["Player: I can't do that"])
-	.on_item_used(item)
+		if item.script_name == 'Generadororganicoenchufado':
+			E.run([
+				'Player: Bien, creo que aquí puedo enchufar esto.',
+				'Player: Este tacurú está lleno de energía cinetica, kinetica y térmica.',
+				'Player: Algo va a tener que cargar.',
+				I.remove_item(item.script_name),
+				I.remove_item(script_name),
+				I.add_item('Celularcargado'),
+				'Player: ¡Perfecto! Telefono cargado con la aplicación de los hijos de puta de Casimiro! Ahora, al centro.',
+				])
+
 
 
 # When an inventory item linked to this Prop (link_to_item) is removed from

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Casas1/RoomCasas1.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Alpuente/HotspotAlpuente.gd" type="Script" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://popochiu/Rooms/Casas1/Props/Autosucio/PropAutosucio.gd" type="Script" id=18]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Puertaprimo/HotspotPuertaprimo.gd" type="Script" id=19]
 [ext_resource path="res://assets/objetos/auto_lavamesucio.png" type="Texture" id=20]
+[ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Puerta2/HotspotPuerta2.gd" type="Script" id=21]
+[ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Garage/HotspotGarage.gd" type="Script" id=22]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 1209, 49, -31, 57, -32, -172, 135, -153, 739, -54, 1207, -88, 670, -85 )
@@ -268,6 +270,32 @@ cursor = 1
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 375, 1 )
 polygon = PoolVector2Array( -7, 71, 24, 72, 23, -28, -12, -27 )
+
+[node name="Puerta2" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 21 )
+script_name = "Puerta2"
+description = "Puerta2"
+walk_to_point = Vector2( -424, 76 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Puerta2"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( -425, 46 )
+polygon = PoolVector2Array( 26, 11, 28, -91, -13, -90, -14, 5 )
+
+[node name="Garage" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 22 )
+script_name = "Garage"
+description = "Garage"
+walk_to_point = Vector2( 58, 133 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Garage"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 68, 22 )
+polygon = PoolVector2Array( -50, 67, 40, 68, 51, 39, 45, -52, -55, -55 )
 
 [node name="Regions" type="Node2D" parent="."]
 

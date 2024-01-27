@@ -12,25 +12,28 @@ func on_interact() -> void:
 	# the default behavior to happen.
 	# For example you can make the character walk to the Hotspot and then say
 	# something:
-#	E.run([
-#		C.walk_to_clicked(),
-#		C.face_clicked(),
-#		"Player: Can't open it"
-#	])
-	.on_interact()
-
+	if times_clicked >= 1:
+		E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		'Player: No queda nada, mejor lo dejo cerrado.'
+		])
+	else:
+		E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		"Player: A ver, si fuerzo un poco quizás puedo abrir.",
+		'Player: Momento, qué es esto...',
+		I.add_item('Mandioca')
+		])
 
 # When the node is right clicked
 func on_look() -> void:
-	# Replace the call to .on_look() to implement your code. This only makes
-	# the default behavior to happen.
-	# For example you can make the character walk to the Hotspot and then say
-	# something:
-#	E.run([
-#		C.face_clicked(),
-#		'Player: A closed door'
-#	])
-	.on_look()
+ E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		"Player: Esta caseta está ligeramente abierta.",
+	])
 
 
 # When the node is clicked and there is an inventory item selected

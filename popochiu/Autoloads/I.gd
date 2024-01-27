@@ -23,6 +23,7 @@ const PIIMandiocausb := preload('res://popochiu/InventoryItems/Mandiocausb/Inven
 const PIIMandiocacoaxial := preload('res://popochiu/InventoryItems/Mandiocacoaxial/InventoryMandiocacoaxial.gd')
 const PIICucumelo := preload('res://popochiu/InventoryItems/Cucumelo/InventoryCucumelo.gd')
 const PIIGeneradororganicoenchufado := preload('res://popochiu/InventoryItems/Generadororganicoenchufado/InventoryGeneradororganicoenchufado.gd')
+const PIICelularcargado := preload('res://popochiu/InventoryItems/Celularcargado/InventoryCelularcargado.gd')
 # ---- classes
 
 # nodes ----
@@ -47,6 +48,7 @@ var Mandiocausb: PIIMandiocausb setget , get_Mandiocausb
 var Mandiocacoaxial: PIIMandiocacoaxial setget , get_Mandiocacoaxial
 var Cucumelo: PIICucumelo setget , get_Cucumelo
 var Generadororganicoenchufado: PIIGeneradororganicoenchufado setget , get_Generadororganicoenchufado
+var Celularcargado: PIICelularcargado setget , get_Celularcargado
 # ---- nodes
 
 # functions ----
@@ -71,5 +73,6 @@ func get_Mandiocausb(): return ._get_item_instance('Mandiocausb')
 func get_Mandiocacoaxial(): return ._get_item_instance('Mandiocacoaxial')
 func get_Cucumelo(): return ._get_item_instance('Cucumelo')
 func get_Generadororganicoenchufado(): return ._get_item_instance('Generadororganicoenchufado')
+func get_Celularcargado(): return ._get_item_instance('Celularcargado')
 # ---- functions
 
