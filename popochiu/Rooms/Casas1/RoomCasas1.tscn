@@ -271,7 +271,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 375, 1 )
 polygon = PoolVector2Array( -7, 71, 24, 72, 23, -28, -12, -27 )
 
-[node name="Puerta2" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Puerta2" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 21 )
 script_name = "Puerta2"
@@ -284,7 +284,7 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -425, 46 )
 polygon = PoolVector2Array( 26, 11, 28, -91, -13, -90, -14, 5 )
 
-[node name="Garage" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+[node name="Garage" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 22 )
 script_name = "Garage"
