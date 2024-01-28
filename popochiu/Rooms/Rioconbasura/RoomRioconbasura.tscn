@@ -63,7 +63,7 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Alpuente"]
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -378, -31 )
-polygon = PoolVector2Array( -12, 52, 22, 54, 19, -95, -17, -98 )
+polygon = PoolVector2Array( -12, 52, 22, 54, 91, 47, 92, -25, 81, -83, 19, -95, -17, -98 )
 
 [node name="Almonte" parent="Hotspots" instance=ExtResource( 8 )]
 position = Vector2( 400, 300 )
@@ -76,7 +76,7 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Almonte"]
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 318, -28 )
-polygon = PoolVector2Array( -104, -43, -3, 20, 39, 0, -91, -91, -131, -56 )
+polygon = PoolVector2Array( -104, -43, -8, 21, 65, -38, 65, -115, -30, -128, -118, -62 )
 
 [node name="Basura" parent="Hotspots" instance=ExtResource( 8 )]
 position = Vector2( 400, 300 )

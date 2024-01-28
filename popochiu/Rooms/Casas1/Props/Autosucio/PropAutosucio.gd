@@ -14,12 +14,12 @@ func on_interact() -> void:
 		 E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: Player: ¿Por qué tendría que lavarlo yo? Además, no tengo con qué.",
+		"Player: ¿Por qué tendría que lavarlo yo? Además, no tengo con qué.",
 	])
 	
 	else:
 		yield(E.run([
-		C.Player.say("No tocaré nada hasta no haber idode mi prima")
+		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
 		]), 'completed')
 
 # When the node is right clicked

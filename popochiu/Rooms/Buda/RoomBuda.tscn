@@ -80,7 +80,7 @@ cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacialaparada"]
 modulate = Color( 0, 0, 1, 1 )
-polygon = PoolVector2Array( -13, -27, 18, -27, 24, 22, -18, 23 )
+polygon = PoolVector2Array( -3, -128, 53, -135, 97, -93, 109, 19, -18, 23 )
 
 [node name="Regions" type="Node2D" parent="."]
 

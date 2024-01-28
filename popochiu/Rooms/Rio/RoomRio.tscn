@@ -12,7 +12,7 @@
 [ext_resource path="res://popochiu/Rooms/Rio/Hotspots/Rio/HotspotRio.gd" type="Script" id=10]
 [ext_resource path="res://popochiu/Characters/MonstruoRodridodeFilippi/CharacterMonstruoRodridodeFilippi.tscn" type="PackedScene" id=11]
 [ext_resource path="res://popochiu/Rooms/Rio/Props/Tacuru/PropTacuru.gd" type="Script" id=12]
-[ext_resource path="res://assets/objetos/tacuru.jpg" type="Texture" id=13]
+[ext_resource path="res://assets/objetos/tacuru_sinmandioca.png" type="Texture" id=13]
 [ext_resource path="res://OLEMUCUC.wav" type="AudioStream" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
@@ -70,12 +70,12 @@ texture = ExtResource( 6 )
 
 [node name="Tacuru" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 285, 279 )
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 1, 1 )
 script = ExtResource( 12 )
 script_name = "Tacuru"
 description = "Tacuru"
 baseline = -240
-walk_to_point = Vector2( 29.9999, 295 )
+walk_to_point = Vector2( 60, 82.8571 )
 cursor = 1
 texture = ExtResource( 13 )
 
@@ -96,7 +96,7 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Haciaelcanal"]
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -269, 20 )
-polygon = PoolVector2Array( -82, 6, 18, 52, 31, -36 )
+polygon = PoolVector2Array( -82, 6, 89, 101, 93, -47, 63, -72 )
 
 [node name="Rio" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )

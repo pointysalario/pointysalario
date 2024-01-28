@@ -230,7 +230,7 @@ cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacialacolectora"]
 modulate = Color( 0, 0, 1, 1 )
-polygon = PoolVector2Array( -636, 103, -636, 269, -590, 271, -596, 74, -636, 64 )
+polygon = PoolVector2Array( -636, 103, -636, 269, -554, 269, -573, 58, -637, 41 )
 
 [node name="Alpuente" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
@@ -243,7 +243,7 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Alpuente"]
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 622, 164 )
-polygon = PoolVector2Array( 13, 132, -30, 130, -19, -29, 13, -42 )
+polygon = PoolVector2Array( 13, 132, -97, 130, -108, -13, 13, -42 )
 
 [node name="Alaentrada" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
@@ -256,13 +256,13 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Alaentrada"]
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -65, 283 )
-polygon = PoolVector2Array( -160, -6, 295, -8, 295, 18, -159, 17 )
+polygon = PoolVector2Array( -331, -11, 295, -8, 295, 18, -333, 20 )
 
 [node name="Puertaprimo" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 19 )
 script_name = "Puertaprimo"
-description = "Puertaprimo"
+description = "Puerta"
 walk_to_point = Vector2( 384, 150 )
 cursor = 1
 

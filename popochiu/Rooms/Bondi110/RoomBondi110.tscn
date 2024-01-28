@@ -88,7 +88,7 @@ cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Haciaeltemplo"]
 modulate = Color( 0, 0, 1, 1 )
-polygon = PoolVector2Array( 166, 55, 219, 65, 212, 90, 148, 79 )
+polygon = PoolVector2Array( 198, 25, 245, 35, 161, 166, 103, 148 )
 
 [node name="Tacho" parent="Hotspots" instance=ExtResource( 12 )]
 position = Vector2( 400, 300 )
@@ -131,14 +131,14 @@ polygon = PoolVector2Array( -26, 44, 27, 44, 13, -82, -25, -81 )
 position = Vector2( 400, 300 )
 script = ExtResource( 7 )
 script_name = "Hacialascasas"
-description = "Hacialascasas"
+description = "Hacia el barrio"
 walk_to_point = Vector2( 324, 246 )
 cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacialascasas"]
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 378, 222 )
-polygon = PoolVector2Array( -28, 66, 22, 70, 20, -30, -20, -34 )
+polygon = PoolVector2Array( -28, 66, 22, 70, 21, -74, -24, -92 )
 
 [node name="Regions" type="Node2D" parent="."]
 
