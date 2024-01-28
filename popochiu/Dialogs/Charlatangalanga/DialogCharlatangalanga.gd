@@ -85,7 +85,8 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Tangalanga: Ahh, esa calle me suena.',
 				'Player: ¿Campana te suena?'
 				]), 'completed')
-			E.goto_room('Onirico')
+			stop()
+			E.goto_room('Onirico', 2)
 			opt.turn_off()
 		'cochabamba':
 			yield(E.run([
