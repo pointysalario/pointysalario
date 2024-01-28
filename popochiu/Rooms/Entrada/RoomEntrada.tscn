@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Entrada/RoomEntrada.gd" type="Script" id=1]
-[ext_resource path="res://popochiu/Rooms/Entrada/Hotspots/Anuncio/HotspotAnuncio.gd" type="Script" id=2]
+[ext_resource path="res://assets/objetos/cartel_mamonmusk.png" type="Texture" id=2]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://popochiu/Rooms/Entrada/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=5]
@@ -12,6 +12,9 @@
 [ext_resource path="res://popochiu/Rooms/Entrada/Hotspots/Alascasas/HotspotAlascasas.gd" type="Script" id=10]
 [ext_resource path="res://popochiu/Rooms/Entrada/Props/Contenedor/PropContenedor.gd" type="Script" id=11]
 [ext_resource path="res://assets/objetos/contenedor.png" type="Texture" id=12]
+[ext_resource path="res://popochiu/Rooms/Entrada/Props/Afichemamonmusk/PropAfichemamonmusk.gd" type="Script" id=13]
+[ext_resource path="res://popochiu/Rooms/Entrada/Hotspots/Iprodha/HotspotIprodha.gd" type="Script" id=14]
+[ext_resource path="res://popochiu/Rooms/Entrada/Hotspots/Itaembe/HotspotItaembe.gd" type="Script" id=15]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -367, 152, -368, -12, -10, -10, 416, 149, 10, -10, 54, -2, 418, 72 )
@@ -64,6 +67,21 @@ texture = ExtResource( 12 )
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Contenedor"]
 polygon = PoolVector2Array( -40, 22, 25.3333, 28, 40.6667, 13.3333, 40, -18, -6, -46, -40, -22.6667 )
 
+[node name="Afichemamonmusk" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 708, 327 )
+script = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+script_name = "Afichemamonmusk"
+description = "Afichemamonmusk"
+walk_to_point = Vector2( -105, 187 )
+cursor = 1
+texture = ExtResource( 2 )
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Afichemamonmusk"]
+polygon = PoolVector2Array( -11, 11, 16, 18, 15, -17, -16, -14, -19, 16 )
+
 [node name="Hotspots" type="Node2D" parent="."]
 
 [node name="Hacia la colectora" parent="Hotspots" instance=ExtResource( 9 )]
@@ -79,19 +97,6 @@ modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -347, 127 )
 polygon = PoolVector2Array( 28, 10, -19, 14, -20, -14, 26, -19 )
 
-[node name="Anuncio" parent="Hotspots" instance=ExtResource( 9 )]
-position = Vector2( 400, 300 )
-script = ExtResource( 2 )
-script_name = "Anuncio"
-description = "Anuncio"
-walk_to_point = Vector2( 282, 215 )
-cursor = 1
-
-[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Anuncio"]
-modulate = Color( 0, 0, 1, 1 )
-position = Vector2( 309, 37 )
-polygon = PoolVector2Array( -14, 11, 13, 10, 14, -16, -13, -15 )
-
 [node name="Alascasas" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )
 script = ExtResource( 10 )
@@ -103,6 +108,31 @@ cursor = 1
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -51, 126 )
 polygon = PoolVector2Array( 84, 15, -89, 6, -73, -12, -1.3819, -7.57913, 89, -2 )
+
+[node name="Iprodha" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 14 )
+script_name = "Iprodha"
+description = "Iprodha"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Iprodha"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 143, 130 )
+polygon = PoolVector2Array( 88, 42, 88, -1, -18, -14, -25, 19 )
+
+[node name="Itaembe" type="Area2D" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 15 )
+script_name = "Itaembe"
+description = "Itaembe"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Itaembe"]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 312, -10 )
+rotation = -2.80502
+polygon = PoolVector2Array( -79.144, 16.0379, 16.7087, -24.9162, 59.0694, 165.794, -11.7693, 187.402 )
 
 [node name="Regions" type="Node2D" parent="."]
 

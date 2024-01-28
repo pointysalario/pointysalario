@@ -9,49 +9,29 @@ extends PopochiuHotspot
 # When the node is clicked
 func on_interact() -> void:
 	if Globals.carta_leida == true:
-		yield(E.run([
-			C.walk_to_clicked(),
-			C.face_clicked(),
-			"Player: Bueno, quizás me pueda servir de algo, quién sabe.",
-			I.add_item('AnuncioMamonMusk'),
-		]), 'completed')
+		E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		'Player: Este es uno de esos "barrios chetos" de IPRODHA.'
+	])
 	else:
 		yield(E.run([
 		C.Player.say("No tengo tiempo para mirar nada, primero debo ir de mi prima.")
 		]), 'completed')
+	
 
-##	E.run([
-##		C.walk_to_clicked(),
-##		C.face_clicked(),
-##		"Player: Bueno, quizás me pueda servir de algo, quién sabe.",
-##		I.add_item('AnuncioMamonMusk'),
-#	])
-#	if Globals.carta_leida == true:
-#		yield(E.run([
-#			C.walk_to_clicked(),
-#			C.face_clicked(),
-##			"Player: Can't open it"
-#		]), 'completed')
-#		E.goto_room('Bondi110')
-#	else:
-#		yield(E.run([
-#		C.Player.say("Tengo que ir primero a lo de mi primo")
-#		]), 'completed')
 
 # When the node is right clicked
 func on_look() -> void:
 	if Globals.carta_leida == true:
-		yield(E.run([
-			C.walk_to_clicked(),
-			C.face_clicked(),
-			'Player: Es uno de esos anuncios para despegar y llevarse. Dice lo siguiente:',
-			'Player: ¿QUERÉS SER TU PROPIO JEFE? INVERTÍ CON MAMON MUSK.',
-			'Player: ¡Preguntáme cómo!',
-			'Player: Mmmm, pero, ¿a quién le pregunto?'
-	]), 'completed')
+		E.run([
+		C.face_clicked(),
+		C.walk_to_clicked(),
+		'Player: "Instituto Provincial de Desarrollo Habitacional.',
+	])
 	else:
 		yield(E.run([
-			C.Player.say("No tengo tiempo para mirar nada, primero debo ir de mi prima.")
+		C.Player.say("No tengo tiempo para mirar nada, primero debo ir de mi prima.")
 		]), 'completed')
 
 
@@ -63,4 +43,3 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 #	if item.script_name == 'Key':
 #		E.run(['Player: No can do'])
 	.on_item_used(item)
-
