@@ -30,7 +30,7 @@
 [ext_resource path="res://popochiu/Characters/RamonPuerta/CharacterRamonPuerta.tscn" type="PackedScene" id=28]
 [ext_resource path="res://popochiu/Rooms/Onirico/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=29]
 [ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Ramon puertas de la percepción v0.1.wav" type="AudioStream" id=31]
+[ext_resource path="res://sfx/music/mx_ramon_puerta.ogg" type="AudioStream" id=31]
 
 [sub_resource type="NavigationPolygon" id=3]
 vertices = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -392, 268, -394, 77, -356, 86, -65, 249, 394, 294, 387, 211 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_stinger_conseguir_item_v1.0.ogg-807732f7c1a68c374d5003688dfc4502.oggstr"
+
+[deps]
+
+source_file="res://sfx/music/sfx_stinger_conseguir_item_v1.0.ogg"
+dest_files=[ "res://.import/sfx_stinger_conseguir_item_v1.0.ogg-807732f7c1a68c374d5003688dfc4502.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

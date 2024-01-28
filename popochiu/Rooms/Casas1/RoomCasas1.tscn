@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Casas1/RoomCasas1.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Alpuente/HotspotAlpuente.gd" type="Script" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://assets/objetos/auto_lavamesucio.png" type="Texture" id=20]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Puerta2/HotspotPuerta2.gd" type="Script" id=21]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Garage/HotspotGarage.gd" type="Script" id=22]
+[ext_resource path="res://sfx/music/mx_casas.ogg" type="AudioStream" id=23]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 1209, 49, -31, 57, -32, -172, 135, -153, 739, -54, 1207, -88, 670, -85 )
@@ -309,3 +310,7 @@ position = Vector2( 150, 429 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Tiempo espera" = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+autoplay = true

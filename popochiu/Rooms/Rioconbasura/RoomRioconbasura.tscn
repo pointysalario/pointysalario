@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Rioconbasura/RoomRioconbasura.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Rioconbasura/Hotspots/Alcanal/HotspotAlcanal.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://popochiu/Rooms/Rioconbasura/Hotspots/Almonte/HotspotAlmonte.gd" type="Script" id=9]
 [ext_resource path="res://popochiu/Rooms/Rioconbasura/Hotspots/Basura/HotspotBasura.gd" type="Script" id=10]
 [ext_resource path="res://popochiu/Rooms/Rioconbasura/Hotspots/Agua/HotspotAgua.gd" type="Script" id=11]
+[ext_resource path="res://sfx/music/mxrio_con_basura.ogg" type="AudioStream" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -392, -50, -19, -66, 333, -52, 353, -1, -388, 40 )
@@ -111,3 +112,7 @@ sort_enabled = false
 
 [node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 7 )]
 position = Vector2( 62, 179 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true

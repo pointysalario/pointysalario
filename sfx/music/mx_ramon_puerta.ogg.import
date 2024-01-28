@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mx_ramon_puerta.ogg-89fa093f375c2ef50900e7754e774475.oggstr"
+
+[deps]
+
+source_file="res://sfx/music/mx_ramon_puerta.ogg"
+dest_files=[ "res://.import/mx_ramon_puerta.ogg-89fa093f375c2ef50900e7754e774475.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

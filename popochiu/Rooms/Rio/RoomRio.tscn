@@ -13,7 +13,7 @@
 [ext_resource path="res://popochiu/Characters/MonstruoRodridodeFilippi/CharacterMonstruoRodridodeFilippi.tscn" type="PackedScene" id=11]
 [ext_resource path="res://popochiu/Rooms/Rio/Props/Tacuru/PropTacuru.gd" type="Script" id=12]
 [ext_resource path="res://assets/objetos/tacuru_sinmandioca.png" type="Texture" id=13]
-[ext_resource path="res://OLEMUCUC.wav" type="AudioStream" id=14]
+[ext_resource path="res://sfx/music/mx_cucumelo.ogg" type="AudioStream" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 224, 150, 302, 272, -342, 32, -215, -32, 32, -47, 319, -8, 381, 44 )
@@ -80,9 +80,9 @@ cursor = 1
 texture = ExtResource( 13 )
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Tacuru"]
-visible = false
-position = Vector2( -0.00012207, 19.9999 )
-polygon = PoolVector2Array( -230, 50, -75, 180, 110, 165, 225, 35, 165, -210, 30, -270, -100, -230 )
+position = Vector2( 1.99548, 18.0258 )
+scale = Vector2( 0.959318, 0.988486 )
+polygon = PoolVector2Array( -57.9999, 19.0001, -28.4829, 33.7431, 40.8685, 26.6436, 44.0001, -0.999908, 25.0225, -24.3056, 21.0001, -51.9999, 3.00012, -77.9999, -16.9999, -82.9999 )
 
 [node name="Hotspots" type="Node2D" parent="."]
 

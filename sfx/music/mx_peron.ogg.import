@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mx_peron.ogg-de16692ba3c3de8ce45cba9c52e4280b.oggstr"
+
+[deps]
+
+source_file="res://sfx/music/mx_peron.ogg"
+dest_files=[ "res://.import/mx_peron.ogg-de16692ba3c3de8ce45cba9c52e4280b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

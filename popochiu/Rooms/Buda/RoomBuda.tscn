@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Buda/RoomBuda.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Buda/Hotspots/Cartel/HotspotCartel.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://popochiu/Rooms/Buda/Hotspots/Buda/HotspotBuda.gd" type="Script" id=9]
 [ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=10]
 [ext_resource path="res://popochiu/Rooms/Buda/Hotspots/Hacialaparada/HotspotHacialaparada.gd" type="Script" id=11]
+[ext_resource path="res://sfx/music/mx_buda.ogg" type="AudioStream" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 146, 225, 401, 193, 397, 295, -395, 301, -57, 215, -274, 196, -392, 157, -333, 152 )
@@ -94,3 +95,7 @@ position = Vector2( 737, 424 )
 
 [node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 10 )]
 position = Vector2( 369, 500 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true

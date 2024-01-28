@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sx_stinger_usar_item_quizas_v1.0.ogg-e46a2446bc22f64e3bb4b73696c61c65.oggstr"
+
+[deps]
+
+source_file="res://sfx/music/sx_stinger_usar_item_quizas_v1.0.ogg"
+dest_files=[ "res://.import/sx_stinger_usar_item_quizas_v1.0.ogg-e46a2446bc22f64e3bb4b73696c61c65.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

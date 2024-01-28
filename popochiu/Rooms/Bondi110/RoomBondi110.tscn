@@ -8,7 +8,7 @@
 [ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Hacialascasas/HotspotHacialascasas.gd" type="Script" id=7]
 [ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Ramon Ayala v0.1.wav" type="AudioStream" id=9]
+[ext_resource path="res://sfx/music/mx_ramonayala.ogg" type="AudioStream" id=9]
 [ext_resource path="res://popochiu/Characters/RamonAyala/CharacterRamonAyala.tscn" type="PackedScene" id=10]
 [ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Templobudista/HotspotTemplobudista.gd" type="Script" id=11]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=12]

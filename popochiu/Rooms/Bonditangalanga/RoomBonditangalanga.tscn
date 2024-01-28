@@ -13,7 +13,7 @@
 [ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Parada/HotspotParada.gd" type="Script" id=11]
 [ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Cielo/HotspotCielo.gd" type="Script" id=12]
 [ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Templolisergico/HotspotTemplolisergico.gd" type="Script" id=13]
-[ext_resource path="res://Tangaloopga v.0.1.wav" type="AudioStream" id=14]
+[ext_resource path="res://sfx/music/tangalanga.ogg" type="AudioStream" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -10, 10, -314, 18, -311, -57, 15, -29, 466, 50, 180, -37, 246, -32, 471, -31, 236, -63, 194, -67 )
