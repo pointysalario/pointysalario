@@ -41,5 +41,10 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				'Player: Bueno, ahora si, a esperar el colectivo',
 				I.remove_item(item.script_name),
 				I.remove_item(script_name),
-				'Player: TRANSICIÓN FINAL'
+				'Player: Bien, hasta acá hemos llegado.',
+				'Player: Gracias por tanto y perdón por tan poco.',
+				'Player: Esto es solo una pequeña demo jugable.',
+				'Player: Si encontraste bugs, sumate a chat.rebel.ar y contanos.',
+				'Player: ¡Ah! Recordá que hay otros caminos para llegar a este mensaje.',
+				'Player: ¿Ya los encontraste?'
 				])

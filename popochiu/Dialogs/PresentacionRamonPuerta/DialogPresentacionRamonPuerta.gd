@@ -72,9 +72,15 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'RamonPuerta: Cómo sea, mis pichones siguen ahí, ahora solamente tienen más convicciones para el ajuste.',
 				'RamonPuerta: ¿La ves ahora?',
 				'Player: Sí...creo que sí. De todas maneras, me voy para allá. En la Carpa seguro esta mi prima.',
-				'Player: TRANSICION FIN DE JUEGO',
+				'Player: Bien, hasta acá hemos llegado.',
+				'Player: Gracias por tanto y perdón por tan poco.',
+				'Player: Esto es solo una pequeña demo jugable.',
+				'Player: Si encontraste bugs, sumate a chat.rebel.ar y contanos.',
+				'Player: ¡Ah! Recordá que hay otros caminos para llegar a este mensaje.',
+				'Player: ¿Ya los encontraste?',
 				opt.turn_off()
 			]), 'completed')
+			stop()
 			
 		'adios':
 			yield(E.run([
