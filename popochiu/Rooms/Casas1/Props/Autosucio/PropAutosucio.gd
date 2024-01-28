@@ -49,7 +49,8 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 func transicion():
 	E.run([
 		disable(),
-		'Player: 400 milimetros de lluvia luego...'
+		'Player: 400 milimetros de lluvia luego...',
+		'Player: ¡A la pelota que llovió!'
 		])
 	
 

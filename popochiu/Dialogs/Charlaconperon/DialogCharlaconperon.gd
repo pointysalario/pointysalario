@@ -16,6 +16,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 	match opt.id:
 		'quehaceaqui':
 			yield(E.run([
+				'Player: Mi general, ¿qué hace usted por aquí?',
 				"Peron: Guardo para Misiones un gran lugar en mi corazón. Indudablemente fue durante nuestro gobierno que logramos la provincialización del otrora Territorio Nacional de Misiones",
 				'Player: Si, lo sabía, pero...¿acaso usted no...murió?',
 				'Peron: ¡"Perón Vuelve"! ¡O usted diría que Eva no está entre nosotros tampoco? ¿O que San Martín espichó?',
@@ -27,6 +28,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 #			stop()
 		'consulta':
 			yield(E.run([
+				'Player: Mi general, el gobierno provincial nos ha recortado el salario. ¿Qué deberíamos hacer?',
 				'Peron: La Educación de las Masas es lo que verdaderamente hace grande a una organización, y la República depende de ella para su crecimiento, que es a lo que todos aspiramos.',
 				'Peron: Mas que soldado, yo he sido un educador, y he comprendido el rol que estos tienen como parte integral de un Movimiento de Trabajadores.',
 				'Peron: Un Gobierno que ajusta a sus maestros, no puede más que acelerar el quebranto de su Nación. Lo lógico es rechazarlo y combatirlo.',
@@ -37,6 +39,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			turn_on_options(['sinorganizacion'])
 		'sinorganizacion':
 			yield(E.run([
+				'Player: Pero general, muchos docentes reniegan de ser trabajadores y de todo tipo de organizacion.',
 				'Peron: Normalmente un maestro sabe lo qué es bueno para sus alumnos, pero puede perder el rumbo si no tiene en claro lo que es bueno para él...',
 				'Peron: Actuando gregariamente, se consumirá solo, como la vela que el cura deja nomás para no chocarse el altar.',
 				'Peron: Hace ya milenios que los Egipcios comprendieron que a la pirámide se la construye desde la base hacia el vértice. Este predicamento hemos de seguir los argentinos.',
@@ -49,6 +52,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			
 		'perdido':
 			yield(E.run([
+				'Player: Mi general, estoy bastante perdido, tengo que llegar al centro y no sé cómo.',
 				'Peron: Sólo se encontrará perdido quien no cuente con una Doctrina que aclare su camino',
 				'Peron: Vea, solamente la conformación de un Tercer Mundo podría ser una garantía para que la humanidad pudiese disfrutar de un mundo mejor en el futuro, pero para eso ese Tercer Mundo ha de organizase y fortalecerse.',
 				'Player: Lo comprendo, mi general, pero voy a algo más concreto. ¡Tengo que llegar al centro y no sé cómo!',
@@ -57,6 +61,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			turn_on_options(['doctrina1','ayuda'])
 		'doctrina1':
 			yield(E.run([
+				'Player: ¿No me podría dar algun consejo, una guía, pista o algo para llegar al centro?',
 				'Peron: En tiempos aciagos donde uno se ve perdido, hay que desensillar hasta que aclare. Por fortuna siempre podremos recurrir a nuestro basal ideológico:',
 				'Peron: ¡Las 20 verdades peronistas!',
 				'Player: ¡Pero general, ya las conozco!',
@@ -72,6 +77,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			turn_on_options(['doctrina2'])
 		'ayuda':
 			yield(E.run([
+				'Player: ¿No tendría dinero, una tarjeta SUBE misionera o donde cargar el celular, así puedo viajar?',
 				'Peron: No sé lo que es una SUBE. Ni le digo lo que cuesta hacer swip en un celular. Dinero no manejo, se me va de las manos.',
 				'Peron: Por cierto, ya que le estoy dando una mano, le doy este par de guantes. Le serán de utilidad a usted, quien sabrá darles buen uso',
 				'Player: Estem...no es lo que esperaba, pero todo sirve.',
@@ -81,6 +87,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			]), 'completed')
 		'doctrina2':
 			yield(E.run([
+				'Player: Si, mi general, perdone, pero es que esto solo me confunde más. Yo solo quiero llegar al centro.',
 				'Peron: No existe para el peronismo más que una clase de personas: las que trabajan por la grandeza de la Patria y la caída de los falsos "conductores" y clonadores seriales.',
 				'Player: Ok, creo que sé a quién se refiere con lo de "conductor"',
 				'Peron: En la nueva Argentina de Perón, el trabajo es un Derecho que crea la dignidad del hombre, pero no somos excluyentes. Si hay un clonado, tiene que ser peronista.',
@@ -102,6 +109,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 #			]), 'completed')
 		'doctrina3':
 			yield(E.run([
+				'Player: Mi general, solo me queda confiar en usted, así que proceda.',
 				'Peron: Ya llegaremos a la gran verdad, espere, ¿o acaso nunca jugó una aventura gráfica?',
 				'Player: Si, tiene razón mi general',
 				'Peron: Frente al objetivo de la UNIDAD NACIONAL, los provincialismos son muy poca cosa.',
@@ -122,6 +130,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 #			]), 'completed')
 		'ultimaverdad':
 			yield(E.run([
+				'Player: ¡Si, por favor, mi general, es lo que estoy esperando!',
 				'Peron: ¡Compañeros! La Gran Verdad, aquella que os acompañará en esta senda de esclarecimiento contra un gobierno provincial de Misiones tornado en ajustador serial es...',
 				'Peron: Si alguna vez el agua quieres atraer, a rabdomantes y bailarines no debes creer...',
 				'Peron: Lava el coche al sol, y atraerás al chaparrón.',

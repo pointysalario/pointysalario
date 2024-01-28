@@ -27,7 +27,7 @@ func on_look() -> void:
 		E.run([
 		C.face_clicked(),
 		C.walk_to_clicked(),
-		'Player: "Instituto Provincial de Desarrollo Habitacional.',
+		'Player: "Instituto Provincial de Desarrollo Habitacional."',
 	])
 	else:
 		yield(E.run([

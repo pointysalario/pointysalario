@@ -26,6 +26,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 	match opt.id:
 		'Muerto':
 			yield(E.run([
+			'RamonAyala: Usted se parece mucho a Ramón Ayala, pero él murió hace unos meses.',
 			"RamonAyala:Si, es cierto, pero eso no impide que esté aquí, disfrutando de estos 45 grados de sensación térmica",
 			"Player: Eso no tiene mucha lógica. ¿Estoy hablando con un muerto?",
 			"RamonAyala: No está muerto lo que puede yacer eternamente. ¿Acaso tú, muchacho, dirías que el Paraná está muerto?",
@@ -34,6 +35,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			]), 'completed')
 		'ComoLlegar':
 			yield(E.run([
+			'Player: ¿Sabe cómo puedo llegar a la Plaza 9 de Julio?',
 			"RamonAyala: Si, por supuesto, hay dos maneras de llegar, pero, ¿para qué querés ir al centro? Acá tenés todo lo que necesitas.",
 			"Player: Es que mis colegas docentes están de huelga, la provincia recortó nuestro sueldo y necesito ir a la asamblea que se realiza en la Plaza 9 de Julio",
 			"RamonAyala: Ah, entiendo. Tenés dos maneras de ir.",
@@ -42,7 +44,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			"Player: ¿Y la otra forma?",
 			"RamonAyala: Bueno, es un tanto más...onírica"
 			]), 'completed')
-			opt.turn_off()
+#			opt.turn_off()
 			turn_on_options(['onirica'])
 		'conflicto':
 			yield(E.run([
@@ -65,6 +67,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			]), 'completed')
 		'onirica':
 			yield(E.run([
+			'Player: ¿Cómo que onirica?¿Qué quiere decir?',
 			"RamonAyala: ¡Pero chamigo, si serás lento!¿No quedamos en que estoy muerto?¿Acaso te pensas que INCLUSO LOS MUERTOS tenemos que padecer a los mafiosos transportistas de Casimiro?",
 			"Player: ¡Qué suerte estar muerto entonces!",
 			"RamonAyala: Verás, es una de sus ventajas, pero tampoco podemos movernos libremente, por lo cual, utilizamos pasajes ocultos entre el monte, los arroyos y los ríos.",

@@ -70,9 +70,10 @@ polygon = PoolVector2Array( -40, 22, 25.3333, 28, 40.6667, 13.3333, 40, -18, -6,
 
 [node name="Afichemamonmusk" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 708, 327 )
+scale = Vector2( 1, 1 )
 script = ExtResource( 13 )
 script_name = "Afichemamonmusk"
-description = "Afichemamonmusk"
+description = "Afiche"
 walk_to_point = Vector2( -105, 187 )
 cursor = 1
 texture = ExtResource( 2 )
@@ -93,7 +94,7 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Hacia la colectora"]
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -347, 127 )
-polygon = PoolVector2Array( 28, 10, -19, 14, -20, -14, 26, -19 )
+polygon = PoolVector2Array( 96, 12, -46, 21, -49, -11, 26, -19, 88, -16 )
 
 [node name="Alascasas" parent="Hotspots" instance=ExtResource( 9 )]
 position = Vector2( 400, 300 )

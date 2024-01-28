@@ -24,7 +24,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'MonstruoRodridodeFilippi: ¿Raro? Raro sería que pudieramos implementar que las tres cabezas hablen por si mismas',
 				'MonstruoRodridodeFilippi: Mezclando ideas de Rodrigo y los Filippi...pero no nos da el tiempo ni la cabeza, valga la redundancia.',
 				'Player: Menos mal.',
-#			opt.turn_off()
+			opt.turn_off()
 			]), 'completed')
 #			stop()
 		'quehacen':

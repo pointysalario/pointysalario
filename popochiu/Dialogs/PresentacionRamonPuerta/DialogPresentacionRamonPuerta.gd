@@ -20,6 +20,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 	match opt.id:
 		'muerto':
 			yield(E.run([
+				'Player: ¿Pero...usted no estaba muerto?',
 				"RamonPuerta: We, debo ser el único personaje no muerto de este juego",
 				'Player: ¿Está usted seguro?',
 				'RamonPuerta: Pero claro, gurí, usted es muy joven y no conoce el apellido Puerta.',
@@ -32,6 +33,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			
 		'donde':
 			yield(E.run([
+				'Player: ¿Me puede decir donde estamos? ¡Yo necesito ir al centro!',
 				'RamonPuerta: ¡Pero gurí!¿Usted decidió hacer el viaje con cucumelo antes que esperar un colectivo de Casimiro, no?',
 				'Player: Si, eso creo...',
 				'RamonPuerta: Y bueno chamigo, hubiera esperado la pésima frecuencia y los 55º arriba de esos colectivos. Ahora aguantese.',
@@ -43,6 +45,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			turn_on_options(['buscaste'])
 		'buscaste':
 			yield(E.run([
+				'Player: Pero esto parece una joda, ¿hay que comerse un hongo y hablar con Ramon Puerta para llegar al centro?',
 				'RamonPuerta: Esto es así gurí, con Casimiro no se jode guaú.',
 				'Player: ¿Qué significa eso?',
 				'RamonPuerta: Guaú:Del guaraní guau ("falso").',
@@ -52,6 +55,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			]), 'completed')
 		'triciclo':
 			yield(E.run([
+				'Player: ¿Qué le pasó a su rostro?¿Por qué el triciclo?',
 				'RamonPuerta: ¿Es que todavía no lo entendes?¡Juipitaura.',
 				'RamonPuerta: La historia es una pesadilla de la que no podemos despertar, ¿sabes?',
 				'Player: ¡Pero yo nunca me dormí!',
@@ -61,7 +65,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			turn_on_options(['carpadocente'])
 		'carpadocente':
 			yield(E.run([
-				'Player: Este... es muy...hipnótico.',
+				'Player: Si, eso parece, pero...no se, esto es muy... hipnótico',
 				'RamonPuerta: ¡Pero claro que es hipnótico! Así es cómo funciona todo esto, gurí, ¿no lo ves todavía?',
 				'Player: Si, mientras más miro creo que más cosas veo.',
 				'RamonPuerta: Es una vuelta de tuerca, gurí.',
