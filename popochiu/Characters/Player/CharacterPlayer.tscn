@@ -13,6 +13,7 @@ description = "Player"
 baseline = 73
 walk_to_point = Vector2( 0, 81 )
 cursor = 8
+flips_when = 2
 walk_speed = 250.0
 popochiu_placeholder = null
 
@@ -20,11 +21,13 @@ popochiu_placeholder = null
 polygon = PoolVector2Array( 0, -57, 29, -33, 58, -23, 61, 23, 32, 42, 33, 65, -16, 72, -17, 44, -51, 38, -63, -9, -23, -51 )
 
 [node name="BaselineHelper" type="Line2D" parent="."]
+visible = false
 position = Vector2( 0, 73 )
 points = PoolVector2Array( -10000, 0, 100.684, 0, 10000, 0 )
 width = 1.0
 
 [node name="WalkToHelper" type="Position2D" parent="."]
+visible = false
 position = Vector2( 0, 81 )
 __meta__ = {
 "_edit_group_": true
