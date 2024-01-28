@@ -55,7 +55,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Criptoevangelista: Estamos próximos a desmontar este engendro de la herejía empobrecedora. Necesitamos más energía para que nuestros feligreces depositen el diezmo en la blockchain',
 				'Player: ¿Pero sus feligreses tienen computadoras y conexión de Internet para darles el criptodiezmo?',
 				'Criptoevangelista: Bueno, ese es otro paso. Está por llegar Mamon Musk para ofrecernos sátelites de punta, que apuntando hacia Anillaco, harán un enlace hacia la estratosfera, pudiendo así en tan solo una hora y media descargar 10 mb/s',
-				'Player: ¿Mamón Musk? ¿Es un productor de la chacra?',
+				'Player: ¿Mamón Musk? ¿Es un productor de cítricos misioneros?',
 				'Player: Además no suena muy veloz y quemar carbón no está para nada bien, menos si es para dejar diezmo en la blockchain.',
 				'Criptoevangelista: ¡Zurdoempobrecedor!',
 				]), 'completed')

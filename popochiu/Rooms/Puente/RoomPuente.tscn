@@ -74,7 +74,7 @@ position = Vector2( 400, 300 )
 script = ExtResource( 10 )
 script_name = "Bajaralcanal"
 description = "Bajar al canal"
-walk_to_point = Vector2( -51, 144 )
+walk_to_point = Vector2( 288, 230 )
 cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Bajaralcanal"]

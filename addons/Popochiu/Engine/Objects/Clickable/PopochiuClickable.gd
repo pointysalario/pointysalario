@@ -94,21 +94,21 @@ func on_room_set() -> void:
 # When the node is clicked
 func on_interact() -> void:
 	yield(E.run([
-		G.display("Can't INTERACT with it")
+		G.display("No puedes llevarte eso")
 	]), 'completed')
 
 
 # When the node is right clicked
 func on_look() -> void:
 	yield(E.run([
-		G.display("Can't EXAMINE it")
+		G.display("No hay nada que examinar")
 	]), 'completed')
 
 
 # When the node is clicked and there is an inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
 	yield(E.run([
-		G.display("Can't USE %s here" % item.description)
+		G.display("No podes usar %s así" % item.description)
 	]), 'completed')
 
 

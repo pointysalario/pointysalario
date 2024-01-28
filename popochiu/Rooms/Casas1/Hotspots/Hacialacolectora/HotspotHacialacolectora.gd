@@ -17,7 +17,7 @@ func on_interact() -> void:
 		E.goto_room('Bondi110')
 	else:
 		yield(E.run([
-		C.Player.say("Tengo que ir primero a lo de mi primo")
+		C.Player.say("Tengo que ir primero a lo de mi prima")
 		]), 'completed')
 
 

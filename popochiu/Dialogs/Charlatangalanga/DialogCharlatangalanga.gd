@@ -60,9 +60,13 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			yield(E.run([
 				'Player: Dr., encontré un espejaime, ¿le sirve a usted?',
 				'Tangalanga: ¡Lo estaba buscando hace años!',
-				'Tangalanga: Mirá, hoy estoy en modo alcahuete y quiero laburar',
-				'Tangalanga: Escuchame, a dṕónde tenés que ir vos.',
-				'Tangalanga: Pero solo a direcciones que yo conozca.',
+				'Tangalanga: Mirá, hoy estoy en modo alcahuete y quiero laburar.',
+				'Tangalanga: Te puedo llevar al centro de Posadas pero solo conozco estas direcciones:',
+				'Tangalanga: Malabia 1614, 2do patio del lado de la sombra:',
+				'Tangalanga: Ecuador 432.',
+				'Tangalanga: Cochabamba al tresmil setecientos y monedas',
+				'Tangalanga: Junin y Santa Fe pero del lado de canto.',
+				'Tangalanga: Venezuela y Chile.',
 			]), 'completed')
 			opt.turn_off()
 			turn_off_options(['estanmuertos','docentes','delcielo','adios'])
@@ -70,13 +74,13 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 		'ecuador':
 			yield(E.run([
 				'Player: Ecuador 747.',
-				'Tangalanga: No se cómo llegar ahí.'
+				'Tangalanga: Mmmm, no, eso está a más de 1000km, no seas alcahuete no me hagas laburar tanto.'
 			]), 'completed')
 			opt.turn_off()
 		'malabia':
 			yield(E.run([
 				'Player: Malabia 1614 segundo patio del lado de la sombra.',
-				'Tangalanga: No se cómo llegar ahí.'
+				'Tangalanga: Mmmm, no, eso está a más de 1000km, no seas alcahuete no me hagas laburar tanto.'
 				]), 'completed')
 			opt.turn_off()
 		'junin':
@@ -91,13 +95,13 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 		'cochabamba':
 			yield(E.run([
 				'Player: Cochabamba al tresmil setecientos y monedas.',
-				'Tangalanga: No se cómo llegar ahí.'
+				'Tangalanga: Mmmm, no, eso está a más de 1000km, no seas alcahuete no me hagas laburar tanto.'
 				]), 'completed')
 			opt.turn_off()
 		'venezuela':
 			yield(E.run([
 				'Player: Venuezuela y Chile.',
-				'Tangalanga: No se cómo llegar ahí.'
+				'Tangalanga: Mmmm, no, eso está a más de 1000km, no seas alcahuete no me hagas laburar tanto.'
 				]), 'completed')
 			opt.turn_off()
 		'adios':

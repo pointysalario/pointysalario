@@ -26,7 +26,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 	match opt.id:
 		'Muerto':
 			yield(E.run([
-			'RamonAyala: Usted se parece mucho a Ramón Ayala, pero él murió hace unos meses.',
+			'Player: Usted se parece mucho a Ramón Ayala, pero él murió hace unos meses.',
 			"RamonAyala:Si, es cierto, pero eso no impide que esté aquí, disfrutando de estos 45 grados de sensación térmica",
 			"Player: Eso no tiene mucha lógica. ¿Estoy hablando con un muerto?",
 			"RamonAyala: No está muerto lo que puede yacer eternamente. ¿Acaso tú, muchacho, dirías que el Paraná está muerto?",

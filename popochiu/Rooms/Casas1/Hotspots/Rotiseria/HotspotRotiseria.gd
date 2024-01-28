@@ -25,7 +25,7 @@ func on_look() -> void:
 		C.walk_to_clicked(),
 		C.face_clicked(),
 		"Player: Rotisería Agus: Minutas, empanadas, milanesas, sanguches...",
-		"Player: Según mi primo, las mejores empanadas fritas que vas a probar.",
+		"Player: Según mi prima, las mejores empanadas fritas que vas a probar.",
 	])
 
 
