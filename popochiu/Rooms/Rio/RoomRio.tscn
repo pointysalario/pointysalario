@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Rio/RoomRio.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://popochiu/Characters/MonstruoRodridodeFilippi/CharacterMonstruoRodridodeFilippi.tscn" type="PackedScene" id=11]
 [ext_resource path="res://popochiu/Rooms/Rio/Props/Tacuru/PropTacuru.gd" type="Script" id=12]
 [ext_resource path="res://assets/objetos/tacuru.jpg" type="Texture" id=13]
+[ext_resource path="res://OLEMUCUC.wav" type="AudioStream" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 224, 150, 302, 272, -342, 32, -215, -32, 32, -47, 319, -8, 381, 44 )
@@ -123,3 +124,7 @@ position = Vector2( 494, 330 )
 [node name="CharacterMonstruoRodridodeFilippi *" parent="Characters" instance=ExtResource( 11 )]
 position = Vector2( 680, 231 )
 scale = Vector2( 0.4, 0.4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
