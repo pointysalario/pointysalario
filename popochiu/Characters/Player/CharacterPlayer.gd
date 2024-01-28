@@ -31,12 +31,15 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 	# Replace the call to .on_item_used(item) to implement your code. This only
 	# makes the default behavior to happen.
 	if item.script_name == "Cucumelo":
-		E.run([
+		yield(E.run([
+			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Player: Me voy a flashearla fiero',
-			E.goto_room('Bonditangalanga')
-		])
-	pass
+			"Player: Bueno, ahora si vamos a flasharla."
+		]), 'completed')
+		E.goto_room('Bonditangalanga')
+		
+
+
 
 # Use it to play the idle animation for the character
 func play_idle() -> void:
