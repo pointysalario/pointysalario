@@ -10,7 +10,7 @@ func on_start() -> void:
 	]), 'completed')
 	
 func option_selected(opt: PopochiuDialogOption) -> void:
-	yield(D.say_selected(), 'completed')
+#	yield(D.say_selected(), 'completed')
 
 
 	match opt.id:
@@ -76,7 +76,8 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Peron: Por cierto, ya que le estoy dando una mano, le doy este par de guantes. Le serán de utilidad a usted, quien sabrá darles buen uso',
 				'Player: Estem...no es lo que esperaba, pero todo sirve.',
 				I.add_item('Guantes'),
-				opt.turn_off()
+				opt.turn_off(),
+				stop()
 			]), 'completed')
 		'doctrina2':
 			yield(E.run([
@@ -127,8 +128,14 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Player: Ok...estoy más confundido que antes pero me guardo este consejo.',
 			opt.turn_off()
 			]), 'completed')
+			turn_on_options(['merepite'])
 			Globals.dialog_verdad_peronista_done = true
-				
+		'merepite':
+			yield(E.run([
+				'Peron: ¡Compañeros! La Gran Verdad, aquella que os acompañará en esta senda de esclarecimiento contra un gobierno provincial de Misiones tornado en ajustador serial es...',
+				'Peron: Si alguna vez el agua quieres atraer, a rabdomantes y bailarines no debes creer...',
+				'Peron: Lava el coche al sol, y atraerás al chaparrón.',
+				]), 'completed')
 		'adios':
 			yield(E.run([
 				'Peron: Siga, compañero, ¡y no se rinda!'

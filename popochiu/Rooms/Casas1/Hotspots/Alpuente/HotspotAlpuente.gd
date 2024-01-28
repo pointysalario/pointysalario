@@ -9,18 +9,21 @@ extends PopochiuHotspot
 # When the node is clicked
 
 func on_interact() -> void:
-	if Globals.carta_leida == true:
+	if Globals.carta_leida == true and Globals.charlacriptoevangelista ==true:
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
 #			"Player: Can't open it"
 		]), 'completed')
 		E.goto_room('Puente')
+	elif Globals.carta_leida == true and Globals.charlacriptoevangelista == false:
+		yield(E.run([
+		C.Player.say("Mmm todavía me quedan lugares por recorrer.")
+		]), 'completed')
 	else:
 		yield(E.run([
 		C.Player.say("Tengo que ir primero a lo de mi primo")
 		]), 'completed')
-
 
 # When the node is right clicked
 func on_look() -> void:

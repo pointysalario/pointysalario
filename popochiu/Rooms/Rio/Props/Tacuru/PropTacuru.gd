@@ -12,12 +12,13 @@ func on_interact() -> void:
 	# the default behavior to happen.
 	# For example you can make the character walk to the Prop and then say
 	# something:
-#	E.run([
-#		C.walk_to_clicked(),
-#		C.face_clicked(),
-#		'Player: Not picking that up'
-#	])
-	.on_interact()
+	E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		'Player: Hay muchísimas hormigas.',
+		'Player: Todo ese ir y venir de decenas de miles de patas es atrapante.',
+	])
+
 
 
 # When the node is right clicked
@@ -26,10 +27,10 @@ func on_look() -> void:
 	# the default behavior to happen.
 	# For example you can make the character walk to the Prop and then say
 	# something:
-#	E.run([
-#		C.face_clicked(),
-#		'Player: A deck of cards'
-#	])
+	E.run([
+		C.face_clicked(),
+		'Player: Un clásico tacurú misionero.'
+	])
 	.on_look()
 
 

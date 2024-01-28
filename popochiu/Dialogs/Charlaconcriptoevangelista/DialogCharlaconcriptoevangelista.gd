@@ -22,7 +22,7 @@ func on_start() -> void:
 
 func option_selected(opt: PopochiuDialogOption) -> void:
 	# You can make the player character say the selected option with:
-	yield(D.say_selected(), 'completed')
+
 	
 	# Use match to check which option was selected and excecute something for
 	# each one
@@ -60,6 +60,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Criptoevangelista: ¡Zurdoempobrecedor!',
 				]), 'completed')
 				stop()
+				Globals.charlacriptoevangelista = true
 #				opt.turn_off()
 #				if I.AnuncioMamonMusk.in_inventory and !I.TarjetaMamonMusk.in_inventory:
 #					turn_on_options(['MamonMusk'])

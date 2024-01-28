@@ -6,31 +6,29 @@ extends PopochiuHotspot
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
-# When the node is clicked
-func on_interact() -> void:
-	# Replace the call to .on_interact() to implement your code. This only makes
-	# the default behavior to happen.
-	# For example you can make the character walk to the Hotspot and then say
-	# something:
-#	E.run([
-#		C.walk_to_clicked(),
-#		C.face_clicked(),
-#		"Player: Can't open it"
-#	])
-	.on_interact()
 
+
+func on_interact() -> void:
+	if Globals.carta_leida == true :
+		 E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		"Player: Típica plantera de barrio. Tentadoramente delictiva.",
+	])
+	
+	else:
+		yield(E.run([
+		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
+		]), 'completed')
 
 # When the node is right clicked
 func on_look() -> void:
-	# Replace the call to .on_look() to implement your code. This only makes
-	# the default behavior to happen.
-	# For example you can make the character walk to the Hotspot and then say
-	# something:
-#	E.run([
-#		C.face_clicked(),
-#		'Player: A closed door'
-#	])
-	.on_look()
+	 E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		"Player: Acá no hay suculenta que aguante..",
+		
+	])
 
 
 # When the node is clicked and there is an inventory item selected

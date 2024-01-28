@@ -7,8 +7,11 @@ extends PopochiuHotspot
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
+
+
 func on_interact() -> void:
- E.run([
+	if Globals.carta_leida == true :
+		E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
 		"Player: A ver...",
@@ -16,9 +19,12 @@ func on_interact() -> void:
 		"Player: Ugh, qué asco, está muy pegajosa, como si tuviera algún tipo de pegamento.",
 		"Player: No me servirá de mucho aquí, pero bueno, me la llevo.",
 		I.add_item('TarjetaSUBE')
-	])
+		])
+	else:
+		yield(E.run([
+		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
+		]), 'completed')
 
-	
 
 # When the node is right clicked
 func on_look() -> void:

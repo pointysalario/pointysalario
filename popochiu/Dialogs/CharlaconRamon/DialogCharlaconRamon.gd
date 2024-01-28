@@ -12,6 +12,10 @@ func on_start() -> void:
 		'Player: Estem...',
 		'Lagomarsinojr: Qué precisa, muchacho'
 	]), 'completed')
+	if Globals.dialog_verdad_peronista_done == true and I.Mandioca.in_inventory:
+		turn_on_options(['generador'])
+	if I.Generadororganicoenchufado.in_inventory:
+		turn_on_options(['enchufado'])
 
 func option_selected(opt: PopochiuDialogOption) -> void:
 	# You can make the player character say the selected option with:
@@ -32,7 +36,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			yield(E.run([
 			"RamonAyala: Si, por supuesto, hay dos maneras de llegar, pero, ¿para qué querés ir al centro? Acá tenés todo lo que necesitas.",
 			"Player: Es que mis colegas docentes están de huelga, la provincia recortó nuestro sueldo y necesito ir a la asamblea que se realiza en la Plaza 9 de Julio",
-			"RamonAyala: Ah, entiendo. Tenes dos maneras de ir.",
+			"RamonAyala: Ah, entiendo. Tenés dos maneras de ir.",
 			"Player: ¿Cuáles son?",
 			"RamonAyala: Cualquier colectivo te llevará hasta el centro, si es que lográs que los planetas se alineen y pasen a tiempo.",
 			"Player: ¿Y la otra forma?",
@@ -40,6 +44,25 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			]), 'completed')
 			opt.turn_off()
 			turn_on_options(['onirica'])
+		'conflicto':
+			yield(E.run([
+				'Player: ¿Pero sabe algo del conflicto docente?',
+				'RamonAyala: Gurí, tengo unos cuantos años más que vos, y esta ya la ví. Las ví todas.',
+				'Player: Eso no responde mi pregunta.',
+				'RamonAyala: Mire, cuando yo era gurisito, nadie sabía mucha, se trabajaba pero que paguen...',
+				'RamonAyala: Eso era otra. Y no es que anduviese viviendo la del mensú del Alto Paraná.',
+				'Player: Me imagino, si todos en el barrio lo conocían como "el viejo mano larga".',
+				'RamonAyala: No me falte el respeto.',
+			]), 'completed')
+			opt.turn_off()
+		'respeto':
+			yield(E.run([
+				'Player: ¡No le estoy faltando el respeto!',
+				'RamonAyala: Gurí, lo que digo es lo siguiente:',
+				'RamonAyala: La historia de Misiones es la historia del país:',
+				'RamonAyala: La lucha entre el pueblo y los patrones de estancia.',
+				'Player: Patrones de estancia...sí, historia del país.'
+			]), 'completed')
 		'onirica':
 			yield(E.run([
 			"RamonAyala: ¡Pero chamigo, si serás lento!¿No quedamos en que estoy muerto?¿Acaso te pensas que INCLUSO LOS MUERTOS tenemos que padecer a los mafiosos transportistas de Casimiro?",
@@ -49,6 +72,30 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			"RamonAyala: Me extraña, chamigo, las puertas de la percepción se abren para quienes saben encontrar la llave. Buscala y sabrás cómo viajar"
 			]), 'completed')
 			opt.turn_off()
+		'generador':
+			yield(E.run([
+			'Player: ¿Sabe cómo puedo hacer para cargar un celular?',
+			'RamonAyala: Vengo de otra tierra, de otros caminos donde no se usan celulares.',
+			'Player: Pero ahora está en ESTA tierra.',
+			'RamonAyala: Bueno, en ese caso... en la época de Perón, antes y durante la provincialización...',
+			'RamonAyala: Las Colonias Experimentales hicieron algunos experimentos con baterias de mandioca.',
+			'Player: Eso suena bastante oportuno.',
+			'RamonAyala: Así funciona el mal game design.',
+				
+			]), 'completed')
+			opt.turn_off()
+		'enchufado':
+			yield(E.run([
+			'Player: Armé esto, ¿y ahora que se le ocurre, Ramon?',
+			'RamonAyala: Gurí, ya te ayudé un montón, no sea pesado.',
+			'Player: ¡Pero es que me falta tan poco!',
+			'RamonAyala: ¡Entonces enchufelo donde sea y ya!',
+			]), 'completed')
+			opt.turn_off()
+		'adios':
+			yield(E.run([
+			'Player: Tengo que irme.',
+			]), 'completed')
 			stop()
 	
 	_show_options()

@@ -19,10 +19,11 @@ func on_interact() -> void:
 
 # When the item is right clicked in the inventory
 func on_look() -> void:
-	# Replace the call to .on_look() to implement your code. This only makes
-	# the default behavior to happen.
-	.on_look()
-
+ E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		"Player: ¡Una autentica tarjeta de Mamón Musk!",
+	])
 
 # When the item is clicked and there is another inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:

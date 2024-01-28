@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=11 format=2]
 
 [ext_resource path="res://popochiu/Dialogs/CharlaconRamon/DialogCharlaconRamon.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
@@ -30,8 +30,53 @@ visible = false
 disabled = false
 always_on = false
 
+[sub_resource type="Resource" id=4]
+resource_name = "conflicto"
+script = ExtResource( 2 )
+id = "conflicto"
+text = "¿Pero sabe algo del conflicto docente?"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=5]
+resource_name = "respeto"
+script = ExtResource( 2 )
+id = "respeto"
+text = "¡No le falto el respeto!"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=6]
+resource_name = "generador"
+script = ExtResource( 2 )
+id = "generador"
+text = "¿Sabe cómo puedo hacer para cargar un celular?"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=7]
+resource_name = "adios"
+script = ExtResource( 2 )
+id = "adios"
+text = "Tengo que irme."
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=8]
+resource_name = "enchufado"
+script = ExtResource( 2 )
+id = "enchufado"
+text = "Armé esto, ¿y ahora que se le ocurre, Ramon?"
+visible = false
+disabled = false
+always_on = false
+
 [resource]
 resource_name = "CharlaconRamon"
 script = ExtResource( 1 )
-options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ]
 script_name = "CharlaconRamon"

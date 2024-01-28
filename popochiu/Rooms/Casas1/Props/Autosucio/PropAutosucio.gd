@@ -7,17 +7,20 @@ extends PopochiuProp
 var mouse_enabled = true
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
+
+
 func on_interact() -> void:
-	# Replace the call to .on_interact() to implement your code. This only makes
-	# the default behavior to happen.
-	# For example you can make the character walk to the Hotspot and then say
-	# something:
-	E.run([
+	if Globals.carta_leida == true :
+		 E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: ¿Por qué tendría que lavarlo yo? Además, no tengo con qué."
+		"Player: Player: ¿Por qué tendría que lavarlo yo? Además, no tengo con qué.",
 	])
-
+	
+	else:
+		yield(E.run([
+		C.Player.say("No tocaré nada hasta no haber idode mi prima")
+		]), 'completed')
 
 # When the node is right clicked
 func on_look() -> void:

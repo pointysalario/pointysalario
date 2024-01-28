@@ -115,7 +115,7 @@ scale = Vector2( 1, 1 )
 z_index = 2
 script = ExtResource( 18 )
 script_name = "Autosucio"
-description = "Autosucio"
+description = "Auto sucio"
 baseline = -1250
 walk_to_point = Vector2( 5370, 1630 )
 cursor = 1
@@ -275,7 +275,7 @@ polygon = PoolVector2Array( -7, 71, 24, 72, 23, -28, -12, -27 )
 position = Vector2( 400, 300 )
 script = ExtResource( 21 )
 script_name = "Puerta2"
-description = "Puerta2"
+description = "Puerta"
 walk_to_point = Vector2( -424, 76 )
 cursor = 1
 

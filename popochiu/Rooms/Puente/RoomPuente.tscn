@@ -50,7 +50,7 @@ script_name = "Puente"
 description = "Puente"
 clickable = false
 baseline = -195
-walk_to_point = Vector2( 294, 213 )
+walk_to_point = Vector2( 301, 210 )
 cursor = 1
 texture = ExtResource( 4 )
 

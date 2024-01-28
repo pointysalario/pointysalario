@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=13 format=2]
+[gd_resource type="Resource" load_steps=14 format=2]
 
 [ext_resource path="res://popochiu/Dialogs/Charlaconperon/DialogCharlaconperon.gd" type="Script" id=1]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
@@ -93,8 +93,17 @@ visible = false
 disabled = false
 always_on = false
 
+[sub_resource type="Resource" id=12]
+resource_name = "merepite"
+script = ExtResource( 2 )
+id = "merepite"
+text = "¿Me podría repetir la última verdad?"
+visible = false
+disabled = false
+always_on = false
+
 [resource]
 resource_name = "Charlaconperon"
 script = ExtResource( 1 )
-options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ]
 script_name = "Charlaconperon"

@@ -7,13 +7,18 @@ extends PopochiuHotspot
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
+
 func on_interact() -> void:
-	E.run([
+	if Globals.carta_leida == true :
+		E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Player: Que esté abierto no significa que pueda entrar."
-	])
-
+		"Player: Que esté abierto no significa que pueda entrar.",
+		])
+	else:
+		yield(E.run([
+		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
+		]), 'completed')
 
 # When the node is right clicked
 func on_look() -> void:

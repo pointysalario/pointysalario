@@ -7,13 +7,20 @@ extends PopochiuHotspot
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
+
 func on_interact() -> void:
-	yield(E.run([
-		C.walk_to_clicked(),
-		C.face_clicked(),
-#		"Player: Can't open it"
-	]), 'completed')
-	E.goto_room('Rio')
+	if Globals.dialog_verdad_peronista_done == true:
+		yield(E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+#			"Player: Can't open it"
+		]), 'completed')
+		E.goto_room('Rio')
+	else:
+		yield(E.run([
+		C.Player.say("Mmmmm, todavía no.")
+		]), 'completed')
+
 
 # When the node is right clicked
 func on_look() -> void:

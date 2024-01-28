@@ -12,11 +12,11 @@ func on_interact() -> void:
 	# the default behavior to happen.
 	# For example you can make the character walk to the Hotspot and then say
 	# something:
-#	E.run([
-#		C.walk_to_clicked(),
-#		C.face_clicked(),
-#		"Player: Can't open it"
-#	])
+	E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		"Player: Cuando hay poca agua, se puede caminar sobre el canal. No es este el caso."
+	])
 	.on_interact()
 
 
