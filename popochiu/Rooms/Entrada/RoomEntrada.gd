@@ -14,7 +14,7 @@ var state: Data = preload('RoomEntrada.tres')
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func on_room_entered() -> void:
-	pass
+	A.play_music_no_block('mx_chicharras_pajaros_autos',3)
 
 
 # What happens when the room changing transition finishes. At this point the room

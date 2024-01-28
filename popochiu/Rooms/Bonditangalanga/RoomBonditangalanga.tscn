@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Bonditangalanga/RoomBonditangalanga.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Cartel/HotspotCartel.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Parada/HotspotParada.gd" type="Script" id=11]
 [ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Cielo/HotspotCielo.gd" type="Script" id=12]
 [ext_resource path="res://popochiu/Rooms/Bonditangalanga/Hotspots/Templolisergico/HotspotTemplolisergico.gd" type="Script" id=13]
+[ext_resource path="res://Tangaloopga v.0.1.wav" type="AudioStream" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -10, 10, -314, 18, -311, -57, 15, -29, 466, 50, 180, -37, 246, -32, 471, -31, 236, -63, 194, -67 )
@@ -131,3 +132,7 @@ position = Vector2( 120, 456 )
 
 [node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 7 )]
 position = Vector2( 550, 485 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true

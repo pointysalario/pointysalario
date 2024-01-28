@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Onirico/RoomOnirico.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Onirico/Props/_NoInteraction/Fondo espiral/002.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://popochiu/Characters/RamonPuerta/CharacterRamonPuerta.tscn" type="PackedScene" id=28]
 [ext_resource path="res://popochiu/Rooms/Onirico/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=29]
 [ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Ramon puertas de la percepción v0.1.wav" type="AudioStream" id=31]
 
 [sub_resource type="NavigationPolygon" id=3]
 vertices = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10, -392, 268, -394, 77, -356, 86, -65, 249, 394, 294, 387, 211 )
@@ -129,17 +130,10 @@ sort_enabled = false
 
 [node name="CharacterRamonPuerta *" parent="Characters" instance=ExtResource( 28 )]
 position = Vector2( 599, 325 )
-clickable = true
-baseline = 0
-walk_to_point = Vector2( 0, 0 )
-always_on_top = false
-text_color = Color( 1, 1, 1, 1 )
-flips_when = 0
-voices = [  ]
-follow_player = false
-walk_speed = 200.0
-can_move = true
-ignore_walkable_areas = false
 
 [node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 30 )]
 position = Vector2( 69, 453 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+autoplay = true
