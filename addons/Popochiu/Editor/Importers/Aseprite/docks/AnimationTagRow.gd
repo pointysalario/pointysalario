@@ -53,7 +53,7 @@ func _load_default_tag_state() -> Dictionary:
 		"import": _config.is_default_animation_import_enabled(),
 		"loops": _config.is_default_animation_loop_enabled(),
 	}
-
+ 
 
 
 func _on_import_toggled(button_pressed):

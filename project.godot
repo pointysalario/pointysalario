@@ -135,7 +135,7 @@ _global_script_class_icons={
 [application]
 
 config/name="pointysalario"
-run/main_scene="res://popochiu/Rooms/Entrada/RoomEntrada.tscn"
+run/main_scene="res://popochiu/Rooms/Main/RoomMain.tscn"
 config/icon="res://icon.png"
 
 [autoload]

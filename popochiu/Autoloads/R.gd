@@ -11,6 +11,9 @@ const PRRioconbasura := preload('res://popochiu/Rooms/Rioconbasura/RoomRioconbas
 const PRPuente := preload('res://popochiu/Rooms/Puente/RoomPuente.gd')
 const PROnirico := preload('res://popochiu/Rooms/Onirico/RoomOnirico.gd')
 const PRBonditangalanga := preload('res://popochiu/Rooms/Bonditangalanga/RoomBonditangalanga.gd')
+const PRTest := preload('res://popochiu/Rooms/Test/RoomTest.gd')
+const PRMain := preload('res://popochiu/Rooms/Main/RoomMain.gd')
+const PRCreditos := preload('res://popochiu/Rooms/Creditos/RoomCreditos.gd')
 # ---- classes
 
 # nodes ----
@@ -23,6 +26,9 @@ var Rioconbasura: PRRioconbasura setget , get_Rioconbasura
 var Puente: PRPuente setget , get_Puente
 var Onirico: PROnirico setget , get_Onirico
 var Bonditangalanga: PRBonditangalanga setget , get_Bonditangalanga
+var Test: PRTest setget , get_Test
+var Main: PRMain setget , get_Main
+var Creditos: PRCreditos setget , get_Creditos
 # ---- nodes
 
 # functions ----
@@ -35,5 +41,8 @@ func get_Rioconbasura(): return .get_runtime_room('Rioconbasura')
 func get_Puente(): return .get_runtime_room('Puente')
 func get_Onirico(): return .get_runtime_room('Onirico')
 func get_Bonditangalanga(): return .get_runtime_room('Bonditangalanga')
+func get_Test(): return .get_runtime_room('Test')
+func get_Main(): return .get_runtime_room('Main')
+func get_Creditos(): return .get_runtime_room('Creditos')
 # ---- functions
 

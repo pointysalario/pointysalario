@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Creditos/RoomCreditos.gd" type="Script" id=1]
+[ext_resource path="res://Ramon puertas de la percepción v0.1.wav" type="AudioStream" id=2]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/ux/Créditos.png" type="Texture" id=4]
+[ext_resource path="res://popochiu/Rooms/Creditos/Hotspots/Back/HotspotBack.gd" type="Script" id=5]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=6]
+
+[node name="RoomCreditos" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Creditos"
+has_player = false
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Creditos" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 398, 298 )
+scale = Vector2( 1.01, 1.01 )
+script_name = "Creditos"
+description = "Creditos"
+clickable = false
+cursor = 1
+texture = ExtResource( 4 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Back" parent="Hotspots" instance=ExtResource( 6 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 5 )
+script_name = "Back"
+description = "Back"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Back"]
+modulate = Color( 0, 0, 1, 1 )
+polygon = PoolVector2Array( -303, 227, -298, 227, -295, 223, -293, 212, -226, 209, -227, 167, -293, 165, -300, 149, -339, 188 )
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true

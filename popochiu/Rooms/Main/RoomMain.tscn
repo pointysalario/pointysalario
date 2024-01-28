@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Main/RoomMain.gd" type="Script" id=1]
+[ext_resource path="res://popochiu/Rooms/Main/Hotspots/Creditos/HotspotCreditos.gd" type="Script" id=2]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/ux/a00 Fondo.png" type="Texture" id=4]
+[ext_resource path="res://assets/ux/b00 Mancha.png" type="Texture" id=5]
+[ext_resource path="res://popochiu/photo_2024-01-27_19-45-57.jpg" type="Texture" id=6]
+[ext_resource path="res://assets/ux/c00 Logo.png" type="Texture" id=7]
+[ext_resource path="res://popochiu/Rooms/Main/Hotspots/Nuevo/HotspotNuevo.gd" type="Script" id=8]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=9]
+[ext_resource path="res://popochiu/Rooms/Main/Hotspots/Cargar/HotspotCargar.gd" type="Script" id=10]
+[ext_resource path="res://Ramon Ayala v0.1.wav" type="AudioStream" id=11]
+
+[node name="RoomMain" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Main"
+has_player = false
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Wallpaper" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+scale = Vector2( 1, 1 )
+script_name = "Wallpaper"
+description = "Wallpaper"
+clickable = false
+cursor = 1
+texture = ExtResource( 4 )
+
+[node name="Mancha" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+script_name = "Mancha"
+description = "Mancha"
+clickable = false
+cursor = 1
+texture = ExtResource( 5 )
+
+[node name="Logo" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 300 )
+script_name = "Logo"
+description = "Logo"
+clickable = false
+cursor = 1
+texture = ExtResource( 7 )
+
+[node name="Photo2024-01-2719-45-57" type="Sprite" parent="Props"]
+position = Vector2( 400, 300 )
+texture = ExtResource( 6 )
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Nuevo" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 8 )
+script_name = "Nuevo"
+description = "Nuevo"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Nuevo"]
+modulate = Color( 0, 0, 1, 1 )
+polygon = PoolVector2Array( -22, -4, -116, -4, -143, -9, -134, -47, 134, -46, 149, -27, 135, -2 )
+
+[node name="Cargar" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 10 )
+script_name = "Cargar"
+description = "Cargar"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Cargar"]
+modulate = Color( 0, 0, 1, 1 )
+polygon = PoolVector2Array( -138, 14, -144, 20, -145, 41, -123, 55, -84, 42, -52, 54, -31, 47, 12, 52, 19, 55, 65, 46, 93, 55, 121, 46, 138, 50, 148, 41, 148, 16, 131, 12, 70, 13, 52, 9, 15, 18, -24, 8, -46, 16, -75, 12, -102, 14 )
+
+[node name="Creditos" parent="Hotspots" instance=ExtResource( 9 )]
+position = Vector2( 400, 300 )
+script = ExtResource( 2 )
+script_name = "Creditos"
+description = "Creditos"
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Creditos"]
+modulate = Color( 0, 0, 1, 1 )
+polygon = PoolVector2Array( -95, 161, -36, 161, 12, 158, 52, 167, 87, 160, 103, 159, 108, 132, 91, 121, 52, 125, 21, 117, -3, 121, -13, 125, -41, 125, -59, 123, -93, 117, -105, 133, -107, 155 )
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+visible = false
+sort_enabled = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true

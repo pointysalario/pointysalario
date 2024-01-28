@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Test/RoomTest.gd" type="Script" id=1]
+
+[node name="RoomTest" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Test"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false

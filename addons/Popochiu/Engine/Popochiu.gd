@@ -239,11 +239,13 @@ func run_cutscene(instructions: Array) -> void:
 # Loads the room with script_name. use_transition can be used to trigger a fade
 # out animation before loading the room, and a fade in animation once it is ready
 func goto_room(
+
 	script_name := '',
 	use_transition := true,
 	store_state := true,
 	ignore_change := false
 ) -> void:
+	print("hola3")
 	if not in_room: return
 	
 	G.block()
@@ -276,7 +278,7 @@ func goto_room(
 	main_camera.limit_bottom = _defaults.camera_limits.bottom
 	
 	if ignore_change: return
-	
+	print("hola")	
 	var rp: String = PopochiuResources.get_data_value('rooms', script_name, null)
 	if not rp:
 		prints('[Popochiu] No PopochiuRoom with name: %s' % script_name)

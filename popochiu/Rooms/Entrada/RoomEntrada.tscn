@@ -41,7 +41,7 @@ navpoly = SubResource( 1 )
 sort_enabled = false
 
 [node name="Fondo" parent="Props" instance=ExtResource( 3 )]
-position = Vector2( 400, 300 )
+position = Vector2( 400, 301 )
 scale = Vector2( 1, 1 )
 script_name = "Fondo"
 description = "Fondo"
@@ -102,7 +102,7 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Alascasas"]
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -51, 126 )
-polygon = PoolVector2Array( 84, 15, -89, 6, -73, -12, 89, -2 )
+polygon = PoolVector2Array( 84, 15, -89, 6, -73, -12, -1.3819, -7.57913, 89, -2 )
 
 [node name="Regions" type="Node2D" parent="."]
 
