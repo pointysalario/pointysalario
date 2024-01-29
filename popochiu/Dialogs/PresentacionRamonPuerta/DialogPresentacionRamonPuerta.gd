@@ -64,26 +64,24 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			]), 'completed')
 			turn_on_options(['carpadocente','conflicto'])
 		'carpadocente':
-			yield(E.run([
-				'Player: Si, eso parece, pero...no se, esto es muy... hipnótico',
-				'RamonPuerta: ¡Pero claro que es hipnótico! Así es cómo funciona todo esto, gurí, ¿no lo ves todavía?',
-				'Player: Si, mientras más miro creo que más cosas veo.',
-				'RamonPuerta: Es una vuelta de tuerca, gurí.',
-				'RamonPuerta: De la carpa docente sale todo. Las provincias pidiéndole plata al estado nacional para pagar sueldos.',
-				'RamonPuerta: Misiones no podía financiar la educación. El traspaso de la Reforma fue ruin.',
-				'Player: ¡Y ustedes más ruines!',
-				'RamonPuerta: ¿Y pero por qué te pensas que estoy aquí, arriba un triciclo y no haciendo chistes como Tangalanga?',
-				'RamonPuerta: Cómo sea, mis pichones siguen ahí, ahora solamente tienen más convicciones para el ajuste.',
-				'RamonPuerta: ¿La ves ahora?',
-				'Player: Sí...creo que sí. De todas maneras, me voy para allá. En la Carpa seguro esta mi prima.',
-				'Player: Bien, hasta acá hemos llegado.',
-				'Player: Gracias por tanto y perdón por tan poco.',
-				'Player: Esto es solo una pequeña demo jugable.',
-				'Player: Si encontraste bugs, sumate a chat.rebel.ar y contanos.',
-				'Player: ¡Ah! Recordá que hay otros caminos para llegar a este mensaje.',
-				'Player: ¿Ya los encontraste?',
-				opt.turn_off()
+			yield(
+				E.run([ 
+					'Player: Si, eso parece, pero...no se, esto es muy... hipnótico',
+					'RamonPuerta: ¡Pero claro que es hipnótico! Así es cómo funciona todo esto, gurí, ¿no lo ves todavía?',
+					'Player: Si, mientras más miro creo que más cosas veo.',
+					'RamonPuerta: Es una vuelta de tuerca, gurí.',
+					'RamonPuerta: De la carpa docente sale todo. Las provincias pidiéndole plata al estado nacional para pagar sueldos.',
+					'RamonPuerta: Misiones no podía financiar la educación. El traspaso de la Reforma fue ruin.',
+					'Player: ¡Y ustedes más ruines!',
+					'RamonPuerta: ¿Y pero por qué te pensas que estoy aquí, arriba un triciclo y no haciendo chistes como Tangalanga?',
+					'RamonPuerta: Cómo sea, mis pichones siguen ahí, ahora solamente tienen más convicciones para el ajuste.',
+					'RamonPuerta: ¿La ves ahora?',
+					'Player: Sí...creo que sí. De todas maneras, me voy para allá. En la Carpa seguro esta mi prima.',
+					opt.turn_off()
 			]), 'completed')
+			stop()
+			E.goto_room('Final')
+			
 		'conflicto':
 			yield(E.run([
 				'Player: ¿Qué sabe del conflicto docente?',

@@ -37,14 +37,10 @@ func on_look() -> void:
 # When the node is clicked and there is an inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
 		if item.script_name == 'Celularcargado' or item.script_name == '350pesos' :
-			E.run([ 
-				'Player: Bueno, ahora si, a esperar el colectivo',
-				I.remove_item(item.script_name),
-				I.remove_item(script_name),
-				'Player: Bien, hasta acá hemos llegado.',
-				'Player: Gracias por tanto y perdón por tan poco.',
-				'Player: Esto es solo una pequeña demo jugable.',
-				'Player: Si encontraste bugs, sumate a chat.rebel.ar y contanos.',
-				'Player: ¡Ah! Recordá que hay otros caminos para llegar a este mensaje.',
-				'Player: ¿Ya los encontraste?'
-				])
+			yield(
+				E.run([ 
+					'Player: Bueno, ahora si, a esperar el colectivo',
+					I.remove_item(item.script_name),
+					I.remove_item(script_name)
+			]), 'completed')
+			E.goto_room('Final')

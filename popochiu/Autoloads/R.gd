@@ -14,6 +14,7 @@ const PRBonditangalanga := preload('res://popochiu/Rooms/Bonditangalanga/RoomBon
 const PRTest := preload('res://popochiu/Rooms/Test/RoomTest.gd')
 const PRMain := preload('res://popochiu/Rooms/Main/RoomMain.gd')
 const PRCreditos := preload('res://popochiu/Rooms/Creditos/RoomCreditos.gd')
+const PRFinal := preload('res://popochiu/Rooms/Final/RoomFinal.gd')
 # ---- classes
 
 # nodes ----
@@ -29,6 +30,7 @@ var Bonditangalanga: PRBonditangalanga setget , get_Bonditangalanga
 var Test: PRTest setget , get_Test
 var Main: PRMain setget , get_Main
 var Creditos: PRCreditos setget , get_Creditos
+var Final: PRFinal setget , get_Final
 # ---- nodes
 
 # functions ----
@@ -44,5 +46,6 @@ func get_Bonditangalanga(): return .get_runtime_room('Bonditangalanga')
 func get_Test(): return .get_runtime_room('Test')
 func get_Main(): return .get_runtime_room('Main')
 func get_Creditos(): return .get_runtime_room('Creditos')
+func get_Final(): return .get_runtime_room('Final')
 # ---- functions
 
