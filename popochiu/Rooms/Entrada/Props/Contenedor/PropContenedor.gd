@@ -41,16 +41,27 @@ func on_look() -> void:
 
 # When the node is clicked and there is an inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
-		if item.script_name == 'Guantes':
+	if item.script_name == 'Guantes':
+		if !I.is_item_in_inventory('Cablecoaxial'):
 			E.run([
-				'Player: Bueno, con los guantes si me animo a revolver...',
-				'Player: A ver qué encontramos',
-				I.add_item('Cablecoaxial'),
-				'Player: Nunca viene de más un poco de cable coaxial. A ver si encuentro algo más.',
+			'Player: Bueno, con los guantes si me animo a revolver...',
+			'Player: A ver qué encontramos',
+			I.add_item('Cablecoaxial'),
+			'Player: Nunca viene de más un poco de cable coaxial.',
+		])
+		elif !I.is_item_in_inventory('Cableusb'):
+			E.run([
+				'Player: Veamos si aparece algo más...',
 				I.add_item('Cableusb'),
 				'Player: Bueno, esto si me puede servir',
 				'Player: Creo que ya no hay nada interesante.'
 				])
+		else:
+			E.run([
+				'Player: Uy rompí los guantes con una chapa... menos mal que tengo la antitetanica',
+				'Player: Igual por suerte ya no hay mas nada interesante acá adentro',
+				I.remove_item('Guantes'),
+			])
 
 
 # When an inventory item linked to this Prop (link_to_item) is removed from
