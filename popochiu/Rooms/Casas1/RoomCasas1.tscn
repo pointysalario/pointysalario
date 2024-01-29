@@ -130,13 +130,10 @@ position = Vector2( -477.41, 418.345 )
 scale = Vector2( 0.990723, 0.99268 )
 polygon = PoolVector2Array( 401, -363, 423, -355, 434, -356, 601, -371, 612, -389, 587, -461, 475, -466, 378, -434, 356, -398 )
 
-[node name="Gato" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+[node name="Gato" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 339, 228 )
 scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 24 )
-__meta__ = {
-"_editor_description_": ""
-}
 script_name = "Gato"
 description = "Gato"
 cursor = 1

@@ -11,7 +11,7 @@ var mouse_enabled = true
 
 func on_interact() -> void:
 	if Globals.carta_leida == true :
-		 E.run([
+		E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
 		"Player: ¿Por qué tendría que lavarlo yo? Además, no tengo con qué.",
@@ -32,8 +32,6 @@ func on_look() -> void:
 	])
 	Globals.inspect_lavame_done = true
 
-
-
 # When the node is clicked and there is an inventory item selected
 
 func on_item_used(item: PopochiuInventoryItem) -> void:
@@ -47,13 +45,14 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				]),'completed')
 			$"../../AnimationPlayer".play("Tiempo espera")
 		Globals.lluvia = true
+		
 func transicion():
 	E.run([
 		disable(),
 		'Player: 400 milimetros de lluvia luego...',
 		'Player: ¡A la pelota que llovió!'
 		])
-	
+	Globals.autolimpio = true
 
 func mouse_interactions(valor):
 	 get_tree().get_root().set_disable_input(valor)
