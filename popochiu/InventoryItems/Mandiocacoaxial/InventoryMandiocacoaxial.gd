@@ -33,6 +33,7 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 			E.run([
 				I.remove_item(item.script_name),
 				I.remove_item(script_name),
+				A.play('sfx_craftear_item'),
 				I.add_item('Generadororganico'),
 				'Player: Ok, creo que esto es lo que necesito para poder cargar mi telefono. Ahora, ¿a qué lo conecto?'
 				])

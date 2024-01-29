@@ -36,6 +36,7 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 			C.face_clicked(),
 			"Player: Bueno, ahora si vamos a flasharla."
 		]), 'completed')
+		I.remove_item('Cucumelo')
 		E.goto_room('Bonditangalanga')
 		
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Casas1/RoomCasas1.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Alpuente/HotspotAlpuente.gd" type="Script" id=2]
@@ -23,6 +23,8 @@
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Puerta2/HotspotPuerta2.gd" type="Script" id=21]
 [ext_resource path="res://popochiu/Rooms/Casas1/Hotspots/Garage/HotspotGarage.gd" type="Script" id=22]
 [ext_resource path="res://sfx/music/mx_casas.ogg" type="AudioStream" id=23]
+[ext_resource path="res://popochiu/Rooms/Casas1/Props/Gato/PropGato.gd" type="Script" id=24]
+[ext_resource path="res://assets/objetos/gato.png" type="Texture" id=25]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 1209, 49, -31, 57, -32, -172, 135, -153, 739, -54, 1207, -88, 670, -85 )
@@ -127,6 +129,22 @@ texture = ExtResource( 20 )
 position = Vector2( -477.41, 418.345 )
 scale = Vector2( 0.990723, 0.99268 )
 polygon = PoolVector2Array( 401, -363, 423, -355, 434, -356, 601, -371, 612, -389, 587, -461, 475, -466, 378, -434, 356, -398 )
+
+[node name="Gato" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 339, 228 )
+scale = Vector2( 0.2, 0.2 )
+script = ExtResource( 24 )
+__meta__ = {
+"_editor_description_": ""
+}
+script_name = "Gato"
+description = "Gato"
+cursor = 1
+texture = ExtResource( 25 )
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Gato"]
+position = Vector2( -5.00012, 39.9999 )
+polygon = PoolVector2Array( -70, 45, -15, 70, 50, 60, 30, 0, 65, -45, 80, -140, 0, -135, 0, -70 )
 
 [node name="Hotspots" type="Node2D" parent="."]
 

@@ -42,7 +42,8 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				'Player: ¿Será que mi misión en este mundo es lavar autos ajenos?',
 				'Player: ¿Será que Perón tiene razón y el mejor ritual para llamar a la lluvia es lavar el auto?',
 				'Player: Nunca especificó si tiene que ser TU auto o cualquier auto. Probemos...',
-				I.remove_item('Baldeconespuma')
+				I.remove_item('Baldeconespuma'),
+				A.play('sfx_rayos')
 				]),'completed')
 			$"../../AnimationPlayer".play("Tiempo espera")
 		Globals.lluvia = true

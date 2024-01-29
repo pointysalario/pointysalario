@@ -21,7 +21,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 		'muerto':
 			yield(E.run([
 				'Player: ¿Pero...usted no estaba muerto?',
-				"RamonPuerta: We, debo ser el único personaje no muerto de este juego",
+				"RamonPuerta: We, debo ser el único personaje no muerto de este juego.",
 				'Player: ¿Está usted seguro?',
 				'RamonPuerta: Pero claro, gurí, usted es muy joven y no conoce el apellido Puerta.',
 				'Player: ¿El puerta de las fuerzas del cielo?',
@@ -34,9 +34,9 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 		'donde':
 			yield(E.run([
 				'Player: ¿Me puede decir donde estamos? ¡Yo necesito ir al centro!',
-				'RamonPuerta: ¡Pero gurí!¿Usted decidió hacer el viaje con cucumelo antes que esperar un colectivo de Casimiro, no?',
+				'RamonPuerta: ¡Pero gurí! ¿Usted decidió hacer el viaje con cucumelo antes que esperar un colectivo de Casimiro, no?',
 				'Player: Si, eso creo...',
-				'RamonPuerta: Y bueno chamigo, hubiera esperado la pésima frecuencia y los 55º arriba de esos colectivos. Ahora aguantese.',
+				'RamonPuerta: Y bueno chamigo, hubiera esperado la pésima frecuencia y los 55º arriba de esos colectivos. Ahora aguántese.',
 				'Player: ¿Que me aguante qué?',
 				'RamonPuerta: Guaú que no te lo buscaste.',
 				'RamonPuerta: ¿Querías viajar al centro de otra manera? Tranquilo chamigo, que vas a llegar.',
@@ -55,14 +55,14 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			]), 'completed')
 		'triciclo':
 			yield(E.run([
-				'Player: ¿Qué le pasó a su rostro?¿Por qué el triciclo?',
-				'RamonPuerta: ¿Es que todavía no lo entendes?¡Juipitaura.',
+				'Player: ¿Qué le pasó a su rostro? ¿Por qué el triciclo?',
+				'RamonPuerta: ¿Es que todavía no lo entendes? ¡Juipitaura!',
 				'RamonPuerta: La historia es una pesadilla de la que no podemos despertar, ¿sabes?',
 				'Player: ¡Pero yo nunca me dormí!',
 				'RamonPuerta: Eso es lo que crees. ¿No ves, ahí al fondo, en el centro del espiral, la Carpa de los Docentes levantándose?',
 				opt.turn_off()
 			]), 'completed')
-			turn_on_options(['carpadocente'])
+			turn_on_options(['carpadocente','conflicto'])
 		'carpadocente':
 			yield(E.run([
 				'Player: Si, eso parece, pero...no se, esto es muy... hipnótico',
@@ -84,8 +84,37 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Player: ¿Ya los encontraste?',
 				opt.turn_off()
 			]), 'completed')
-			stop()
-			
+		'conflicto':
+			yield(E.run([
+				'Player: ¿Qué sabe del conflicto docente?',
+				'RamonPuerta: Lo que sabe todo el mundo, que el gobierno judea a los docentes.',
+				'Player: Eso no me dice mucho.',
+				'RamonPuerta: Mirá, gurí, acá las cosas son simples. Yo he entablado un dogma, el verdadero dogma "misionerista".',
+				'RamonPuerta: Mucho antes que mi pichoncito remonte solo, yo lo fui orientando en las verdades puertistas.',
+				'RamonPuerta: Y hay una muy clara, concisa, que yo instauré y define toda esta situación:',
+				'RamonPuerta: Si a Misiones le va bien, es gracias a la provincia, y si a Misiones le va mal, es culpa de la nación.',
+				opt.turn_off()
+			]), 'completed')
+			turn_on_options(['dogma'])
+		'dogma':
+			yield(E.run([
+				'Player: ¿Dogma? ¿Misionerismo? ¿Qué tiene que ver con los salarios de miseria de los docentes?',
+				'RamonPuerta: El misionerismo es el respeto irrestricto del proyecto de la casta provincial..',
+				'RamonPuerta: basado en el PRINCIPIO GENERACIÓN DE HUMO y en defensa de los intereses de los capangas de estancia.',
+				'Player: Creo que entiendo. Entonces, a la casta la educación la tiene sin cuidado.',
+				'RamonPuerta: Pero gurí, si ellos aprendieron muy bien de mi, ¿no sabías que fueron alumnos míos?',
+				
+				opt.turn_off()
+			]), 'completed')
+			turn_on_options(['alumnos'])
+		'alumnos':
+			yield(E.run([
+				'Player: ¿Cómo que alumnos?',
+				'RamonPuerta: Me parece que a vos te falta un poco de lo que en Misiones llamamos "Eduación Disruptiva"',
+				'Player: ¡Disruptivo es poder vivir con 165 mil pesos de sueldo!',
+				
+				opt.turn_off()
+			]), 'completed')
 		'adios':
 			yield(E.run([
 				]), 'completed')

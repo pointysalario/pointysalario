@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_rayos.ogg-1b2ad869e8acf71058db383f493b86b4.oggstr"
+
+[deps]
+
+source_file="res://popochiu/Rooms/Casas1/sfx_rayos.ogg"
+dest_files=[ "res://.import/sfx_rayos.ogg-1b2ad869e8acf71058db383f493b86b4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

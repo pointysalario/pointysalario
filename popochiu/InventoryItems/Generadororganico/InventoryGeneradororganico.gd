@@ -34,6 +34,7 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				I.remove_item(script_name),
 #				I.remove_item('Generadororganico'),
 				I.remove_item('Celular'),
+				A.play('sfx_craftear_item'),
 				I.add_item('Generadororganicoenchufado'),
 				'Player: Bueno, ahora si, el generador definitivo. Necesito enchufarlo a una fuente orgánica de vida.'
 				])

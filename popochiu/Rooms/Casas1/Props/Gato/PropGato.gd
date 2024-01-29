@@ -15,8 +15,11 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		'Player: Hay muchísimas hormigas.',
-		'Player: Todo ese ir y venir de decenas de miles de patas es atrapante.',
+		'Player: Me encantaría llevarmelo.',
+		'Player: Que duerma en mi casa.',
+		'Player: Que nunca le falta nada y le sobre todo.',
+		'Player: Pero es muy miedoso, me acerco y se quiere ir.'
+		
 	])
 
 
@@ -29,25 +32,22 @@ func on_look() -> void:
 	# something:
 	E.run([
 		C.face_clicked(),
-		'Player: Un clásico tacurú misionero.'
+		'Player: Awww. Es un gatito rubio, hermoso.',
+		'Player: Es de la calle, mi prima le da de comer.',
+		'Player: No tiene cola. Espero que la gurisada no haya tenido que ver con ese crimen.'
+		
 	])
-	.on_look()
+
 
 
 # When the node is clicked and there is an inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
-		if item.script_name == 'Generadororganicoenchufado':
-			E.run([
-				'Player: Bien, creo que aquí puedo enchufar esto.',
-				'Player: Este tacurú está lleno de energía cinetica, kinetica y térmica.',
-				'Player: Algo va a tener que cargar.',
-				I.remove_item(item.script_name),
-				I.remove_item(script_name),
-				A.play('sfx_craftear_item'),
-				I.add_item('Celularcargado'),
-				'Player: ¡Perfecto! Telefono cargado con la aplicación de los hijos de puta de Casimiro! Ahora, al centro.',
-				])
-
+	# Replace the call to .on_item_used(item) to implement your code. This only
+	# makes the default behavior to happen.
+	# For example you can make the PC react on using some items in this Prop
+#	if item.script_name == 'Key':
+#		E.run(["Player: I can't do that"])
+	.on_item_used(item)
 
 
 # When an inventory item linked to this Prop (link_to_item) is removed from

@@ -23,8 +23,8 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 	match opt.id:
 		'estanmuertos':
 			yield(E.run([
-				'Player:¿El cucumelo me mató?¿O no paro de encontrarme con muertos?',
-				'Tangalanga: Para que mierda te habras comido esa porquería.',
+				'Player:¿El cucumelo me mató? ¿O no paro de encontrarme con muertos?',
+				'Tangalanga: Para qué mierda te habras comido esa porquería.',
 				'Tangalanga: Igual no se hasta qué punto no te chifla el ortho desde el principio',
 				'Player: Cada vez entiendo menos',
 				'Player: Igual, no se haga el gracioso, Dr, que acá no es tan popular.',
@@ -34,11 +34,11 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			yield(E.run([
 				'Player: Dr, está usted al tanto del reclamo salarial docente?',
 				'Tangalanga: Yo le cuento lo que se de la cuestión.',
-				'Tangalanga: Escucheme, una vez un primo mio me dijo que escuchó al ministro decir:',
-				'Tangalanga: Si las maestras no llegan a fin de mes, que se busquen un compañero.',
+				'Tangalanga: Una vez un primo mio me dijo que escuchó a un ex ministro de educación de Misiones decir:',
+				'Tangalanga: "Si las maestras no llegan a fin de mes, que se busquen un compañero para parar la olla."',
 				'Player: Eso sueno posible pero siento en su voz un ligero tono como de...chantapufi.',
-				'Tangalanga:¿Cómo mierda te lo tengo qué decir?',
-				'Tangalanga:Oíme, una vez un sobrino mio escuchó al gobernador decir:',
+				'Tangalanga: ¿Cómo mierda te lo tengo qué decir?',
+				'Tangalanga: Oíme, te cuento un versito que me dijo el actual gobernador, una vez que me lo crucé en una casa de masajes:',
 				'Tangalanga:"Cada vez que consideren que su sueldo es muy ingrato.."',
 				'Tangalanga:"Metanse un dedo en el orto y dejenlo estar un rato"',
 				'Player: ¡Usted me está faltando el respeto!',
@@ -49,12 +49,12 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			yield(E.run([
 				'Player: Dr., qué opina de las fuerzas del cielo',
 				'Tangalanga: Oíme una cosa, cómo mierda te lo tengo qué decir.',
-				'Tangalanga: Justamente estamos organizando un banquete y con un primo...',
-				'Tangalanga: Él invitó una vez a una señora, de rasgos... cómo decirlo, cómo de re boluda.',
+				'Tangalanga: Justamente estamos organizando un banquete con un primo...',
+				'Tangalanga: Él invitó a una señora, de rasgos... cómo decirlo, como de re boluda.',
 				'Tangalanga: Y resulta que era una muchacha llamada Limones.',
 				'Player: ¿Puede redondear, Dr.?',
 				'Tangalanga: ¡Pero la puta que te pario cómo me faltas así el respeto, ponete de perfil...',
-				'Tangalanga: No ves que te chifla el ortho?',
+				'Tangalanga: ¿No ves que te chifla el ortho?',
 				]), 'completed')
 		'espejaime':
 			yield(E.run([

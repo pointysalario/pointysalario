@@ -45,6 +45,8 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'MonstruoRodridodeFilippi: Tomá, ya que hiciste llover, esto es para vos, que cucu que cucu que cucumelo!',
 				I.add_item('Cucumelo'),
 				]), 'completed')
+			opt.turn_off()
+			
 		'adios':
 			yield(E.run([
 				'MonstruoRodridodeFilippi: ¡QUE CUCU, QUE CUCU, QUE CUCUMELO!'

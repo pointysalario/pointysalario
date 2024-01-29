@@ -19,13 +19,13 @@ func on_interact() -> void:
 		"Player: A ver, golpeemos.",
 		"Player: Qué extraño, dijo que me iba a estar esperando.",
 		"Player: ¡Y encima no tengo batería en el télefono!",
-		"Player: Pero...qué es eso? Parece ser una nota entre la rendija de la puerta. A ver",
-		"Player: Querido primo, espero no te pitchees, pero te estuve mandando mensajes y no te llegaban.",
-		"Player: Me fui a la Plaza 9 de Julio, al centro. Hay Asamblea Docente por el recorte salarial que venimos padeciendo.",
-		"Player: Venite porque voy a estar un buen rato, ¿sabes?",
-		"Player: Te espero allá.",
-		"Player: Ok...¿Y cómo carajo llegó al centro de Posadas?",
-		"Player: Encima a esta hora no hay nadie en la calle como para preguntar",
+		'Player: Pero... ¿qué es eso? Parece ser una nota entre la rendija de la puerta. A ver.',
+		'Player: "Querido primo, espero no te pitchees, pero te estuve mandando mensajes y no te llegaban."',
+		'Player: "Me fui a la Plaza 9 de Julio, al centro. Hay Asamblea Docente por el recorte salarial que venimos padeciendo."',
+		'Player: "Venite porque voy a estar un buen rato, ¿sabes?"',
+		'Player: "Te espero allá."',
+		"Player: Ok... ¿Y cómo carajo llegó al centro de Posadas?",
+		"Player: Encima a esta hora no hay nadie en la calle como para preguntar.",
 	
 	])
 	Globals.carta_leida = true

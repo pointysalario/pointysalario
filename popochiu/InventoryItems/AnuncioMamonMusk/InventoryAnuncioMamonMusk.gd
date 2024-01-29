@@ -36,8 +36,9 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				'Player: Bueno, tal vez pueda pegar esto con esto y...',
 				I.remove_item(item.script_name),
 				I.remove_item(script_name),
+				A.play('sfx_craftear_item'),
 				I.add_item('TarjetaMamonMusk'),
-				'Player: Ahora si, una autentica tarjeta de Mamon Musk'
+				'Player: Ahora si, una autentica tarjeta de Mamon Musk.'
 				])
 
 # Actions to excecute after the item is added to the Inventory

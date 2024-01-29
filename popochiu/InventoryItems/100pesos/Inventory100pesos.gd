@@ -32,6 +32,7 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 			E.run([
 				I.remove_item(item.script_name),
 				I.remove_item(script_name),
+				A.play('sfx_craftear_item'),
 				I.add_item('350pesos'),
 				'Player: Ahora si, ¡ya tengo el efectivo para el colectivo!'
 				])

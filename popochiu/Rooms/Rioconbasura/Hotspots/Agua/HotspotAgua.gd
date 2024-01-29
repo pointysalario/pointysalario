@@ -34,5 +34,6 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				'Player: Le agregamos un poco de agua y...',
 				'Player: Listo, un espumante balde de agua con esponja',
 				I.remove_item('Baldecondetergente'),
+				A.play('sfx_craftear_item'),
 				I.add_item('Baldeconespuma'),
 				])
