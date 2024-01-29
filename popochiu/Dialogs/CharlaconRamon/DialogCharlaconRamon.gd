@@ -10,12 +10,14 @@ func on_start() -> void:
 	# (!) It MUST always use a yield
 	yield(E.run([
 		'Player: Estem...',
-		'Lagomarsinojr: Qué precisa, muchacho'
+		'RamonAyala: Qué precisa, muchacho'
 	]), 'completed')
-	if Globals.dialog_verdad_peronista_done == true and I.Mandioca.in_inventory:
+	if  I.Mandioca.in_inventory:
 		turn_on_options(['generador'])
 	if I.Generadororganicoenchufado.in_inventory:
 		turn_on_options(['enchufado'])
+	if I.Mandiocaaluminada.in_inventory:
+		turn_on_options(['aluminio'])
 
 func option_selected(opt: PopochiuDialogOption) -> void:
 	# You can make the player character say the selected option with:
@@ -81,9 +83,9 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			'RamonAyala: Vengo de otra tierra, de otros caminos donde no se usan celulares.',
 			'Player: Pero ahora está en ESTA tierra.',
 			'RamonAyala: Bueno, en ese caso... en la época de Perón, antes y durante la provincialización...',
-			'RamonAyala: Las Colonias Experimentales hicieron algunos experimentos con baterias de mandioca.',
+			'RamonAyala: Las Colonias Experimentales hicieron algunos avances con baterias a base de mandioca y envueltas en algún tipo de metal.',
 			'Player: Eso suena bastante oportuno.',
-			'RamonAyala: Así funciona el mal game design.',
+			'RamonAyala: Bueno, así funciona el game design así nomás.',
 				
 			]), 'completed')
 			opt.turn_off()
@@ -95,6 +97,17 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			'RamonAyala: ¡Entonces enchufelo donde sea y ya!',
 			]), 'completed')
 			opt.turn_off()
+		'aluminio':
+			yield(E.run([
+			'Player:¿Y ahora que tengo una mandioca aluminada?',
+			'RamonAyala: ¿Ya estamos en el mes del aluminio?',
+			'Player: Eh... no sé.',
+			'RamonAyala: Gurí, eso parece más un cigarillo de droga que otra cosa.',
+			'RamonAyala: Te ayudé demasiado, pensá un poco vos.',
+			opt.turn_off()
+			]), 'completed')
+			
+			
 		'adios':
 			yield(E.run([
 			'Player: Tengo que irme.',

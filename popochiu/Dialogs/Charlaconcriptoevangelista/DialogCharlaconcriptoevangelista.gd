@@ -29,6 +29,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 	match opt.id:
 			'Necesito-dinero':
 				yield(E.run([
+			'Player: Necesito dinero para poder tomarme el colectivo e ir hacia el centro, ¿podría prestarme algo?',
 			'Criptoevangelista: Hermano, creo que estamos invirtiendo los roles, generalmente soy yo quien pide dinero, pero cuentame, ¿cómo es eso que necesitas dinero?',
 			'Player: Debo ir a la Plaza 9 de Julio a una asamblea docente, no sé si sabía usted que el gobierno provincial le ha descontado un 30% del sueldo a los docentes.',
 			'Criptoevangelista: ¡Lo bien que hizo! Me apeno que no le hayan recortado aún más. Los docentes son Agentes del Maligno en la Tierra.',
@@ -36,6 +37,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				opt.turn_off()
 			'como':
 				yield(E.run([
+				'Player:¿Cómo puedo viajar al centro?',
 				'Criptoevangelista: Muy fácil, hermano. Podes pagar el colectivo en efectivo y son 330$.',
 				'Player: Uff...¿efectivo? ¿Y siquiero pagar con el celular?',
 				'Criptoevangelista: Bueno en ese caso con la aplicación de Casimiro.',
@@ -44,6 +46,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				opt.turn_off()
 			'Templo':
 				yield(E.run([
+			'Player:¿Qué es esto?¿Qué sucedió con el templo de los laosianos?',
 			'Criptoevangelista: ¿Laosianos? ¡Bah, esas herejías zurdoempobrecedoras y de bajo poder de procesamiento no son aceptadas en la Nueva Argentina de las Fuerzas del Criptocielo!',
 			'Player: ¿Fuerzas del criptocielo?',
 			'Criptoevangelista: ¡Pero en qué tarjeta gráfica de bajo cómputo estuviste viviendo en estos tiempos!¡Seguro sos un zurdo empobrecedor de Monero o alguna cripto de bajo consumo!',
@@ -52,6 +55,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				turn_on_options(['bajoconsumo','vidaaustera'])
 			'bajoconsumo':
 				yield(E.run([
+				'Player:¿Qué problema tenés con el bajo consumo eléctrico?',
 				'Criptoevangelista: Estamos próximos a desmontar este engendro de la herejía empobrecedora. Necesitamos más energía para que nuestros feligreces depositen el diezmo en la blockchain',
 				'Player: ¿Pero sus feligreses tienen computadoras y conexión de Internet para darles el criptodiezmo?',
 				'Criptoevangelista: Bueno, ese es otro paso. Está por llegar Mamon Musk para ofrecernos sátelites de punta, que apuntando hacia Anillaco, harán un enlace hacia la estratosfera, pudiendo así en tan solo una hora y media descargar 10 mb/s',
@@ -69,6 +73,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 #					turn_off_options(['MamonMusk'])
 			'vidaaustera':
 				yield(E.run([
+				'Player:Creo que estás equivocado. El Señor ha pregonado siempre una vida austera y libre de la tiranía del dinero. ',
 				'Criptoevangelista: Eso no suena muy inteligente, más bien parece la falacia Ad Pobrenium, o sea, digamos, que ser pobre es ser mejor',
 				'Player: Esa falacia no existe',
 				'Criptoevangelista: ¿Cómo que no? Si la vi en un video de TipitoEnojado',
