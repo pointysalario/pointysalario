@@ -44,7 +44,7 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				A.play('sfx_rayos')
 				]),'completed')
 			$"../../AnimationPlayer".play("Tiempo espera")
-		Globals.lluvia = true
+			Globals.lluvia = true
 		
 func transicion():
 	E.run([
