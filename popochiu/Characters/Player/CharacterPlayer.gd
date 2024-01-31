@@ -34,9 +34,10 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			"Player: Bueno, ahora si vamos a flasharla."
+			"Player: Bueno, ahora si vamos a flasharla.",
+			I.remove_item('Cucumelo')
 		]), 'completed')
-		I.remove_item('Cucumelo')
+
 		E.goto_room('Bonditangalanga')
 		
 

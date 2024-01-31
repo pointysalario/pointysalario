@@ -19,6 +19,31 @@ func on_start() -> void:
 	if I.Mandiocaaluminada.in_inventory:
 		turn_on_options(['aluminio'])
 
+func on_interact() -> void:
+	if !Globals.carta_leida == true:
+		yield(E.run([
+		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
+		]), 'completed')
+	else:
+		Globals.carta_leida ==true
+		if I.is_item_in_inventory('Mandioca'):
+			E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			'Player: No queda nada, mejor lo dejo cerrado.'
+			])
+		else:
+			yield(E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			'Player: A ver, si fuerzo un poco esto.',
+			'Player: Momento, qué es esto.',
+			I.add_item('Mandioca')
+			]), 'completed')
+
+
+
+
 func option_selected(opt: PopochiuDialogOption) -> void:
 	# You can make the player character say the selected option with:
 #	yield(D.say_selected(), 'completed')

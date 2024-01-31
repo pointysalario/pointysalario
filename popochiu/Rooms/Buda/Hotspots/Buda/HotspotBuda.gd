@@ -35,7 +35,7 @@ func on_look() -> void:
 
 # When the node is clicked and there is an inventory item selected
 func on_item_used(item: PopochiuInventoryItem) -> void:
-		if item.script_name == 'Guantes':
+		if item.script_name == 'Guantes': 
 			E.run([
 				'Player: Bueno, una cosa es tocarlo con las manos y otra frotarlo con guantes...',
 				'Player: Veamos que pasa...',
@@ -43,3 +43,4 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				'Player: Eh, ahora si me trajo suerte, ¡me dio plata!',
 				'Player: Ya saben, si van a frotar un Buda y no quieren terminar cagandose encima, usen guantes.'
 				])
+	

@@ -9,21 +9,47 @@ extends PopochiuHotspot
 # When the node is clicked
 
 
+#func on_interact() -> void:
+#	if Globals.carta_leida == true :
+#		E.run([
+#		C.walk_to_clicked(),
+#		C.face_clicked(),
+#		"Player: A ver...",
+#		"Player: Si... ¿Una tarjeta SUBE nacional?",
+#		"Player: Ugh, qué asco, está muy pegajosa, como si tuviera algún tipo de pegamento.",
+#		"Player: No me servirá de mucho aquí, pero bueno, me la llevo.",
+#		I.add_item('TarjetaSUBE')
+#		])
+#	else:
+#		yield(E.run([
+#		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
+#		]), 'completed')
+
 func on_interact() -> void:
-	if Globals.carta_leida == true :
-		E.run([
-		C.walk_to_clicked(),
-		C.face_clicked(),
-		"Player: A ver...",
-		"Player: Si... ¿Una tarjeta SUBE nacional?",
-		"Player: Ugh, qué asco, está muy pegajosa, como si tuviera algún tipo de pegamento.",
-		"Player: No me servirá de mucho aquí, pero bueno, me la llevo.",
-		I.add_item('TarjetaSUBE')
-		])
-	else:
+	if !Globals.carta_leida == true:
 		yield(E.run([
 		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
 		]), 'completed')
+	else:
+		Globals.carta_leida ==true
+		if I.is_item_in_inventory('TarjetaSUBE'):
+			E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			'Player: Ya no hay nada interesante en esta plantera, solo tierra reseca.'
+			])
+		else:
+			yield(E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			"Player: A ver...",
+			"Player: Si... ¿Una tarjeta SUBE nacional?",
+			"Player: Ugh, qué asco, está muy pegajosa, como si tuviera algún tipo de pegamento.",
+			"Player: No me servirá de mucho aquí, pero bueno, me la llevo.",
+			I.add_item('TarjetaSUBE')
+			]), 'completed')
+
+
 
 
 # When the node is right clicked

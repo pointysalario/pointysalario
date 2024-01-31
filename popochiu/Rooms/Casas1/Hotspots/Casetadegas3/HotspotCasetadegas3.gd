@@ -28,24 +28,27 @@ extends PopochiuHotspot
 #		])
 
 func on_interact() -> void:
-	if Globals.carta_leida == true:
-		E.run([
-		C.walk_to_clicked(),
-		C.face_clicked(),
-		"Player: A ver, si fuerzo un poco quizás puedo abrir.",
-		'Player: Momento, qué es esto...',
-		I.add_item('Mandioca')
-		])
-	elif times_clicked >= 1 and Globals.carta_leida == true :
-		E.run([
-		C.walk_to_clicked(),
-		C.face_clicked(),
-		'Player: No queda nada, mejor lo dejo cerrado.'
-		])
-	else:
+	if !Globals.carta_leida == true:
 		yield(E.run([
 		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
 		]), 'completed')
+	else:
+		Globals.carta_leida ==true
+		if I.is_item_in_inventory('Mandioca'):
+			E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			'Player: No queda nada, mejor lo dejo cerrado.'
+			])
+		else:
+			yield(E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			'Player: A ver, si fuerzo un poco esto.',
+			'Player: Momento, qué es esto.',
+			I.add_item('Mandioca')
+			]), 'completed')
+
 
 
 # When the node is right clicked

@@ -80,7 +80,7 @@ resource_name = "aluminio"
 script = ExtResource( 2 )
 id = "aluminio"
 text = "¿Y ahora que tengo una mandioca aluminada?"
-visible = true
+visible = false
 disabled = false
 always_on = false
 
