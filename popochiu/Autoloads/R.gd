@@ -15,6 +15,7 @@ const PRTest := preload('res://popochiu/Rooms/Test/RoomTest.gd')
 const PRMain := preload('res://popochiu/Rooms/Main/RoomMain.gd')
 const PRCreditos := preload('res://popochiu/Rooms/Creditos/RoomCreditos.gd')
 const PRFinal := preload('res://popochiu/Rooms/Final/RoomFinal.gd')
+const PRSkividela := preload('res://popochiu/Rooms/Skividela/RoomSkividela.gd')
 # ---- classes
 
 # nodes ----
@@ -31,6 +32,7 @@ var Test: PRTest setget , get_Test
 var Main: PRMain setget , get_Main
 var Creditos: PRCreditos setget , get_Creditos
 var Final: PRFinal setget , get_Final
+var Skividela: PRSkividela setget , get_Skividela
 # ---- nodes
 
 # functions ----
@@ -47,5 +49,6 @@ func get_Test(): return .get_runtime_room('Test')
 func get_Main(): return .get_runtime_room('Main')
 func get_Creditos(): return .get_runtime_room('Creditos')
 func get_Final(): return .get_runtime_room('Final')
+func get_Skividela(): return .get_runtime_room('Skividela')
 # ---- functions
 

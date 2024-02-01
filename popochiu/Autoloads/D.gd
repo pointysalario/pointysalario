@@ -8,6 +8,7 @@ const PDCharlaconperon := preload('res://popochiu/Dialogs/Charlaconperon/DialogC
 const PDCharlaconmonstruo := preload('res://popochiu/Dialogs/Charlaconmonstruo/DialogCharlaconmonstruo.gd')
 const PDPresentacionRamonPuerta := preload('res://popochiu/Dialogs/PresentacionRamonPuerta/DialogPresentacionRamonPuerta.gd')
 const PDCharlatangalanga := preload('res://popochiu/Dialogs/Charlatangalanga/DialogCharlatangalanga.gd')
+const PDSkividela := preload('res://popochiu/Dialogs/Skividela/DialogSkividela.gd')
 # ---- classes
 
 # nodes ----
@@ -17,6 +18,7 @@ var Charlaconperon: PDCharlaconperon setget , get_Charlaconperon
 var Charlaconmonstruo: PDCharlaconmonstruo setget , get_Charlaconmonstruo
 var PresentacionRamonPuerta: PDPresentacionRamonPuerta setget , get_PresentacionRamonPuerta
 var Charlatangalanga: PDCharlatangalanga setget , get_Charlatangalanga
+var Skividela: PDSkividela setget , get_Skividela
 # ---- nodes
 
 # functions ----
@@ -26,5 +28,6 @@ func get_Charlaconperon(): return E.get_dialog('Charlaconperon')
 func get_Charlaconmonstruo(): return E.get_dialog('Charlaconmonstruo')
 func get_PresentacionRamonPuerta(): return E.get_dialog('PresentacionRamonPuerta')
 func get_Charlatangalanga(): return E.get_dialog('Charlatangalanga')
+func get_Skividela(): return E.get_dialog('Skividela')
 # ---- functions
 

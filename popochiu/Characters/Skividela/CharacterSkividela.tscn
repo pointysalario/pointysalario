@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://popochiu/Characters/Skividela/CharacterSkividela.gd" type="Script" id=1]
+[ext_resource path="res://assets/personajes/skividela.png" type="Texture" id=2]
+
+[node name="CharacterSkividela" type="Area2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+script_name = "Skividela"
+description = "Skividela"
+cursor = 8
+popochiu_placeholder = null
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+position = Vector2( -17, -45 )
+scale = Vector2( 2.0625, 3.8125 )
+polygon = PoolVector2Array( -20.8485, -19.9344, 33.9394, -20.7213, 29.5758, 4.19672, 42.6667, 17.8361, 25.2121, 28.3279, 28.1212, 45.6393, 3.87879, 51.9344, -12.6061, 45.6393, -7.75758, 32, -22.303, 19.1475, -22.303, 10.4918, -11.1515, 4.45902 )
+
+[node name="BaselineHelper" type="Line2D" parent="."]
+points = PoolVector2Array( -10000, 0, 10000, 0 )
+width = 1.0
+
+[node name="WalkToHelper" type="Position2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="WalkToHelper"]
+margin_left = -2.5
+margin_top = -2.5
+margin_right = 2.5
+margin_bottom = 2.5
+color = Color( 0, 1, 1, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="DialogPos" type="Position2D" parent="."]
+visible = false
