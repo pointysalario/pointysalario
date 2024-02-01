@@ -8,6 +8,6 @@ mouse_filter = 0
 size_flags_vertical = 4
 texture = ExtResource( 2 )
 script = ExtResource( 1 )
-description = "Mandiocacoaxial"
+description = "Mandioca con cable coaxial"
 script_name = "Mandiocacoaxial"
 cursor = 10

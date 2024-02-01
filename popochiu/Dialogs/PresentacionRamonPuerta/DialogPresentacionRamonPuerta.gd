@@ -49,7 +49,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'RamonPuerta: Esto es así gurí, con Casimiro no se jode guaú.',
 				'Player: ¿Qué significa eso?',
 				'RamonPuerta: Guaú:Del guaraní guau ("falso").',
-				'RamonPuerta: Adjetivo indeclinable. Falso, de mentira',
+				'RamonPuerta: Adjetivo indeclinable. Falso, de mentira.',
 				'Player: Mmmmm',
 			opt.turn_off()
 			]), 'completed')
@@ -66,7 +66,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 		'carpadocente':
 			yield(
 				E.run([ 
-					'Player: Si, eso parece, pero...no se, esto es muy... hipnótico',
+					'Player: Si, eso parece, pero...no sé, esto es muy... hipnótico',
 					'RamonPuerta: ¡Pero claro que es hipnótico! Así es cómo funciona todo esto, gurí, ¿no lo ves todavía?',
 					'Player: Si, mientras más miro creo que más cosas veo.',
 					'RamonPuerta: Es una vuelta de tuerca, gurí.',
@@ -97,7 +97,7 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 		'dogma':
 			yield(E.run([
 				'Player: ¿Dogma? ¿Misionerismo? ¿Qué tiene que ver con los salarios de miseria de los docentes?',
-				'RamonPuerta: El misionerismo es el respeto irrestricto del proyecto de la casta provincial..',
+				'RamonPuerta: El misionerismo es el respeto irrestricto del proyecto de la casta provincial...',
 				'RamonPuerta: basado en el PRINCIPIO GENERACIÓN DE HUMO y en defensa de los intereses de los capangas de estancia.',
 				'Player: Creo que entiendo. Entonces, a la casta la educación la tiene sin cuidado.',
 				'RamonPuerta: Pero gurí, si ellos aprendieron muy bien de mi, ¿no sabías que fueron alumnos míos?',

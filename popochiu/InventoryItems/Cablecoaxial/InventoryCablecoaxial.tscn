@@ -8,6 +8,6 @@ mouse_filter = 0
 size_flags_vertical = 4
 texture = ExtResource( 2 )
 script = ExtResource( 1 )
-description = "Cablecoaxial"
+description = "Cable coaxial"
 script_name = "Cablecoaxial"
 cursor = 10

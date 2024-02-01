@@ -30,6 +30,7 @@ func on_look() -> void:
 func on_item_used(item: PopochiuInventoryItem) -> void:
 		if item.script_name == 'Cablecoaxial':
 			E.run([
+				'Player: Bien, supongo que puedo enchufar este cable acá y...',
 				I.remove_item(item.script_name),
 				I.remove_item(script_name),
 				I.add_item('Mandiocacoaxial'),
@@ -37,6 +38,7 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				])
 		elif item.script_name == 'Cableusb':
 			E.run([
+				'Player: Bien, supongo que puedo enchufar este cable acá y...',
 				I.remove_item(item.script_name),
 				I.remove_item(script_name),
 				I.add_item('Mandiocausb'),

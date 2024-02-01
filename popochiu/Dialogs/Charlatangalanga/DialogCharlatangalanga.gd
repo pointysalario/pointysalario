@@ -39,15 +39,15 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Player: Eso sueno posible pero siento en su voz un ligero tono como de...chantapufi.',
 				'Tangalanga: ¿Cómo mierda te lo tengo qué decir?',
 				'Tangalanga: Oíme, te cuento un versito que me dijo el actual gobernador, una vez que me lo crucé en una casa de masajes:',
-				'Tangalanga:"Cada vez que consideren que su sueldo es muy ingrato.."',
-				'Tangalanga:"Metanse un dedo en el orto y dejenlo estar un rato"',
+				'Tangalanga:"Cada vez que consideren que su sueldo es muy ingrato..."',
+				'Tangalanga:"Metanse un dedo en el orto y dejenlo estar un rato."',
 				'Player: ¡Usted me está faltando el respeto!',
 				'Tangalanga: No se haga el boludo, usted sabe bien de quién hablo.'
 				
 			]), 'completed')
 		'delcielo':
 			yield(E.run([
-				'Player: Dr., qué opina de las fuerzas del cielo',
+				'Player: Dr., ¿qué opina de las fuerzas del cielo?',
 				'Tangalanga: Oíme una cosa, cómo mierda te lo tengo qué decir.',
 				'Tangalanga: Justamente estamos organizando un banquete con un primo...',
 				'Tangalanga: Él invitó a una señora, de rasgos... cómo decirlo, como de re boluda.',
@@ -62,9 +62,9 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 				'Tangalanga: ¡Lo estaba buscando hace años!',
 				'Tangalanga: Mirá, hoy estoy en modo alcahuete y quiero laburar.',
 				'Tangalanga: Te puedo llevar al centro de Posadas pero solo conozco estas direcciones:',
-				'Tangalanga: Malabia 1614, 2do patio del lado de la sombra:',
+				'Tangalanga: Malabia 1614, 2do patio del lado de la sombra.',
 				'Tangalanga: Ecuador 432.',
-				'Tangalanga: Cochabamba al tresmil setecientos y monedas',
+				'Tangalanga: Cochabamba al tresmil setecientos y monedas.',
 				'Tangalanga: Junin y Santa Fe pero del lado de canto.',
 				'Tangalanga: Venezuela y Chile.',
 			]), 'completed')
