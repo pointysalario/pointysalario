@@ -20,7 +20,6 @@ func on_interact() -> void:
 # When the item is right clicked in the inventory
 func on_look() -> void:
 	E.run([
-		C.face_clicked(),
 		'Player: Es uno de esos anuncios para despegar y llevarse. Dice lo siguiente:',
 		'Player: ¿QUERÉS SER TU PROPIO JEFE? INVERTÍ CON MAMON MUSK.',
 		'Player: ¡Preguntáme cómo!',

@@ -20,8 +20,6 @@ func on_interact() -> void:
 # When the item is right clicked in the inventory
 func on_look() -> void:
  E.run([
-		C.walk_to_clicked(),
-		C.face_clicked(),
 		"Player: Una mandioca aluminada. Se ve un tanto...extraña.",
 	])
 
