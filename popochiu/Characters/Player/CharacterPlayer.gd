@@ -37,9 +37,22 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 			"Player: Bueno, ahora si vamos a flasharla.",
 			I.remove_item('Cucumelo')
 		]), 'completed')
-
 		E.goto_room('Bonditangalanga')
-		
+	if item.script_name == "Mandiocaaluminada":
+		if Globals.intentosMandioca < 6:
+			yield(E.run([
+				"Player: ¿Fumarme una mandioca Aluminada?",
+				"Player: No gracias, asi se empieza, voy a terminar clonando perros con una peluca",
+			]), 'completed')
+			Globals.intentosMandioca += 1
+		else:
+			yield(E.run([
+				"Player: COF COF COF",
+				"Player: Llamen a un medico",
+				I.remove_item('Mandiocaaluminada')
+			]), 'completed')
+			E.goto_room('Skividela')
+			
 
 
 

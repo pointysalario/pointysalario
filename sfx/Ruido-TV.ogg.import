@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ruido-TV.ogg-878239962a13fead9afd50511738f9c3.oggstr"
+
+[deps]
+
+source_file="res://sfx/Ruido-TV.ogg"
+dest_files=[ "res://.import/Ruido-TV.ogg-878239962a13fead9afd50511738f9c3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,9 +1,46 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=7 format=2]
 
 [ext_resource path="res://popochiu/Dialogs/Skividela/DialogSkividela.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Dialog/PopochiuDialogOption.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+resource_name = "Opt1"
+script = ExtResource( 2 )
+id = "Opt1"
+text = "Skividela toilet??! ¿la sensacion de los niños y adolescentes?"
+visible = true
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=2]
+resource_name = "Opt2"
+script = ExtResource( 2 )
+id = "Opt2"
+text = "¿Donde estoy?"
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=3]
+resource_name = "Opt3"
+script = ExtResource( 2 )
+id = "Opt3"
+text = "¿Muertos???!!!..."
+visible = false
+disabled = false
+always_on = false
+
+[sub_resource type="Resource" id=4]
+resource_name = "Opt4"
+script = ExtResource( 2 )
+id = "Opt4"
+text = "¿Supongo que este no es el final feliz secreto del juego cierto?"
+visible = false
+disabled = false
+always_on = false
 
 [resource]
 resource_name = "Skividela"
 script = ExtResource( 1 )
-options = [  ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
 script_name = "Skividela"

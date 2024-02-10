@@ -9,3 +9,4 @@ var lluvia := false
 var monte := false
 var charlacriptoevangelista := false
 var autolimpio := false
+var intentosMandioca := 0
