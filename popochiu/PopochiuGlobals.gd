@@ -11,4 +11,4 @@ var charlacriptoevangelista := false
 var autolimpio := false
 var charlaramonayala := false
 var tarjetamamon := false
-
+var intentosMandioca := 0

@@ -4,6 +4,7 @@
 [ext_resource path="res://assets/personajes/skividela.png" type="Texture" id=2]
 
 [node name="CharacterSkividela" type="Area2D"]
+scale = Vector2( 1.4, 1.4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -19,10 +20,12 @@ scale = Vector2( 2.0625, 3.8125 )
 polygon = PoolVector2Array( -20.8485, -19.9344, 33.9394, -20.7213, 29.5758, 4.19672, 42.6667, 17.8361, 25.2121, 28.3279, 28.1212, 45.6393, 3.87879, 51.9344, -12.6061, 45.6393, -7.75758, 32, -22.303, 19.1475, -22.303, 10.4918, -11.1515, 4.45902 )
 
 [node name="BaselineHelper" type="Line2D" parent="."]
+visible = false
 points = PoolVector2Array( -10000, 0, 10000, 0 )
 width = 1.0
 
 [node name="WalkToHelper" type="Position2D" parent="."]
+visible = false
 __meta__ = {
 "_edit_group_": true
 }

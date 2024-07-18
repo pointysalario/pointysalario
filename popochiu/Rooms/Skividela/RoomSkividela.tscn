@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Skividela/RoomSkividela.gd" type="Script" id=1]
-[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.gd" type="Script" id=2]
+[ext_resource path="res://sfx/Ruido-TV.ogg" type="AudioStream" id=2]
 [ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://popochiu/Characters/Skividela/CharacterSkividela.gd" type="Script" id=4]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=4]
 [ext_resource path="res://popochiu/Characters/Skividela/CharacterSkividela.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/fondos/senal.png" type="Texture" id=6]
 
 [node name="RoomSkividela" type="YSort"]
 sort_enabled = false
@@ -16,6 +17,15 @@ script_name = "Skividela"
 [node name="Props" type="YSort" parent="."]
 sort_enabled = false
 
+[node name="Fondo" parent="Props" instance=ExtResource( 4 )]
+position = Vector2( 400, 300 )
+scale = Vector2( 1.4, 1.8 )
+script_name = "Fondo"
+description = "Fondo"
+clickable = false
+cursor = 1
+texture = ExtResource( 6 )
+
 [node name="Hotspots" type="Node2D" parent="."]
 
 [node name="Regions" type="Node2D" parent="."]
@@ -25,28 +35,12 @@ sort_enabled = false
 [node name="Characters" type="YSort" parent="."]
 sort_enabled = false
 
-[node name="CharacterPlayer *" type="Area2D" parent="Characters" instance=ExtResource( 3 )]
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 3 )]
 position = Vector2( 100, 487 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-script_name = "Player"
-description = "Player"
-baseline = 73
-walk_to_point = Vector2( 0, 81 )
-cursor = 8
-flips_when = 2
-walk_speed = 250.0
-popochiu_placeholder = null
 
-[node name="CharacterSkividela *" type="Area2D" parent="Characters" instance=ExtResource( 5 )]
-position = Vector2( 414, 192 )
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
-script_name = "Skividela"
-description = "Skividela"
-cursor = 8
-popochiu_placeholder = null
+[node name="CharacterSkividela *" parent="Characters" instance=ExtResource( 5 )]
+position = Vector2( 397, 305 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
