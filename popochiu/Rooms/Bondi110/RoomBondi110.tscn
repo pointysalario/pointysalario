@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Bondi110/RoomBondi110.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Hacialaentrada/HotspotHacialaentrada.gd" type="Script" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Templobudista/HotspotTemplobudista.gd" type="Script" id=11]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=12]
 [ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Cartel/HotspotCartel.gd" type="Script" id=13]
-[ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Haciaeltemplo/HotspotHaciaeltemplo.gd" type="Script" id=14]
 [ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Tacho/HotspotTacho.gd" type="Script" id=15]
 [ext_resource path="res://popochiu/Rooms/Bondi110/Hotspots/Paradadecolectivo/HotspotParadadecolectivo.gd" type="Script" id=16]
 
@@ -78,17 +77,6 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Cartel"]
 modulate = Color( 0, 0, 1, 1 )
 polygon = PoolVector2Array( -366, -99, -31, -103, -31, -41, -368, -39 )
-
-[node name="Haciaeltemplo" parent="Hotspots" instance=ExtResource( 12 )]
-position = Vector2( 400, 300 )
-script = ExtResource( 14 )
-script_name = "Haciaeltemplo"
-description = "Hacia el templo"
-cursor = 1
-
-[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Haciaeltemplo"]
-modulate = Color( 0, 0, 1, 1 )
-polygon = PoolVector2Array( 198, 25, 245, 35, 161, 166, 103, 148 )
 
 [node name="Tacho" parent="Hotspots" instance=ExtResource( 12 )]
 position = Vector2( 400, 300 )

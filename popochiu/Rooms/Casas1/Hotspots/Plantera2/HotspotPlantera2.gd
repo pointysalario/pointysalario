@@ -31,8 +31,8 @@ func on_interact() -> void:
 		C.Player.say("No tocaré nada hasta no haber ido de mi prima")
 		]), 'completed')
 	else:
-		Globals.carta_leida ==true
-		if I.is_item_in_inventory('TarjetaSUBE'):
+		Globals.carta_leida ==true or Globals.tarjetamamon ==true
+		if I.is_item_in_inventory('TarjetaSUBE') or I.is_item_in_inventory('TarjetaMamonMusk'):
 			E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
@@ -48,6 +48,7 @@ func on_interact() -> void:
 			"Player: No me servirá de mucho aquí, pero bueno, me la llevo.",
 			I.add_item('TarjetaSUBE')
 			]), 'completed')
+			
 
 
 
