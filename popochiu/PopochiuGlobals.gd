@@ -9,3 +9,6 @@ var lluvia := false
 var monte := false
 var charlacriptoevangelista := false
 var autolimpio := false
+var charlaramonayala := false
+var tarjetamamon := false
+

@@ -49,8 +49,15 @@ func on_item_used(item: PopochiuInventoryItem) -> void:
 				'Player: Jeje que manera de cazar giles.',
 				'Criptoevangelista: ¿Qué dijiste hermano?',
 				'Player: Que ya llegó mi primo de San Andres de Giles.',
-			
+				print(Globals.tarjetamamon),
+				
 			])
+		Globals.tarjetamamon = true
+		
+		
+		
+			
+			
 
 # Use it to play the idle animation for the character
 func play_idle() -> void:
